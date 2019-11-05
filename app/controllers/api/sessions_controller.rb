@@ -4,7 +4,7 @@ class Api::SessionsController < ApplicationController
         @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
         if @user
             login(@user)
-            render json: { username: @user.username }
+            render json: { id: @user.id, username: @user.username }
         else
             render json: ['Invalid Username and/or Password'], status: 401
         end
