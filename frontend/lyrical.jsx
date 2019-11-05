@@ -6,12 +6,12 @@ import { login, logout } from "./actions/session_actions";
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const root = document.getElementById('root');
     const store = configureStore();
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     window.login = login;
     window.logout = logout;
-
-    ReactDOM.render(<div><h1>Lyrical</h1></div>, root)
+    
+    const root = document.getElementById('root');
+    ReactDOM.render(<Root store={store} />, root)
 })
