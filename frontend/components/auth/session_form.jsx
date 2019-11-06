@@ -27,7 +27,8 @@ class SessionForm extends React.Component {
         let formName;
         let oppositeForm;
         let oppositeFormName;
-        let linkText
+        let linkText;
+        let passwordHint;
         if (this.props.formType === 'login') {
             formName = 'Log In';
             oppositeForm = '/signup';
@@ -38,6 +39,7 @@ class SessionForm extends React.Component {
             oppositeForm = '/login';
             oppositeFormName = 'Log In'
             linkText = 'Already have an account?';
+            passwordHint = '(must be atleast 6 characters)'
         }
         let errors = this.props.errors.map((error) => (
             <li>{error}</li>
@@ -51,13 +53,13 @@ class SessionForm extends React.Component {
                         <ul className="errors-list">
                             {errors}
                         </ul>
-                        <label>Username:
+                        <label>Username
                             <input type="text" onChange={this.handleInput('username')}></input>
                         </label>
-                        <label>Password:
+                        <label>Password  <span className="password-hint">{passwordHint}</span>
                             <input type="password" onChange={this.handleInput('password')}></input>
                         </label>
-                        <button className="submit">Submit</button>
+                        <button className="submit">{formName}</button>
                     </form>
                     <p>{linkText}</p>
                     <Link to={oppositeForm}>{oppositeFormName + ' here!'}</Link>
