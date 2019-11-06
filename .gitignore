@@ -1,11 +1,10 @@
-node_modules/
 bundle.js
 bundle.js.map
 /.bundle
 
 # Ignore all logfiles and tempfiles.
 /log/*
-/tmp/*
+/tmp
 !/log/.keep
 !/tmp/.keep
 
