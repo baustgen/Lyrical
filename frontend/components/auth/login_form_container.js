@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { login } from "../../actions/session_actions";
+import { login, removeErrors } from "../../actions/session_actions";
 import SessionForm from "./session_form";
 
 const mapSTP = (state, ownProps) => ({
@@ -8,7 +8,8 @@ const mapSTP = (state, ownProps) => ({
 })
 
 const mapDTP = (dispatch, ownProps) => ({
-    processForm: (user) => dispatch(login(user))
+    processForm: (user) => dispatch(login(user)),
+    removeErrors: () => dispatch(removeErrors())
 })
 
 export default connect(mapSTP, mapDTP)(SessionForm)
