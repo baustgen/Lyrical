@@ -39,10 +39,10 @@ class SessionForm extends React.Component {
             oppositeForm = '/login';
             oppositeFormName = 'Log In'
             linkText = 'Already have an account?';
-            passwordHint = '(must be atleast 6 characters)'
+            passwordHint = '(must be at least 6 characters)'
         }
-        let errors = this.props.errors.map((error) => (
-            <li>{error}</li>
+        let errors = this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>{error}</li>
         ))
 
         return (
@@ -53,11 +53,20 @@ class SessionForm extends React.Component {
                         <ul className="errors-list">
                             {errors}
                         </ul>
+                        <br/>
                         <label>Username
-                            <input type="text" onChange={this.handleInput('username')}></input>
+                            <input 
+                                type="text" 
+                                onChange={this.handleInput('username')}
+                                value={this.state.username}
+                            />
                         </label>
                         <label>Password  <span className="password-hint">{passwordHint}</span>
-                            <input type="password" onChange={this.handleInput('password')}></input>
+                            <input 
+                            type="password" 
+                            onChange={this.handleInput('password')}
+                            value={this.state.password}
+                            />
                         </label>
                         <button className="submit">{formName}</button>
                     </form>

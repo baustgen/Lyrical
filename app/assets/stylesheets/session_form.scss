@@ -11,15 +11,19 @@
     align-items: center;
     margin: 50px auto;
     padding: 15px;
-    width: 350px;
+    width: 400px;
     color: white;
     font-size: 12px;
     font-weight: 700;
 }
 
+.form-container > p {
+    line-height: 20px;
+}
+
 .form-container input {
     background-color: rgb(40, 40, 40);
-    width: 95%;
+    width: 300px;
     margin: 5px 0 15px 0;
     padding: 5px;
     border: 1px solid rgb(50, 50, 50);
@@ -61,6 +65,7 @@
     align-items: flex-start;
     margin: 50px;
     padding: 15px;
+    border-top: 1px solid rgb(50, 50, 50);
     border-radius: 1px;
     background-color: rgb(20, 20, 20);
 }
@@ -73,4 +78,10 @@
     position: relative;
     font-size: 10px;
     color: rgb(150, 150, 150);
+}
+
+.errors-list {
+    font-size: 12px;
+    list-style: disc inside;
+    color: red;
 }
