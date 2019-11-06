@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class NavBar extends React.Component {
+class UserLinks extends React.Component {
     constructor(props) {
         super(props);
         this.logout = this.props.logout.bind(this);
@@ -10,22 +10,25 @@ class NavBar extends React.Component {
     render() {
         if (this.props.currentUser) {
             return (
-                <div>
+                <div className="user-links">
                     <p>{this.props.currentUser.username}</p>
                     <button onClick={this.logout}>Log Out</button>
                 </div>
             )
         } else {
             return (
-                <div>
-                    <Link to="/signup">Sign Up</Link>
-                    <br />
-                    <Link to="/login">Log In</Link>
-                </div>
+                <ul className="user-links">
+                    <li>
+                        <Link to="/signup">SIGN UP</Link>
+                    </li>
+                    <li>
+                        <Link to="/login">LOG IN</Link>
+                    </li>
+                </ul>
             )
         }
 
     }
 }
 
-export default NavBar;
+export default UserLinks;

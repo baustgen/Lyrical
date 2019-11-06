@@ -44,10 +44,10 @@ class SessionForm extends React.Component {
         ))
 
         return (
-            <div>
+            <div className="form-container">
                 <form onSubmit={this.handleSubmit}>
                     <h2>{formName}</h2>
-                    <ul>
+                    <ul className="errors-list">
                         {errors}
                     </ul>
                     <label>Username
@@ -56,8 +56,7 @@ class SessionForm extends React.Component {
                     <label>Password
                         <input type="password" onChange={this.handleInput('password')}></input>
                     </label>
-
-                    <input type="submit" value="Submit"/>
+                    <button className="submit">Submit</button>
                 </form>
                 <p>{linkText} <Link to={oppositeForm}>{oppositeFormName + ' here.'}</Link></p>
             </div>

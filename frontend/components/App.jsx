@@ -1,19 +1,23 @@
 import React from "react";
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import SignupFormContainer from "./auth/signup_form_container";
 import LoginFormContainer from "./auth/login_form_container";
-import NavBarContainer from "./nav_bar/nav_bar_container";
 import AuthRoute from "../util/route_util";
+import UserLinksContainer from "./nav_bar/user_links_container";
 
 const App = () => (
     <div>
         <header>
-            <h1>Lyrical</h1>
-            <NavBarContainer />
-        </header>
+            <div className="top-header">
+                <Link to="/" className="logo">L Y R I C A L</Link>
+                <UserLinksContainer />
 
-        <AuthRoute path="/signup" component={SignupFormContainer}/>
-        <AuthRoute path="/login" component={LoginFormContainer}/>
+            </div>
+        </header>
+        <main>
+            <AuthRoute path="/signup" component={SignupFormContainer}/>
+            <AuthRoute path="/login" component={LoginFormContainer}/>
+        </main>
     </div>
 );
 

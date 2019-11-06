@@ -1,0 +1,30 @@
+.top-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(255, 255, 50)
+}
+
+.logo {
+    margin-left: 50%;
+    position: relative;
+    left: -47px;
+    font-size: 26px;
+    color: rgb(255, 255, 50);
+    text-shadow: -2px 1px black;
+    font-weight: 700;
+}
+
+.user-links {
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 95px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.user-links a {
+    color: black;
+}
