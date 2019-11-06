@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemo = this.handleDemo.bind(this)
     }
 
     componentDidMount() {
@@ -19,6 +20,11 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const formUser = Object.assign({}, this.state)
         this.props.processForm(formUser)
+    }
+
+    handleDemo(e) {
+        e.preventDefault();
+        this.props.login({username: "LyricalGenius", password: "password123"})
     }
 
     handleInput(type) {
@@ -72,7 +78,11 @@ class SessionForm extends React.Component {
                             value={this.state.password}
                             />
                         </label>
-                        <button className="submit">{formName}</button>
+                        <div className="form-button-container">
+                            <button className="form-button">{formName}</button>
+                            <br/>
+                            <button className="form-button" onClick={this.handleDemo}>Demo User Log In</button>
+                        </div>
                     </form>
                     <p>{linkText}</p>
                     <Link to={oppositeForm}>{oppositeFormName + ' here!'}</Link>

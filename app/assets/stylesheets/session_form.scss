@@ -37,7 +37,7 @@
     caret-color: white;
 }
 
-.submit {
+.form-button {
     padding: 7px;
     background-color: rgb(30, 30, 30);
     color: white;
@@ -45,12 +45,12 @@
     border-radius: 3px;
 }
 
-.submit:hover {
+.form-button:hover {
     cursor: pointer;
     background-color: rgb(40, 40, 40)
 }
 
-.submit:focus {
+.form-button:focus {
     outline: none;
 }
 
@@ -84,4 +84,9 @@
     font-size: 12px;
     list-style: disc inside;
     color: red;
+}
+
+.form-button-container {
+    display: flex;
+    flex-direction: column;
 }
