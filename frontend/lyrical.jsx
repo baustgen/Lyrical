@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
         store = configureStore(preloadedState);
         delete window.currentUser;
     } else {
-        store = configureStore()
+        store = configureStore();
     }
     
     const root = document.getElementById('root');
-    ReactDOM.render(<Root store={store} />, root)
+    ReactDOM.render(<Root store={store} />, root);
 })
