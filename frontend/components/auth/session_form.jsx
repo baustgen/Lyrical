@@ -44,21 +44,24 @@ class SessionForm extends React.Component {
         ))
 
         return (
-            <div className="form-container">
-                <form onSubmit={this.handleSubmit}>
-                    <h2>{formName}</h2>
-                    <ul className="errors-list">
-                        {errors}
-                    </ul>
-                    <label>Username
-                        <input type="text" onChange={this.handleInput('username')}></input>
-                    </label>
-                    <label>Password
-                        <input type="password" onChange={this.handleInput('password')}></input>
-                    </label>
-                    <button className="submit">Submit</button>
-                </form>
-                <p>{linkText} <Link to={oppositeForm}>{oppositeFormName + ' here.'}</Link></p>
+            <div className="black-out">
+                <div className="form-container">
+                    <h2 className="form-header">{formName}</h2>
+                    <form onSubmit={this.handleSubmit}>
+                        <ul className="errors-list">
+                            {errors}
+                        </ul>
+                        <label>Username:
+                            <input type="text" onChange={this.handleInput('username')}></input>
+                        </label>
+                        <label>Password:
+                            <input type="password" onChange={this.handleInput('password')}></input>
+                        </label>
+                        <button className="submit">Submit</button>
+                    </form>
+                    <p>{linkText}</p>
+                    <Link to={oppositeForm}>{oppositeFormName + ' here!'}</Link>
+                </div>
             </div>
         )
     }

@@ -10,10 +10,11 @@ class UserLinks extends React.Component {
     render() {
         if (this.props.currentUser) {
             return (
-                <div className="user-links">
-                    <p>{this.props.currentUser.username}</p>
-                    <button onClick={this.logout}>Log Out</button>
-                </div>
+                <ul className="user-links">
+                    <li>
+                        <a className="logout-link" onClick={this.logout}>Log Out</a>
+                    </li>
+                </ul>
             )
         } else {
             return (
