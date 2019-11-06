@@ -12,7 +12,7 @@ class UserLinks extends React.Component {
             return (
                 <ul className="user-links">
                     <li>
-                        <a className="logout-link" onClick={this.logout}>LOGOUT</a>
+                        <a className="logout-link" onClick={this.logout}>LOG OUT</a>
                     </li>
                 </ul>
             )
