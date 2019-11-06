@@ -6,14 +6,14 @@ const NavLinks = (props) => {
     return (
         <ul className="nav-links">
             <li>
-                <Link to="https://github.com/baustgen">
-                    Github
-                </Link>
+                <a href="https://github.com/baustgen" target="_blank">
+                    <img src="GitHub.png" alt="GitHub"/>
+                </a>
             </li>
             <li>
-                <Link to="https://github.com/baustgen">
-                    LinkedIn
-                </Link>
+                <a href="https://www.linkedin.com/in/braeden-austgen-a96b52148/" target="_blank">
+                    <img src="LinkedIn.png" alt="LinkedIn"/>
+                </a>
             </li>
         </ul>
     )
