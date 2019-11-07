@@ -1,0 +1,1 @@
+json.extract! track, :id, :title, :album, :lyrics, :artist_id

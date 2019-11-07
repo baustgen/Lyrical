@@ -1,6 +1,6 @@
 json.tracks do
     json.set! @track.id do
-        json.extract! @track, :id, :title, :album, :lyrics, :artist_id
+        json.partial! 'tracks/track', track: @track
     end
 end
 
