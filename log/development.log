@@ -7511,3 +7511,186 @@ Processing by Api::ArtistsController#show as JSON
 Completed 200 OK in 65ms (Views: 13.3ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for ::1 at 2019-11-07 14:50:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 213ms (Views: 198.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/tracks" for ::1 at 2019-11-07 14:51:01 -0800
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (1.0ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  ↳ app/views/api/tracks/index.json.jbuilder:2
+  Rendered api/tracks/_track.json.jbuilder (0.9ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:11
+  Rendered api/artists/_artist.json.jbuilder (9.7ms)
+  Rendered api/tracks/index.json.jbuilder (27.9ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.1ms)
+
+
+
+NoMethodError - undefined method `id' for 1:Integer
+Did you mean?  i:
+  app/views/api/artists/_artist.json.jbuilder:1:in `_app_views_api_artists__artist_json_jbuilder___2799510225681118099_70319566675520'
+  app/views/api/tracks/index.json.jbuilder:12:in `block (3 levels) in _app_views_api_tracks_index_json_jbuilder__313454838252581395_70319518525200'
+  app/views/api/tracks/index.json.jbuilder:11:in `block (2 levels) in _app_views_api_tracks_index_json_jbuilder__313454838252581395_70319518525200'
+  app/views/api/tracks/index.json.jbuilder:10:in `block in _app_views_api_tracks_index_json_jbuilder__313454838252581395_70319518525200'
+  app/views/api/tracks/index.json.jbuilder:9:in `_app_views_api_tracks_index_json_jbuilder__313454838252581395_70319518525200'
+  app/controllers/api/tracks_controller.rb:5:in `index'
+
+Started POST "/__better_errors/114d6a601842724f/variables" for ::1 at 2019-11-07 14:51:01 -0800
+Started POST "/__better_errors/114d6a601842724f/eval" for ::1 at 2019-11-07 14:52:50 -0800
+Started POST "/__better_errors/114d6a601842724f/variables" for ::1 at 2019-11-07 14:54:04 -0800
+Started POST "/__better_errors/114d6a601842724f/variables" for ::1 at 2019-11-07 14:54:19 -0800
+Started POST "/__better_errors/114d6a601842724f/eval" for ::1 at 2019-11-07 14:54:30 -0800
+Started POST "/__better_errors/114d6a601842724f/variables" for ::1 at 2019-11-07 14:54:36 -0800
+Started POST "/__better_errors/114d6a601842724f/variables" for ::1 at 2019-11-07 14:54:43 -0800
+Started POST "/__better_errors/114d6a601842724f/eval" for ::1 at 2019-11-07 14:54:54 -0800
+Started POST "/__better_errors/114d6a601842724f/eval" for ::1 at 2019-11-07 14:55:01 -0800
+Started POST "/__better_errors/114d6a601842724f/variables" for ::1 at 2019-11-07 14:55:03 -0800
+Started POST "/__better_errors/114d6a601842724f/eval" for ::1 at 2019-11-07 14:55:07 -0800
+Started POST "/__better_errors/114d6a601842724f/eval" for ::1 at 2019-11-07 14:55:13 -0800
+Started POST "/__better_errors/114d6a601842724f/eval" for ::1 at 2019-11-07 14:55:23 -0800
+Started GET "/api/tracks" for ::1 at 2019-11-07 14:56:02 -0800
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  ↳ app/views/api/tracks/index.json.jbuilder:2
+  Rendered api/tracks/_track.json.jbuilder (0.4ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:11
+  Rendered api/artists/_artist.json.jbuilder (0.4ms)
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:11
+  Rendered api/artists/_artist.json.jbuilder (0.1ms)
+  Rendered api/tracks/index.json.jbuilder (12.6ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/tracks?artist_id=1" for ::1 at 2019-11-07 15:03:57 -0800
+Processing by Api::TracksController#index as JSON
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."artist_id" = $1 LIMIT $2[0m  [["artist_id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/tracks_controller.rb:6
+  Rendering api/tracks/index.json.jbuilder
+  Rendered api/tracks/index.json.jbuilder (5.2ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 10.7ms)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/api/tracks/index.json.jbuilder:2:in `block in _app_views_api_tracks_index_json_jbuilder__313454838252581395_70319526106160'
+  app/views/api/tracks/index.json.jbuilder:1:in `_app_views_api_tracks_index_json_jbuilder__313454838252581395_70319526106160'
+  app/controllers/api/tracks_controller.rb:10:in `index'
+
+Started POST "/__better_errors/b606f5cbad4fbfa1/variables" for ::1 at 2019-11-07 15:03:57 -0800
+Started GET "/api/tracks?artist_id=1" for ::1 at 2019-11-07 15:04:38 -0800
+Processing by Api::TracksController#index as JSON
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tracks_controller.rb:6
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/api/tracks_controller.rb:6
+  Rendering api/tracks/index.json.jbuilder
+  Rendered api/tracks/index.json.jbuilder (7.5ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 22.0ms)
+
+
+
+NoMethodError - undefined method `each' for #<Track:0x00007fe919893a78>:
+  app/views/api/tracks/index.json.jbuilder:2:in `block in _app_views_api_tracks_index_json_jbuilder__313454838252581395_70319558840580'
+  app/views/api/tracks/index.json.jbuilder:1:in `_app_views_api_tracks_index_json_jbuilder__313454838252581395_70319558840580'
+  app/controllers/api/tracks_controller.rb:10:in `index'
+
+Started POST "/__better_errors/8b1e7e0c484c76f8/variables" for ::1 at 2019-11-07 15:04:39 -0800
+Started GET "/api/tracks?artist_id=1" for ::1 at 2019-11-07 15:05:28 -0800
+Processing by Api::TracksController#index as JSON
+  Parameters: {"artist_id"=>"1"}
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:2
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:2
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/artists/_artist.json.jbuilder (0.5ms)
+  Rendered api/artists/_artist.json.jbuilder (0.1ms)
+  Rendered api/tracks/index.json.jbuilder (37.7ms)
+Completed 200 OK in 57ms (Views: 35.9ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/api/tracks?artist_id=2" for ::1 at 2019-11-07 15:05:35 -0800
+Processing by Api::TracksController#index as JSON
+  Parameters: {"artist_id"=>"2"}
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/api/tracks/index.json.jbuilder:2
+  Rendered api/tracks/index.json.jbuilder (3.6ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/tracks?artist_id=1" for ::1 at 2019-11-07 15:05:40 -0800
+Processing by Api::TracksController#index as JSON
+  Parameters: {"artist_id"=>"1"}
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:2
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:2
+  Rendered api/tracks/_track.json.jbuilder (0.6ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/artists/_artist.json.jbuilder (0.4ms)
+  Rendered api/artists/_artist.json.jbuilder (0.1ms)
+  Rendered api/tracks/index.json.jbuilder (13.2ms)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-11-07 15:19:04 -0800
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.7ms)
+  Rendered api/artists/index.json.jbuilder (29.0ms)
+Completed 200 OK in 56ms (Views: 28.8ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/api/artists?letter=q" for ::1 at 2019-11-07 15:19:19 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (8.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.7ms)
+  Rendered api/artists/index.json.jbuilder (14.2ms)
+Completed 200 OK in 24ms (Views: 13.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/artists?letter=a" for ::1 at 2019-11-07 15:19:23 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"a"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'a%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/index.json.jbuilder (4.0ms)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-07 15:19:28 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.6ms)
+  Rendered api/artists/index.json.jbuilder (7.2ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.5ms)
+
+

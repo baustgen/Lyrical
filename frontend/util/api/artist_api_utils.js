@@ -5,6 +5,8 @@ export const fetchArtists = (letter) => (
         data: { letter }
     })
 )
+
+// also fetches tracks associated with that artist
 export const fetchArtist = (artistId) => (
     $.ajax({
         url: `/api/artists/${artistId}`,
