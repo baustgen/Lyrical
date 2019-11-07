@@ -7407,3 +7407,60 @@ Migrating to CreateArtists (20191107173218)
   ↳ db/seeds.rb:88
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:88
+Started GET "/" for ::1 at 2019-11-07 11:56:55 -0800
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/braedenaustgen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (27.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 2481ms (Views: 2438.1ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/api/tracks" for ::1 at 2019-11-07 11:57:17 -0800
+Processing by Api::TracksController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/tracks/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/braedenaustgen/Desktop/Lyrical/app/views"
+:
+  app/controllers/api/tracks_controller.rb:5:in `index'
+
+Started POST "/__better_errors/061b33b82b7f420d/variables" for ::1 at 2019-11-07 11:57:17 -0800
+  [1m[36mTrack Load (2.6ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/braedenaustgen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Track Load (0.0ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/braedenaustgen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Track Load (0.0ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/braedenaustgen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Track Load (0.0ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/braedenaustgen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/api/tracks.json" for ::1 at 2019-11-07 11:57:29 -0800
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  ↳ app/views/api/tracks/index.json.jbuilder:2
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:11
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:11
+  Rendered api/tracks/index.json.jbuilder (58.4ms)
+Completed 200 OK in 71ms (Views: 60.6ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/api/tracks.json" for ::1 at 2019-11-07 11:58:59 -0800
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (19.3ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  ↳ app/views/api/tracks/index.json.jbuilder:2
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:11
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/tracks/index.json.jbuilder:11
+  Rendered api/tracks/index.json.jbuilder (24.4ms)
+Completed 200 OK in 35ms (Views: 14.1ms | ActiveRecord: 19.8ms)
+
+
