@@ -41,3 +41,24 @@
 .logout-link {
     cursor: pointer;
 }
+
+.bottom-header {
+    display: flex;
+    background-color: black;
+    justify-content: space-evenly;
+    padding: 10px;
+    height: 20px;
+}
+
+.nav-links {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    border-left: 2px solid white;
+    padding-left: 10px;
+    text-align: center;
+}
+.nav-links img {
+    display: inline-block;
+    height: 100%;
+}
