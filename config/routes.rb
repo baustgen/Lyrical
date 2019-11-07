@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
+    resources :artists, only: [:index, :show]
+    resources :tracks, only: [:index, :show]
   end
 end
