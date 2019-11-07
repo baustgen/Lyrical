@@ -12,4 +12,5 @@
 #
 
 class Track < ApplicationRecord
+    validates :title, :album, :lyrics, :artist_id, presence: true
 end
