@@ -8152,3 +8152,13 @@ Processing by Api::TracksController#show as JSON
 Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.8ms)
 
 
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'q%')[0m
+  [1m[36mArtist Load (3.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE '%')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Exists (26.8ms)[0m  [1m[34mSELECT  1 AS one FROM "artists" WHERE "artists"."name" = $1 LIMIT $2[0m  [["name", "50 Cent"], ["LIMIT", 1]]
+  [1m[36mArtist Create (7.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "50 Cent"], ["bio", "50 cent is an American rapper"], ["created_at", "2019-11-08 00:51:49.529418"], ["updated_at", "2019-11-08 00:51:49.529418"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE '%')[0m
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" BETWEEN $1 AND $2[0m  [["name", "0%"], ["name", "9%"]]
+  [1m[36mArtist Load (21.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" BETWEEN $1 AND $2[0m  [["name", "0%"], ["name", "9%"]]
