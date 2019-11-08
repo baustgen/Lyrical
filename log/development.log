@@ -8686,3 +8686,206 @@ Processing by Api::ArtistsController#index as JSON
 Completed 200 OK in 41ms (Views: 22.2ms | ActiveRecord: 17.2ms)
 
 
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE DATABASE "Lyrical_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "Lyrical_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (5.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (51.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (64.0ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "name" character varying NOT NULL, "bio" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_artists_on_name" ON "artists"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tracks" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "tracks" ("id" bigserial primary key, "title" character varying NOT NULL, "album" character varying NOT NULL, "lyrics" text NOT NULL, "artist_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_tracks_on_artist_id" ON "tracks"  ("artist_id")[0m
+  ↳ db/schema.rb:26
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_tracks_on_title" ON "tracks"  ("title")[0m
+  ↳ db/schema.rb:26
+  [1m[35m (4.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:37
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:37
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (3.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (28.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (44.2ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "name" character varying NOT NULL, "bio" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_artists_on_name" ON "artists"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tracks" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "tracks" ("id" bigserial primary key, "title" character varying NOT NULL, "album" character varying NOT NULL, "lyrics" text NOT NULL, "artist_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_tracks_on_artist_id" ON "tracks"  ("artist_id")[0m
+  ↳ db/schema.rb:26
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_tracks_on_title" ON "tracks"  ("title")[0m
+  ↳ db/schema.rb:26
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:37
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:37
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (7.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2019-11-08 19:30:32.441030"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-11-08 19:30:32.456601"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "LyricalGenius"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ECHlvPdn_qZ-zXhxY6Wwlg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "LyricalGenius"], ["password_digest", "$2a$12$IYeA.95GsVez50m1/xbdBO6jsad.ttKTuFz7o8svQ2TbrY8ABl6wa"], ["session_token", "ECHlvPdn_qZ-zXhxY6Wwlg"], ["created_at", "2019-11-08 19:30:32.795204"], ["updated_at", "2019-11-08 19:30:32.795204"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mArtist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "artists" WHERE "artists"."name" = $1 LIMIT $2[0m  [["name", "Quinn XCII"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mArtist Create (1.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Quinn XCII"], ["bio", "Originally under the name Quinn, he released his EP Shlup in 2013. In 2015 he suddenly changed to ‘Quinn XCII’ for the then-new EP Change of Scenery; ‘XCII’ being 92 in Roman numerals and the year he was born."], ["created_at", "2019-11-08 19:30:32.842172"], ["updated_at", "2019-11-08 19:30:32.842172"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mArtist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "artists" WHERE "artists"."name" = $1 LIMIT $2[0m  [["name", "Queen"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Queen"], ["bio", "Arena Rock Band"], ["created_at", "2019-11-08 19:30:32.849164"], ["updated_at", "2019-11-08 19:30:32.849164"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mTrack Create (3.4ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "lyrics", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Tough"], ["album", "From Michigan With Love"], ["lyrics", "[Verse 1: Quinn XCII]\nMaybe it's 'cause your mom never kissed you\nIf you ever cried, you'd wipe with muscle tissue\nYou bench pressing more than me's not the issue\nI know you're actually weaker than that\nLet's open up and get deeper than that\n\n[Pre-Chorus: Quinn XCII]\nLike why, why are you only vulnerable when no-one's around?\nYour gym membership is not a crown\n\n[Chorus: Quinn XCII]\nYou're not so tough\nI know that nightlight's on when you sleep\nYou're not so tough\nYeah, you watch Eat Pray Love on repeat\nAnd I'm sure you'd win in an altercation\nBut you're still insecure to me\nOh, so mess me up\nI know you're not so tough\n\n[Verse 2: Noah Kahan]\nAre you insecure that the steroids are causing hair loss?\nThat your Lulu shorts don't quite vibe with your camo AirPods\nAnd if I ran into you past sunset, I'd probably be scared, oh\nI know you're honestly weaker than that\nI bet you know that you need to relax\n\n[Verse 3: Quinn XCII]\nAnd I don't mean to come at you like it's Watergate\nMy pale ghostly body's purely water-weight\nYeah, I should probably substitute what is on my plate\nBut I still acknowledge those feelings inside\nLet's work on your habit to run or to hide\n\n[Pre-Chorus: Quinn XCII & Noah Kahan]\nLike why, why are you only vulnerable when no-one's around?\nYour gym membership is not a crown\n\n[Chorus: Quinn XCII & Noah Kahan]\nYou're not so tough\nI know that nightlight's on when you sleep\nYou're not so tough\nYeah, you watch Eat Pray Love on repeat\nAnd I'm sure you'd win in an altercation\nBut you're still insecure to me\nOh, so mess me up\nI know you're not so tough\n\n[Bridge: Quinn XCII & Noah Kahan]\nYou're not so tough\nYou're not\nYou're not so tough\nYou're not\nYou're not so tough\nYou're not\nYou're not so tough\nYou're not\n\n[Chorus: Quinn XCII & Noah Kahan]\nYou're not so tough\nI know that nightlight's on when you sleep\nYou're not so tough\nYeah, you watch Eat Pray Love on repeat\nAnd I'm sure you'd win in an altercation\nBut you're still insecure to me\nOh, so mess me up\nI know you're not so tough"], ["artist_id", 1], ["created_at", "2019-11-08 19:30:32.900738"], ["updated_at", "2019-11-08 19:30:32.900738"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:89
+  [1m[36mTrack Create (15.1ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "lyrics", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Flare Guns"], ["album", "The Story of Us"], ["lyrics", "[Verse 1: Quinn XCII]\nFocus on you in the light, it helps me fill my emotions\nWhy are we at such a distance? Find ourselves so out of frame\nThis love stays calm in the night, yeah, help me heal and reopen\nWhy are we drifting away from everything we wanted to save?\n\n[Pre-Chorus: Quinn XCII]\nI told you I'd be down forever\nLoving you is danger, but it don't feel wrong\nIt's old news, I should look for better\nFalling back to strangers, leave me hanging on\n\n[Chorus: Quinn XCII]\nFlare guns go off in my head, saying not to call you this late\nStill I dial those numbers every time\nWhy do I replay those messages that you left at the tone last May?\nSlowly wishing you were never mine\n\n[Verse 2: Chelsea Cutler]\nYour face became all I know, I'd try to picture another\nWhy are we frayed at the edge, it's making me feel I’m to blame\nI wanna know what's the deal\nWhere have you been and what do you think of me?\nIs there a new girl silently screaming your name?\n\n[Pre-Chorus: Both, Quinn XCII]\nI told you I'd be down forever\nLoving you is danger, but it don't feel wrong\nIt's old news, I should look for better\nFalling back to strangers, leave me hanging on\nYou leave me hanging on\n\n[Chorus: Both]\nFlare guns go off in my head, saying not to call you this late\nStill I dial those numbers every time\nWhy do I replay those messages that you left at the tone last May?\nSlowly wishing you were never mine\n\n[Post-Chorus: Both]\nI told you I'd be down forever\nLoving you is danger, but it don't feel wrong\nIt's old news, I should look for better\nFalling back to strangers, leave me hanging on\n\n[Bridge: Chelsea Cutler & Quinn XCII]\nSee, I don't know better than to give up on loving\nWhy am I still holding on? I'm still holding on\nAnd I'm way too honest and you make me want it\nLying alone all night long, alone all night long\n\n[Chorus: Quinn XCII & Chelsea Cutler]\nWhen flare guns go off in my head, saying not to call you this late\nStill I dial those numbers every time\nWhy do I replay those messages that you left at the tone last May?\nSlowly wishing you were never mine\n\n[Chorus: Both, (Quinn XCII)]\nFlare guns go off in my head, saying not to call you this late\nStill I dial those numbers every time\n(Still I dial those numbers every time)\nWhy do I replay those messages that you left at the tone last May?\nSlowly wishing you were never mine\n(Slowly wishing you were never mine)"], ["artist_id", 1], ["created_at", "2019-11-08 19:30:32.908894"], ["updated_at", "2019-11-08 19:30:32.908894"]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+Started GET "/" for ::1 at 2019-11-08 11:31:02 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/braedenaustgen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 1750ms (Views: 1726.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/artists?letter=q" for ::1 at 2019-11-08 11:31:05 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (60.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.4ms)
+  Rendered api/artists/_artist.json.jbuilder (0.1ms)
+  Rendered api/artists/index.json.jbuilder (193.0ms)
+Completed 200 OK in 213ms (Views: 27.9ms | ActiveRecord: 177.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 11:32:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 440ms (Views: 430.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/api/artists?letter=q" for ::1 at 2019-11-08 11:32:32 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.5ms)
+  Rendered api/artists/_artist.json.jbuilder (0.1ms)
+  Rendered api/artists/index.json.jbuilder (7.7ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 11:33:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 83ms (Views: 79.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists?letter=1" for ::1 at 2019-11-08 11:33:33 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"1"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE '1%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/index.json.jbuilder (2.1ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.8ms)
+
+
