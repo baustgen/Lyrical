@@ -10,6 +10,7 @@ User.create({ username: "LyricalGenius", password: "password123"})
 
 
 Artist.create({ name: 'Quinn XCII', bio: "Originally under the name Quinn, he released his EP Shlup in 2013. In 2015 he suddenly changed to ‘Quinn XCII’ for the then-new EP Change of Scenery; ‘XCII’ being 92 in Roman numerals and the year he was born."})
+Artist.create({ name: 'Queen', bio: "Arena Rock Band"})
 
 
 Track.create({ title: 'Tough',
