@@ -1,7 +1,7 @@
 import { RECEIVE_ARTIST, RECEIVE_ARTISTS } from "../../actions/artist_actions";
 import { RECEIVE_TRACK, RECEIVE_TRACKS } from "../../actions/track_actions";
 
-const tracksReducer = (state = {}, action) => {
+const artistsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ARTIST:
@@ -17,4 +17,4 @@ const tracksReducer = (state = {}, action) => {
     }
 }
 
-export default tracksReducer;
+export default artistsReducer;

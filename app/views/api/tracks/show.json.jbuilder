@@ -6,6 +6,6 @@ end
 
 json.artists do
     json.set! @track.artist.id do
-        json.extract! @track.artist, :id, :name
+        json.partial! 'api/artists/show', artist: @track.artist
     end
 end

@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/Root';
 // testing
 import { login, logout } from "./actions/session_actions";
+import { requestArtist, requestArtists } from "./actions/artist_actions";
 import { requestTrack, requestTracks } from "./actions/track_actions";
 
 
@@ -31,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.logout = logout;
     window.requestTrack = requestTrack;
     window.requestTracks = requestTracks;
+    window.requestArtist = requestArtist;
+    window.requestArtists = requestArtists;
     
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
