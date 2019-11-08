@@ -1,6 +1,6 @@
 json.tracks do
     json.set! @track.id do
-        json.partial! 'tracks/track', track: @track
+        json.partial! 'api/tracks/track', track: @track
     end
 end
 

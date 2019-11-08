@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
-import { login, logout } from "./actions/session_actions";
 import Root from './components/Root';
+// testing
+import { login, logout } from "./actions/session_actions";
+import { requestTrack, requestTracks } from "./actions/track_actions";
 
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
-    // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
-    window.login = login;
-    window.logout = logout;
-
+    
+    
     if (window.currentUser) {
         const preloadedState = {
             entities: {
@@ -24,6 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         store = configureStore();
     }
+
+    
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    window.login = login;
+    window.logout = logout;
+    window.requestTrack = requestTrack;
+    window.requestTracks = requestTracks;
     
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
