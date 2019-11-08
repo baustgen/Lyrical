@@ -1,13 +1,12 @@
 class Api::ArtistsController < ApplicationController
 
     def index
-
-        if params[:letter]
-            @artists = Artist.where("name ILIKE ?", "#{params[:letter]}%")
+        alpha = ("a".."z").to_a + ("A".."Z").to_a
+        if params[:letter] == '#'
+            @artists = Artist.where(name: "0%".."9%")
         else
-            @artists = Artist.all
+            @artists = Artist.where("name ILIKE ?", "#{params[:letter]}%")
         end
-
         render :index
     end
 
