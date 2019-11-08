@@ -1,6 +1,5 @@
 import React from "react";
 import ArtistsIndexItem from "./artists_index_item";
-import { requestArtists } from "../../actions/artist_actions";
 
 
 class ArtistsIndex extends React.Component {
@@ -9,7 +8,6 @@ class ArtistsIndex extends React.Component {
     }
 
     componentDidMount() {
-        // debugger;
         this.props.requestArtists(this.props.match.params.letter)
     }
 

@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { requestArtist } from "../../actions/artist_actions";
+import { requestArtist, requestArtists } from "../../actions/artist_actions";
 import ArtistsIndex from "./artists_index";
 
 const mapSTP = (state, ownProps) => ({
