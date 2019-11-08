@@ -25,7 +25,7 @@ class ArtistShow extends React.Component {
             <div className="artist-show">
                 <div className="artist-info">
                     <div className="artist-img"></div>
-                    <h2>{this.props.artist.name}</h2>
+                    <h2 className="artist-name">{this.props.artist.name}</h2>
                     <div className="artist-description">
                         <h4>About "{this.props.artist.name}"</h4>
                         <p className="artist-bio">{this.props.artist.bio}</p>

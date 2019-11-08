@@ -7,6 +7,7 @@ import UserLinksContainer from "./nav_bar/user_links_container";
 import NavLinks from "./nav_bar/nav_links";
 import ArtistsIndexContainer from "./artist/artists_index_container";
 import ArtistShowContainer from "./artist/artist_show_container";
+import TrackShowContainer from "./track/track_show_container";
 
 const App = () => (
     <div>
@@ -26,6 +27,7 @@ const App = () => (
             <Switch>
                 <Route path="/artists/:letter/:artistId" component={ArtistShowContainer}/>
                 <Route path="/artists/:letter" component={ArtistsIndexContainer}/>
+                <Route path="/tracks/:trackId" component={TrackShowContainer}/>
                 <Route path="/artists/" component={ArtistsIndexContainer}/>
             </Switch>
         </main>
