@@ -26,6 +26,7 @@ const App = () => (
             <Switch>
                 <Route path="/artists/:letter/:artistId" component={ArtistShowContainer}/>
                 <Route path="/artists/:letter" component={ArtistsIndexContainer}/>
+                <Route path="/artists/" component={ArtistsIndexContainer}/>
             </Switch>
         </main>
     </div>
