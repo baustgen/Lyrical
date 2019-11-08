@@ -6,6 +6,6 @@ end
 
 json.artists do
     json.set! @track.artist.id do
-        json.partial! 'api/artists/show', artist: @track.artist
+        json.partial! 'api/artists/artist', artist: @track.artist
     end
 end
