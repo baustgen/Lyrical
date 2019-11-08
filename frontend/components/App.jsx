@@ -5,6 +5,7 @@ import LoginFormContainer from "./auth/login_form_container";
 import AuthRoute from "../util/route_util";
 import UserLinksContainer from "./nav_bar/user_links_container";
 import NavLinks from "./nav_bar/nav_links";
+import ArtistsIndexContainer from "./artist/artists_index_container";
 
 const App = () => (
     <div>
@@ -18,6 +19,8 @@ const App = () => (
             </div>
         </header>
         <main>
+
+            <Route path="/artists/:letter" component={ArtistsIndexContainer}/>
             <AuthRoute path="/signup" component={SignupFormContainer}/>
             <AuthRoute path="/login" component={LoginFormContainer}/>
         </main>

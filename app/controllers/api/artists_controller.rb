@@ -2,7 +2,7 @@ class Api::ArtistsController < ApplicationController
 
     def index
         alpha = ("a".."z").to_a + ("A".."Z").to_a
-        if params[:letter] == '#'
+        if (params[:letter] == '#')
             @artists = Artist.where(name: "0%".."9%")
         else
             @artists = Artist.where("name ILIKE ?", "#{params[:letter]}%")
