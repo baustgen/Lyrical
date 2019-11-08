@@ -1,11 +1,7 @@
 class Api::TracksController < ApplicationController
 
     def index
-        if params[:limit]
-            @tracks = Track.includes(:artist).order(:id).limit(params[:limit])
-        else
-            @tracks = Track.all
-        end
+        @tracks = Track.all
         render :index
     end
 
