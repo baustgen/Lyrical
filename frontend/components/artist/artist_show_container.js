@@ -2,26 +2,8 @@ import { connect } from "react-redux";
 import { requestArtist } from "../../actions/artist_actions";
 import ArtistShow from "./artist_show";
 
-const _defaultState = {
-    entities: {
-        tracks: {
-            id: 0,
-            title: "",
-        },
-        artists: {
-            default: {
-                id: 0,
-                name: "",
-                bio: "",
-            }
-        }
-    }
-}
-
-const mapSTP = (state = _defaultState, ownProps) => {
-    debugger;
+const mapSTP = (state, ownProps) => {
     return {
-        // artist: Object.values(state.entities.artists)[0],
         artist: state.entities.artists[ownProps.match.params.artistId],
         tracks: state.entities.tracks,
     }
