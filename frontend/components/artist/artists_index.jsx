@@ -1,5 +1,6 @@
 import React from "react";
 import ArtistsIndexItem from "./artists_index_item";
+import { Link } from "react-router-dom";
 
 
 class ArtistsIndex extends React.Component {
@@ -25,6 +26,9 @@ class ArtistsIndex extends React.Component {
 
         return (
             <div className="artists-index-container">
+                <p className='artists-index-header'><Link to='/artists'>Artists</Link> > <span className="current-letter">{this.props.match.params.letter}</span></p>
+
+                <h2>{this.props.match.params.letter} Artists on Lyrical</h2>
                 <ul className="artists-index">
                     {artistItems}
                 </ul>

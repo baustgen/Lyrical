@@ -16544,3 +16544,96 @@ Processing by Api::ArtistsController#index as JSON
 Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for ::1 at 2019-11-08 16:52:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 94ms (Views: 90.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-08 16:52:19 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (55.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (1.0ms)
+  Rendered api/artists/_artist.json.jbuilder (0.2ms)
+  Rendered api/artists/index.json.jbuilder (61.8ms)
+Completed 200 OK in 73ms (Views: 16.3ms | ActiveRecord: 55.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 16:54:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (18.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 640ms (Views: 617.7ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 16:54:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 591ms (Views: 568.7ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-08 16:54:49 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (30.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.4ms)
+  Rendered api/artists/_artist.json.jbuilder (0.1ms)
+  Rendered api/artists/index.json.jbuilder (36.0ms)
+Completed 200 OK in 47ms (Views: 13.9ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 16:56:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 448ms (Views: 441.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-08 16:56:38 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (36.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.8ms)
+  Rendered api/artists/_artist.json.jbuilder (0.2ms)
+  Rendered api/artists/index.json.jbuilder (42.8ms)
+Completed 200 OK in 52ms (Views: 14.7ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-08 16:57:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 495ms (Views: 491.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-08 16:57:58 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (4.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.4ms)
+  Rendered api/artists/_artist.json.jbuilder (0.3ms)
+  Rendered api/artists/index.json.jbuilder (10.5ms)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 4.3ms)
+
+
