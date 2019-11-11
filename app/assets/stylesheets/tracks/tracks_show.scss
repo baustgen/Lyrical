@@ -1,0 +1,62 @@
+.track-show {
+    width: 100%;
+    max-width: 970px;
+    margin: auto;
+    min-height: 750px;
+    background-color: white;
+}
+
+.track-show-img {
+    position: relative;
+    left: -15px;
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    border: 2px solid rgb(175, 175, 175);
+    background-color: seagreen;
+}
+
+.track-info-container {
+    display: flex;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    background-color: salmon;
+}
+
+.track-info p {
+    padding: 7px;
+}
+
+.track-title {
+    font-size: 30px;
+    color: rgb(255, 255, 50);
+}
+
+.track-artist {
+    font-size: 18px;
+    color: white;
+}
+
+.track-album {
+    font-size: 14px;
+    color: rgb(70, 70, 70);
+}
+
+.lyrics-header {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(150, 150, 150);
+}
+
+.lyrics-text {
+    padding: 10px 0;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.track-content {
+    width: 50%;
+    padding: 10px;
+}

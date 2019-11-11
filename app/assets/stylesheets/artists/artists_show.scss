@@ -4,7 +4,6 @@
     margin: auto;
     min-height: 750px;
     display: flex;
-
 }
 
 .artist-info {
@@ -89,9 +88,10 @@
     margin: 5px;
 }
 
-.track-title {
+.artist-tracks .track-title {
     font-size: 20px;
     font-weight: 700;
+    color: black;
 }
 
 .track-album {
