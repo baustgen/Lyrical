@@ -54,15 +54,38 @@
     height: 20px;
 }
 
-.nav-links {
+.header-links-container {
+    display: flex;
+    justify-content: center;
+}
+
+.page-links {
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 300;
+}
+
+.page-links a:hover {
+    color: rgb(255, 255, 50);
+}
+
+.page-links li {
+    padding-right: 30px;
+    text-align: center center;
+}
+
+.ext-links {
     display: flex;
     width: 80px;
+    height: 22px;
     justify-content: space-between;
     border-left: 2px solid white;
-    padding-left: 10px;
+    padding-left: 30px;
     text-align: center;
 }
-.nav-links img {
+
+.ext-links img {
     display: inline-block;
     height: 100%;
 }
