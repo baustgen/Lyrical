@@ -14,4 +14,5 @@ class Artist < ApplicationRecord
     validates :name, uniqueness: true
 
     has_many :tracks
+    has_one_attached :image
 end

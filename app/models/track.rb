@@ -15,4 +15,5 @@ class Track < ApplicationRecord
     validates :title, :album, :lyrics, :artist_id, presence: true
     
     belongs_to :artist
+    has_one_attached :image
 end
