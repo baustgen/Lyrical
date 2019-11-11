@@ -6,6 +6,12 @@ import { Link } from "react-router-dom";
 class ArtistsIndex extends React.Component {
     constructor(props) {
         super(props)
+        if (this.props.match.params.letter === undefined) {
+            this.letter = "All";
+        }
+        else {
+            this.letter = this.props.match.params.letter.toUpperCase()
+        }
     }
 
     componentDidMount() {
@@ -25,13 +31,15 @@ class ArtistsIndex extends React.Component {
         })
 
         return (
-            <div className="artists-index-container">
-                <p className='artists-index-header'><Link to='/artists'>Artists</Link> > <span className="current-letter">{this.props.match.params.letter}</span></p>
+            <div className="black-out">
+                <div className="artists-index-container">
+                    <p className='artists-index-breadcrumbs'>Artists > {this.letter}</p>
 
-                <h2>{this.props.match.params.letter} Artists on Lyrical</h2>
-                <ul className="artists-index">
-                    {artistItems}
-                </ul>
+                    <h2 className='artists-index-header'>{this.letter} Artists on Lyrical</h2>
+                    <ul className="artists-index">
+                        {artistItems}
+                    </ul>
+                </div>
             </div>
         )
     }

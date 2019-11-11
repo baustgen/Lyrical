@@ -1,3 +1,35 @@
 .artists-index-container {
     margin: 50px 0 0 50px;
+    color: rgb(0, 173, 226);
+}
+
+.artists-index-container a:hover {
+    color: rgb(136, 207, 255);
+}
+
+.artists-index-breadcrumbs {
+    font-size: 16px;
+    color: rgb(150, 150, 150);
+}
+
+.artists-index-breadcrumbs a {
+    color: rgb(0, 173, 226);
+}
+
+.artists-index-header {
+    font-size: 34px;
+    font-weight: 900;
+    color: white;
+    margin: 15px 0;
+}
+
+.artists-index {
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.artist-index-item {
+    // display: block;
+    margin: 20px 0;
 }
