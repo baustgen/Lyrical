@@ -12,6 +12,9 @@ class UserLinks extends React.Component {
             return (
                 <ul className="user-links">
                     <li>
+                        <span className="nav-user">{this.props.currentUser.username}</span>
+                    </li>
+                    <li>
                         <a className="logout-link" onClick={this.logout}>LOG OUT</a>
                     </li>
                 </ul>
