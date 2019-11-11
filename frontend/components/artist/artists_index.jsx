@@ -18,6 +18,18 @@ class ArtistsIndex extends React.Component {
         this.props.requestArtists(this.props.match.params.letter)
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.letter != prevProps.match.params.letter) {
+            this.props.requestArtists(this.props.match.params.letter)
+            if (this.props.match.params.letter === undefined) {
+                this.letter = "All";
+            }
+            else {
+                this.letter = this.props.match.params.letter.toUpperCase()
+            }
+        }
+    }
+
     render() {
 
         let artistArray = Object.values(this.props.artists);
@@ -33,7 +45,7 @@ class ArtistsIndex extends React.Component {
         return (
             <div className="black-out">
                 <div className="artists-index-container">
-                    <p className='artists-index-breadcrumbs'>Artists > {this.letter}</p>
+                    <p className='artists-index-breadcrumbs'><Link to='/artists'>Artists</Link> > <span className="current-letter">{this.letter}</span></p>
 
                     <h2 className='artists-index-header'>{this.letter} Artists on Lyrical</h2>
                     <ul className="artists-index">
