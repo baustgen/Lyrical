@@ -1,0 +1,28 @@
+.footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    color: rgb(0, 173, 226);
+}
+
+.footer-heading {
+    margin: 10px;
+}
+
+.letter-index {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer a:hover {
+    color: rgb(136, 207, 255)
+}
+
+.footer-letter {
+    margin: 5px;
+}
