@@ -34,7 +34,7 @@ class TrackShow extends React.Component {
         return (
             <div className="track-show">
                 <div className="track-info-container">
-                    <div className="track-show-img"></div>
+                    <img className="track-show-img" src={this.props.track.imageUrl}/>
                     <div className="track-info">
                         <p className="track-title">{this.props.track.title}</p>
                         <p className="track-artist"><Link to={`/artists/${this.props.artist.name[0]}/${this.props.track.artistId}`}>{this.props.artist.name}</Link></p>

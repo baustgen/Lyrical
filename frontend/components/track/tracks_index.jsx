@@ -9,7 +9,7 @@ class TracksIndex extends React.Component {
                 <li key={track.id}>
                     <Link to={'/tracks/' + track.id}>
                         <div className="track-item">
-                            <div className="track-img"></div>
+                            <img className="track-img" src={track.imageUrl}/>
                             <div className="track-info">
                                 <p className="track-title">{track.title}</p>
                                 <p className="track-album">{track.album}</p>

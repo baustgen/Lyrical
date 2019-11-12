@@ -22,7 +22,7 @@
     width: 100%;
     background-color: salmon;
     margin-bottom: 25px;
-    border: 3px solid black;
+    border: 3px solid white;
     border-radius: 100%;
 }
 
@@ -51,7 +51,7 @@
 .artist-tracks {
     box-sizing: border-box;
     width: 55%;
-    margin: 225px 15px 0 20px;
+    margin: 225px 0 0 20px;
 }
 
 .artist-tracks > ul {
@@ -63,7 +63,7 @@
 
 .artist-tracks li {
     width: 50%;
-    min-width: 200px;
+    min-width: 225px;
 }
 
 .artist-tracks > p {
@@ -74,18 +74,14 @@
 
 .track-item {
     display: flex;
+    height: 75px;
     margin: 5px;
     background-color: white;
     color: black;
 }
 
 .track-img {
-    width: 75px;
-    height: 75px;
-}
-
-.track-info {
-    margin: 5px;
+    height: 100%;
 }
 
 .artist-tracks .track-title {
@@ -97,4 +93,8 @@
 .track-album {
     font-size: 12px;
     padding-top: 5px;
+}
+
+.track-info {
+    overflow: scroll;
 }
