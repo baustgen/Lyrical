@@ -26187,3 +26187,379 @@ Processing by Api::TracksController#show as JSON
 Completed 200 OK in 470ms (Views: 125.8ms | ActiveRecord: 289.3ms)
 
 
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-11 16:50:55 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (4.8ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (9.2ms)
+  Rendered api/artists/index.json.jbuilder (18.7ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 2.2ms)
+
+
+
+Module::DelegationError - to_model delegated to attachment, but attachment is nil:
+  app/views/api/artists/_artist.json.jbuilder:2:in `_app_views_api_artists__artist_json_jbuilder__4148761630780759385_70287956925120'
+  app/views/api/artists/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287923760420'
+  app/views/api/artists/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287923760420'
+  app/views/api/artists/index.json.jbuilder:2:in `block in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287923760420'
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___4318897950390265681_70287923760420'
+  app/controllers/api/artists_controller.rb:10:in `index'
+
+Started GET "/api/artists?letter=K" for ::1 at 2019-11-11 16:50:59 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"K"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'K%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (8.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (14.9ms)
+  Rendered api/artists/index.json.jbuilder (19.3ms)
+Completed 200 OK in 33ms (Views: 20.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-11 16:51:01 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (4.7ms)
+  [1m[36mActiveStorage::Attachment Load (8.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (16.7ms)
+  Rendered api/artists/index.json.jbuilder (26.6ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 9.3ms)
+
+
+
+Module::DelegationError - to_model delegated to attachment, but attachment is nil:
+  app/views/api/artists/_artist.json.jbuilder:2:in `_app_views_api_artists__artist_json_jbuilder__4148761630780759385_70287956657500'
+  app/views/api/artists/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287916489480'
+  app/views/api/artists/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287916489480'
+  app/views/api/artists/index.json.jbuilder:2:in `block in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287916489480'
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___4318897950390265681_70287916489480'
+  app/controllers/api/artists_controller.rb:10:in `index'
+
+Started GET "/api/artists?letter=K" for ::1 at 2019-11-11 16:51:05 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"K"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'K%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (5.8ms)
+  Rendered api/artists/index.json.jbuilder (9.4ms)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-11 16:51:07 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (5.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (6.9ms)
+  Rendered api/artists/index.json.jbuilder (16.4ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.4ms)
+
+
+
+Module::DelegationError - to_model delegated to attachment, but attachment is nil:
+  app/views/api/artists/_artist.json.jbuilder:2:in `_app_views_api_artists__artist_json_jbuilder__4148761630780759385_70287978154540'
+  app/views/api/artists/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287978202640'
+  app/views/api/artists/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287978202640'
+  app/views/api/artists/index.json.jbuilder:2:in `block in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287978202640'
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___4318897950390265681_70287978202640'
+  app/controllers/api/artists_controller.rb:10:in `index'
+
+Started GET "/" for ::1 at 2019-11-11 16:53:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rcYVZ7mnz43vMo0v5ch8Xw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 88ms (Views: 84.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-11 16:53:42 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (27.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (160.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (168.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (13.1ms)
+  Rendered api/artists/index.json.jbuilder (214.0ms)
+Completed 500 Internal Server Error in 224ms (ActiveRecord: 190.6ms)
+
+
+
+Module::DelegationError - to_model delegated to attachment, but attachment is nil:
+  app/views/api/artists/_artist.json.jbuilder:2:in `_app_views_api_artists__artist_json_jbuilder__4148761630780759385_70287976794600'
+  app/views/api/artists/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287976859400'
+  app/views/api/artists/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287976859400'
+  app/views/api/artists/index.json.jbuilder:2:in `block in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287976859400'
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___4318897950390265681_70287976859400'
+  app/controllers/api/artists_controller.rb:10:in `index'
+
+Started GET "/" for ::1 at 2019-11-11 16:53:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rcYVZ7mnz43vMo0v5ch8Xw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 98ms (Views: 84.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-11-11 16:54:00 -0800
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (13.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE '%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (11.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (3.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (22.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (23.8ms)
+  Rendered api/artists/index.json.jbuilder (77.0ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 20.2ms)
+
+
+
+Module::DelegationError - to_model delegated to attachment, but attachment is nil:
+  app/views/api/artists/_artist.json.jbuilder:2:in `_app_views_api_artists__artist_json_jbuilder__4148761630780759385_70287917407160'
+  app/views/api/artists/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287917535340'
+  app/views/api/artists/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287917535340'
+  app/views/api/artists/index.json.jbuilder:2:in `block in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287917535340'
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___4318897950390265681_70287917535340'
+  app/controllers/api/artists_controller.rb:10:in `index'
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-11 16:54:03 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (6.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (25.9ms)
+  Rendered api/artists/index.json.jbuilder (56.3ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 2.4ms)
+
+
+
+Module::DelegationError - to_model delegated to attachment, but attachment is nil:
+  app/views/api/artists/_artist.json.jbuilder:2:in `_app_views_api_artists__artist_json_jbuilder__4148761630780759385_70287953495960'
+  app/views/api/artists/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287953891960'
+  app/views/api/artists/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287953891960'
+  app/views/api/artists/index.json.jbuilder:2:in `block in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287953891960'
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___4318897950390265681_70287953891960'
+  app/controllers/api/artists_controller.rb:10:in `index'
+
+Started GET "/api/artists?letter=q" for ::1 at 2019-11-11 16:54:12 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (4.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (32.9ms)
+  Rendered api/artists/index.json.jbuilder (41.2ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.8ms)
+
+
+
+Module::DelegationError - to_model delegated to attachment, but attachment is nil:
+  app/views/api/artists/_artist.json.jbuilder:2:in `_app_views_api_artists__artist_json_jbuilder__4148761630780759385_70287971916100'
+  app/views/api/artists/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287971964080'
+  app/views/api/artists/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287971964080'
+  app/views/api/artists/index.json.jbuilder:2:in `block in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287971964080'
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___4318897950390265681_70287971964080'
+  app/controllers/api/artists_controller.rb:10:in `index'
+
+Started GET "/api/artists" for ::1 at 2019-11-11 16:54:23 -0800
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE '%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (6.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (2.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (29.0ms)
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (10.3ms)
+  Rendered api/artists/index.json.jbuilder (50.6ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 5.7ms)
+
+
+
+Module::DelegationError - to_model delegated to attachment, but attachment is nil:
+  app/views/api/artists/_artist.json.jbuilder:2:in `_app_views_api_artists__artist_json_jbuilder__4148761630780759385_70287977793720'
+  app/views/api/artists/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287977841280'
+  app/views/api/artists/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287977841280'
+  app/views/api/artists/index.json.jbuilder:2:in `block in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287977841280'
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___4318897950390265681_70287977841280'
+  app/controllers/api/artists_controller.rb:10:in `index'
+
+Started GET "/" for ::1 at 2019-11-11 16:54:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rcYVZ7mnz43vMo0v5ch8Xw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 77ms (Views: 72.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-11-11 16:54:51 -0800
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE '%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (7.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (19.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (28.3ms)
+  Rendered api/artists/index.json.jbuilder (61.5ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 5.1ms)
+
+
+
+Module::DelegationError - to_model delegated to attachment, but attachment is nil:
+  app/views/api/artists/_artist.json.jbuilder:2:in `_app_views_api_artists__artist_json_jbuilder__4148761630780759385_70287970376440'
+  app/views/api/artists/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287970436380'
+  app/views/api/artists/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287970436380'
+  app/views/api/artists/index.json.jbuilder:2:in `block in _app_views_api_artists_index_json_jbuilder___4318897950390265681_70287970436380'
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___4318897950390265681_70287970436380'
+  app/controllers/api/artists_controller.rb:10:in `index'
+
+Started GET "/" for ::1 at 2019-11-11 16:59:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rcYVZ7mnz43vMo0v5ch8Xw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 138ms (Views: 131.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-11-11 16:59:35 -0800
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (90.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE '%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (166.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (16.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (189.6ms)
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (10.9ms)
+  [1m[36mActiveStorage::Attachment Load (25.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (29.3ms)
+  Rendered api/artists/index.json.jbuilder (357.3ms)
+Completed 200 OK in 368ms (Views: 63.0ms | ActiveRecord: 303.6ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-11 16:59:39 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (3.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (10.7ms)
+  Rendered api/artists/index.json.jbuilder (18.2ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/artists?letter=K" for ::1 at 2019-11-11 16:59:41 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"K"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'K%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Artist"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/artists/_artist.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (5.0ms)
+  Rendered api/artists/index.json.jbuilder (15.6ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 1.4ms)
+
+
