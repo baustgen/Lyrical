@@ -20,7 +20,7 @@ class TrackShow extends React.Component {
 
 
     render() {
-        if (this.props.track === undefined || this.props.artist === undefined) return null;
+        if (this.props.track === undefined || this.props.artists[this.props.track.artistId] === undefined) return null;
 
         let lyrics = this.props.track.lyrics.split("\n").map((line) => {
             return (
@@ -37,7 +37,11 @@ class TrackShow extends React.Component {
                     <img className="track-show-img" src={this.props.track.imageUrl}/>
                     <div className="track-info">
                         <p className="track-title">{this.props.track.title}</p>
-                        <p className="track-artist"><Link to={`/artists/${this.props.artist.name[0]}/${this.props.track.artistId}`}>{this.props.artist.name}</Link></p>
+                        <p className="track-artist">
+                            <Link to={`/artists/${this.props.artists[this.props.track.artistId].name[0]}/${this.props.track.artistId}`}>
+                                {this.props.artists[this.props.track.artistId].name}
+                            </Link>
+                        </p>
                         <p className="track-album">{this.props.track.album}</p>
                     </div>
                 </div>

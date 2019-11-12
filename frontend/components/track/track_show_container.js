@@ -4,7 +4,7 @@ import TrackShow from "./track_show";
 
 const mapSTP = (state, ownProps) => ({
     track: state.entities.tracks[ownProps.match.params.trackId],
-    artist: state.entities.artists[state.entities.tracks[ownProps.match.params.trackId].artistId],
+    artists: state.entities.artists,
 });
 
 const mapDTP = (dispatch, ownProps) => ({
