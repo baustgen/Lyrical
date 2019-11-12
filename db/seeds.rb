@@ -19,7 +19,14 @@ quill = Artist.create({ name: 'Kid Quill', bio: "Kid Quill is an American Hip Ho
 quill_img = open('https://lyrical-seeds.s3.amazonaws.com/kid-quill.jpg')
 quill.image.attach(io: quill_img, filename: 'kid-quill.jpg')
 
-Artist.create({ name: 'Queen', bio: "Arena Rock Band"})
+queen = Artist.create({ name: 'Queen', bio: "Formed in 1970, Queen was a British rock band whose classic line-up consisted of Freddie Mercury on lead vocals, Brian May on lead guitar, Roger Taylor on drums, and John Deacon on bass. Although Mercury and May wrote the bulk of the band’s material, all four contributed to the songwriting, churning out huge hits. Initially a progressive rock band with strong metal influences, their sound evolved dramatically over time. The band went on to refine, if not define “stadium rock,” as they grew to become a legendary musical phenomenon."})
+queen_img = open('https://lyrical-seeds.s3.amazonaws.com/queen.jpg')
+queen.image.attach(io: queen_img, filename: 'queen.jpg')
+
+
+
+
+# TRACKS
 
 
 tough = Track.create({ title: 'Tough',
@@ -165,4 +172,58 @@ Slowly wishing you were never mine
     artist_id: 1
 })
 flare_guns_img = open('https://lyrical-seeds.s3.amazonaws.com/flare_guns.jpg')
-flare_guns.image.attach(io: flare_guns_img, filename: 'flare_guns.png')
+flare_guns.image.attach(io: flare_guns_img, filename: 'flare_guns.jpg')
+
+champions = Track.create({ title: 'We Are The Champions',
+    album: "News of the World",
+    lyrics: "[Verse 1]
+I've paid my dues
+Time after time
+I've done my sentence
+But committed no crime
+And bad mistakes
+I've made a few
+I've had my share of sand kicked in my face
+But I've come through
+(And I need to go on and on, and on, and on)
+
+[Chorus]
+We are the champions, my friends
+And we'll keep on fighting till the end
+We are the champions
+We are the champions
+No time for losers
+'Cause we are the champions
+Of the world
+
+[Verse 2]
+I've taken my bows
+And my curtain calls
+You brought me fame and fortune and everything that goes with it
+I thank you all
+But it's been no bed of roses
+No pleasure cruise
+I consider it a challenge before the whole human race
+And I ain't gonna lose
+(And I need just go on and on, and on, and on)
+
+[Chorus]
+We are the champions, my friends
+And we'll keep on fighting till the end
+We are the champions
+We are the champions
+No time for losers
+'Cause we are the champions
+Of the world
+
+[Outro]
+We are the champions, my friends
+And we'll keep on fighting till the end, oh
+We are the champions
+We are the champions
+No time for losers
+'Cause we are the champions...",
+    artist_id: 3
+})
+champions_img = open('https://lyrical-seeds.s3.amazonaws.com/champions.jpg')
+champions.image.attach(io: champions_img, filename: 'champions.jpg')
