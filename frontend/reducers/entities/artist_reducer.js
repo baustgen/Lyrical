@@ -5,11 +5,11 @@ const artistsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ARTIST:
-            return Object.assign({}, action.payload.artists)
+            return Object.assign({}, state, action.payload.artists)
         case RECEIVE_ARTISTS:
             return Object.assign({}, action.payload.artists)
         case RECEIVE_TRACK:
-            return Object.assign({}, action.payload.artists)
+            return Object.assign({}, state, action.payload.artists)
         case RECEIVE_TRACKS:
             return Object.assign({}, action.payload.artists)
         default:

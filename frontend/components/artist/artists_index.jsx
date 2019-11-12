@@ -33,17 +33,18 @@ class ArtistsIndex extends React.Component {
     render() {
 
         let artistArray = Object.values(this.props.artists);
-        let artistItems = artistArray.map((artist) => {
+        if (this.props.artists.order === undefined) return null;
+        let artistItems = this.props.artists.order.map(({ id }) => {
             return (
                 <ArtistsIndexItem 
-                    artist={artist} 
-                    key={artist.id} 
+                    artist={this.props.artists[id]} 
+                    key={id} 
                 />
             )
         })
 
         return (
-            <div className="black-out">
+            <div className="gray-out">
                 <div className="artists-index-container">
                     <p className='artists-index-breadcrumbs'><Link to='/artists'>Artists</Link> > <span className="current-letter">{this.letter}</span></p>
 
