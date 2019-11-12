@@ -6,14 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 User.create({ username: "LyricalGenius", password: "password123"})
 
 
-Artist.create({ name: 'Quinn XCII', bio: "Originally under the name Quinn, he released his EP Shlup in 2013. In 2015 he suddenly changed to ‘Quinn XCII’ for the then-new EP Change of Scenery; ‘XCII’ being 92 in Roman numerals and the year he was born."})
+quinn = Artist.create({ name: 'Quinn XCII', bio: "Originally under the name Quinn, he released his EP Shlup in 2013. In 2015 he suddenly changed to ‘Quinn XCII’ for the then-new EP Change of Scenery; ‘XCII’ being 92 in Roman numerals and the year he was born. This was partly due to copyright reasons prohibiting just the name Quinn. He later released the EP Bloom in 2016, and on September 15, 2017 released his debut album The Story of Us."})
+quinn_img = open('https://s3.amazonaws.com/lyrical-dev/quinn-xcii.jpg')
+quinn.attach(io: quinn_img, filename: 'quinn-xcii.jpg')
+
+quill = Artist.create({ name: 'Kid Quill', bio: "Kid Quill is an American Hip Hop artist from Shelbyville, Indiana. His debut album “Ear to Ear” made the Top 40 Rap/Hip-Hop charts in 2014 and he later followed that up with “The Name Above the Title” which charted Top 10 on iTunes Rap/Hip-Hop charts and was a Billboard Heatseeker."})
+quill_img = open('https://s3.amazonaws.com/lyrical-dev/kid-quill.jpg')
+quill.attach(io: quill_img, filename: 'kid-quill.jpg')
+
 Artist.create({ name: 'Queen', bio: "Arena Rock Band"})
 
 
-Track.create({ title: 'Tough',
+tough = Track.create({ title: 'Tough',
     album: "From Michigan With Love",
     lyrics: "[Verse 1: Quinn XCII]
 Maybe it's 'cause your mom never kissed you
@@ -85,6 +94,8 @@ Oh, so mess me up
 I know you're not so tough",
     artist_id: 1
 })
+tough_img = open('https://s3.amazonaws.com/lyrical-dev/tough.png')
+tough.attach(io: tough_img, filename: 'tough.png')
 
 Track.create({ title: 'Flare Guns',
     album: "The Story of Us",
@@ -153,3 +164,5 @@ Slowly wishing you were never mine
 (Slowly wishing you were never mine)",
     artist_id: 1
 })
+flare_guns_img = open('https://s3.amazonaws.com/lyrical-seeds/flare_guns.png')
+flare_guns.attach(io: flare_guns_img, filename: 'flare_guns.png')
