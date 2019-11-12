@@ -24066,3 +24066,147 @@ Completed 200 OK in 255ms (Views: 0.2ms | ActiveRecord: 14.0ms)
 
   [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[36mArtist Load (4.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Started GET "/api/artists" for ::1 at 2019-11-11 15:45:59 -0800
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE '%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.7ms)
+  Rendered api/artists/_artist.json.jbuilder (0.1ms)
+  Rendered api/artists/index.json.jbuilder (48.1ms)
+Completed 200 OK in 77ms (Views: 24.8ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/api/artists?letter=K" for ::1 at 2019-11-11 15:46:02 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"K"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'K%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/index.json.jbuilder (1.9ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-11 15:46:04 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.6ms)
+  Rendered api/artists/_artist.json.jbuilder (0.1ms)
+  Rendered api/artists/index.json.jbuilder (5.2ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/1" for ::1 at 2019-11-11 15:46:08 -0800
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:14
+  [1m[36mTrack Load (1.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/controllers/api/artists_controller.rb:14
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/_artist.json.jbuilder (1.0ms)
+  Rendered api/tracks/_track.json.jbuilder (0.6ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/artists/show.json.jbuilder (9.2ms)
+Completed 200 OK in 81ms (Views: 17.3ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/api/tracks/1" for ::1 at 2019-11-11 15:46:27 -0800
+Processing by Api::TracksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tracks_controller.rb:9
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/api/tracks_controller.rb:9
+  Rendering api/tracks/show.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  Rendered api/artists/_artist.json.jbuilder (0.4ms)
+  Rendered api/tracks/show.json.jbuilder (4.0ms)
+Completed 200 OK in 24ms (Views: 14.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/artists/1" for ::1 at 2019-11-11 15:46:41 -0800
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:14
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/controllers/api/artists_controller.rb:14
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/_artist.json.jbuilder (0.5ms)
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  Rendered api/tracks/_track.json.jbuilder (0.4ms)
+  Rendered api/artists/show.json.jbuilder (7.3ms)
+Completed 200 OK in 24ms (Views: 15.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/tracks/2" for ::1 at 2019-11-11 15:46:42 -0800
+Processing by Api::TracksController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTrack Load (2.2ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/tracks_controller.rb:9
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/api/tracks_controller.rb:9
+  Rendering api/tracks/show.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.7ms)
+  Rendered api/artists/_artist.json.jbuilder (1.2ms)
+  Rendered api/tracks/show.json.jbuilder (6.4ms)
+Completed 200 OK in 20ms (Views: 12.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/artists?letter=Q" for ::1 at 2019-11-11 15:58:13 -0800
+Processing by Api::ArtistsController#index as JSON
+  Parameters: {"letter"=>"Q"}
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (2.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE 'Q%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (1.3ms)
+  Rendered api/artists/_artist.json.jbuilder (0.2ms)
+  Rendered api/artists/index.json.jbuilder (14.5ms)
+Completed 200 OK in 28ms (Views: 21.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-11-11 15:58:15 -0800
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE (name ILIKE '%')[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/_artist.json.jbuilder (0.5ms)
+  Rendered api/artists/_artist.json.jbuilder (0.1ms)
+  Rendered api/artists/index.json.jbuilder (6.9ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/1" for ::1 at 2019-11-11 15:58:17 -0800
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:14
+  [1m[36mTrack Load (1.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/controllers/api/artists_controller.rb:14
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/_artist.json.jbuilder (0.6ms)
+  Rendered api/tracks/_track.json.jbuilder (1.3ms)
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  Rendered api/artists/show.json.jbuilder (10.8ms)
+Completed 200 OK in 39ms (Views: 20.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/tracks/1" for ::1 at 2019-11-11 15:58:26 -0800
+Processing by Api::TracksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tracks_controller.rb:9
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/api/tracks_controller.rb:9
+  Rendering api/tracks/show.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.6ms)
+  Rendered api/artists/_artist.json.jbuilder (0.5ms)
+  Rendered api/tracks/show.json.jbuilder (5.0ms)
+Completed 200 OK in 26ms (Views: 14.8ms | ActiveRecord: 0.8ms)
+
+
