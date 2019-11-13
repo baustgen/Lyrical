@@ -3,6 +3,7 @@ export const RECEIVE_ANNOTATION = "RECEIVE_ANNOTATION"
 export const RECEIVE_ANNOTATIONS = "RECEIVE_ANNOTATIONS"
 export const REMOVE_ANNOTATION = "REMOVE_ANNOTATION"
 export const RECEIVE_ANNOTATIONS_ERRORS = "RECEIVE_ANNOTATIONS_ERRORS"
+export const REMOVE_ANNOTATIONS_ERRORS = "REMOVE_ANNOTATIONS_ERRORS"
 
 
 export const receiveAnnotation = (payload) => ({
@@ -18,6 +19,10 @@ export const receiveAnnotations = (payload) => ({
 export const removeAnnotation = (payload) => ({
     type: REMOVE_ANNOTATION,
     payload
+})
+
+export const removeErrors = () => ({
+    type: REMOVE_ANNOTATIONS_ERRORS,
 })
 
 export const receiveErrors = (payload) => ({
