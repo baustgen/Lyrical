@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :artists, only: [:index, :show], defaults: {format: :json}
     resources :tracks, only: [:index, :show], defaults: {format: :json}
+    resources :annotations, only: [:create, :update, :destroy], defaults: {format: :json}
   end
 end
