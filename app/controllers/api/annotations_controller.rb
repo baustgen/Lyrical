@@ -1,6 +1,7 @@
 class Api::AnnotationsController < ApplicationController
     def create
         @annotation = Annotation.new(annotation_params)
+        @annotation[:user_id] = current_user.id
         if @annotation.save
             render :show
         else
@@ -27,6 +28,6 @@ class Api::AnnotationsController < ApplicationController
     private
     
     def annotation_params
-        params.require(:annotation).permit(:body, :start_index, :end_index, :user_id, :track_id)
+        params.require(:annotation).permit(:body, :start_index, :end_index, :track_id)
     end
 end
