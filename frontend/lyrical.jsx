@@ -6,6 +6,7 @@ import Root from './components/Root';
 import { login, logout } from "./actions/session_actions";
 import { requestArtist, requestArtists } from "./actions/artist_actions";
 import { requestTrack, requestTracks } from "./actions/track_actions";
+import { createAnnotation, updateAnnotation, deleteAnnotation } from './actions/annotation_actions';
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,6 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.requestTracks = requestTracks;
     window.requestArtist = requestArtist;
     window.requestArtists = requestArtists;
+    window.createAnnotation = createAnnotation;
+    window.updateAnnotation = updateAnnotation;
+    window.deleteAnnotation = deleteAnnotation;
     
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);

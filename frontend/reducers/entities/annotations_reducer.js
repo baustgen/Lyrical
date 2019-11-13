@@ -1,4 +1,5 @@
 import { RECEIVE_ANNOTATIONS, RECEIVE_ANNOTATION, REMOVE_ANNOTATION } from "../../actions/annotation_actions";
+import { RECEIVE_TRACK } from "../../actions/track_actions";
 
 const annotationsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -7,6 +8,9 @@ const annotationsReducer = (state = {}, action) => {
             return Object.assign({}, state, action.payload.annotations)
         case RECEIVE_ANNOTATIONS:
             return Object.assign({}, action.payload.annotations)
+        case REMOVE_ANNOTATION:
+            newState = Object.assign({}, state)
+            delete newState[action.payload.annotations.id]
         case RECEIVE_TRACK:
             return Object.assign({}, action.payload.annotations)
         default:
