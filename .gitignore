@@ -4,6 +4,7 @@ bundle.js.map
 
 # Ignore all logfiles and tempfiles.
 /log/*
+log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
