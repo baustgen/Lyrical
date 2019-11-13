@@ -5,14 +5,15 @@ const annotationsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ANNOTATION:
-            return Object.assign({}, state, action.payload.annotations)
+            return Object.assign({}, state, action.payload.annotations);
         case RECEIVE_ANNOTATIONS:
-            return Object.assign({}, action.payload.annotations)
+            return Object.assign({}, action.payload.annotations);
         case REMOVE_ANNOTATION:
-            newState = Object.assign({}, state)
-            delete newState[action.payload.annotations.id]
+            let newState = Object.assign({}, state);
+            delete newState[action.payload.annotations.id];
+            return newState;
         case RECEIVE_TRACK:
-            return Object.assign({}, action.payload.annotations)
+            return Object.assign({}, action.payload.annotations);
         default:
             return state;
     }

@@ -25,9 +25,9 @@ export const removeErrors = () => ({
     type: REMOVE_ANNOTATIONS_ERRORS,
 })
 
-export const receiveErrors = (payload) => ({
+export const receiveErrors = (errors) => ({
     type: RECEIVE_ANNOTATIONS_ERRORS,
-    payload
+    errors
 })
 
 export const createAnnotation = (annotation) => (dispatch) => (
