@@ -51,7 +51,7 @@ class TrackShow extends React.Component {
                         <p className="lyrics-text">{lyrics}</p>
                     </div>
                     <div className="track-modal">
-
+                        
                     </div>
                 </div>
             </div>

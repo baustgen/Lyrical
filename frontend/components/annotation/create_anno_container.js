@@ -4,12 +4,19 @@ import AnnotationForm from "./annotation_form";
 
 const mapSTP = (state, ownProps) => ({
     errors: state.errors.annotation,
-    annotation: state.entities.annotations[ownProps.annotationId]
+    annotation: {
+        body: '',
+        start_index: ownProps.start_index,
+        end_index: ownProps.end_index,
+        track_id: ownProps.match.params.trackId,
+    },
+    tracks: state.entities.tracks,
+    formType: 'Create'
 });
 
 const mapDTP = (dispatch, ownProps) => ({
-    createAnnotation: (trackId) => dispatch(createAnnotation(trackId)),
-
+    processAnnotation: (trackId) => dispatch(createAnnotation(trackId)),
+    removeErrors: () => dispatch(removeErrors()),
 });
 
 export default connect(mapSTP, mapDTP)(AnnotationForm);
