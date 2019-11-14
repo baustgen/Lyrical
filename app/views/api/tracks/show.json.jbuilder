@@ -9,3 +9,11 @@ json.artists do
         json.partial! 'api/artists/artist', artist: @track.artist
     end
 end
+
+json.annotations do
+    @tracks.annotations.each do |annotation|
+        json.set! annotation.id do
+            json.partial! 'api/annotations/annotation', annotation: annotation
+        end
+    end
+end

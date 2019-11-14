@@ -1,5 +1,5 @@
 json.annotations do
     json.set! @annotation.id do
-        json.extract! @annotation, :id, :body, :start_index, :end_index, :user_id, :track_id
+        json.partial! 'api/annotations/annotation', annotation: @annotation
     end
 end

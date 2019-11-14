@@ -6,7 +6,7 @@ class Api::TracksController < ApplicationController
     end
 
     def show
-        @track = Track.includes(:artist).find_by(id: params[:id])
+        @track = Track.includes(:artist).includes(:annotations).find_by(id: params[:id])
         render :show
     end
 end
