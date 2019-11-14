@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { requestTrack } from "../../actions/track_actions";
-import TrackShow from "./track_show";
+import AnnotationShow from "./annotation_show";
 
 const mapSTP = (state, ownProps) => ({
     track: state.entities.tracks[ownProps.match.params.trackId],
