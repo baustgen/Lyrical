@@ -21,7 +21,6 @@ class AnnotationShow extends React.Component {
 
     render() {
         let edit;
-        debugger;
 
         if (this.props.annotation.userId === parseInt(this.props.currentUserId)) {
             edit = (
