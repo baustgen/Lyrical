@@ -29,15 +29,6 @@ class TrackShow extends React.Component {
                 <p>Highlight lyrics to add an annotation</p>
             </div>
         );
-
-        let lyrics = this.props.track.lyrics.split("\n").map((line) => {
-            return (
-                <>
-                    <span>{line}</span>
-                    <br/>
-                </>
-            )
-        })
         
         return (
             <div className="track-show">
@@ -56,7 +47,7 @@ class TrackShow extends React.Component {
                 <div className="track-content">
                     <div className="lyrics-container">
                         <h4 className="lyrics-header">{this.props.track.title.toUpperCase() + ' LYRICS'}</h4>
-                        <p className="lyrics-text">{lyrics}</p>
+                        <p className="lyrics-text">{this.props.track.lyrics}</p>
                     </div>
                     <div className="track-modal">
                         <h4 className="annotations-header">ANNOTATIONS</h4>
