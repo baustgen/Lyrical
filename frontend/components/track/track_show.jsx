@@ -59,7 +59,7 @@ class TrackShow extends React.Component {
                         <p className="lyrics-text">{lyrics}</p>
                     </div>
                     <div className="track-modal">
-                        <h4 className="annotations-header">Annotations</h4>
+                        <h4 className="annotations-header">ANNOTATIONS</h4>
                         {modal}
                     </div>
                 </div>
