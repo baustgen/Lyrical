@@ -56,7 +56,7 @@ class TrackLyrics extends React.Component {
             )
         } else {
             return (
-                <p className="lyrics-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown}>
+                <p className="lyrics-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown} data-indexoffset={0}>
                     {this.props.track.lyrics}
                 </p>
             )

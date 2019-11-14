@@ -29,6 +29,7 @@ class TrackShow extends React.Component {
     }
 
     handleMouseDown(e) {
+        // debugger;
         this.setState({mouseDownElement: e.target})
     }
 
@@ -41,19 +42,49 @@ class TrackShow extends React.Component {
         let minIndex = Math.min(startIndex, endIndex)
         let maxIndex = Math.max(startIndex, endIndex)
 
+        
         if (maxIndex - minIndex > 0) {
-            this.setState({
-                startIndex: minIndex,
-                endIndex: maxIndex,
-                mouseDownElement: null,
-                activeAnnotation: 'create'
-            })
+            if (this.props.annotations.length) {
+                let safe = true;
+                for (let i = 0; i < this.props.annotations.length; i++) {
+                    const annotation = this.props.annotations[i];
+        
+                    if ((annotation.startIndex >= minIndex) && (annotation.endIndex <= maxIndex)) {
+                        debugger;
+                        safe = false
+                    }
+                }
+                if (safe) {
+                    this.setState({
+                        startIndex: minIndex,
+                        endIndex: maxIndex,
+                        mouseDownElement: null,
+                        activeAnnotation: 'create'
+                    })
+                } else {
+                    this.setState({
+                        mouseDownElement: null,
+                        activeAnnotation: null
+                    })
+                }
+
+                
+            } else {
+                this.setState({
+                    startIndex: minIndex,
+                    endIndex: maxIndex,
+                    mouseDownElement: null,
+                    activeAnnotation: 'create'
+                })
+            }
         } else {
+            debugger;
             this.setState({
                 mouseDownElement: null,
                 activeAnnotation: null,
             })
         }
+
     }
 
 
