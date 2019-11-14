@@ -50,13 +50,13 @@ class TrackLyrics extends React.Component {
         if (annotatedLyrics.length) {
             return (
     
-                <p className="lyrics-text">
+                <p className="lyrics-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown}>
                     {annotatedLyrics}
                 </p>
             )
         } else {
             return (
-                <p className="lyrics-text">
+                <p className="lyrics-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown}>
                     {this.props.track.lyrics}
                 </p>
             )

@@ -5,7 +5,8 @@ import AnnotationShow from "./annotation_show";
 const mapSTP = (state, ownProps) => ({
     annotation: state.entities.annotations[ownProps.annotationId],
     track: state.entities.tracks[ownProps.match.params.trackId],
-    currentUserId: state.session.currentUserId
+    currentUserId: state.session.currentUserId,
+    selectAnnotation: ownProps.selectAnnotation,
 });
 
 const mapDTP = (dispatch, ownProps) => ({

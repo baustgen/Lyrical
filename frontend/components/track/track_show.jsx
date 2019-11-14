@@ -35,24 +35,25 @@ class TrackShow extends React.Component {
     handleMouseUp(e) {
         let startOffset = parseInt(this.state.mouseDownElement.getAttribute('data-indexoffset'));
         let endOffset = parseInt(e.target.getAttribute('data-indexoffset'));
+        let startIndex = (startOffset + window.getSelection().anchorOffset);
+        let endIndex = (endOffset + window.getSelection().focusOffset)
         
-        let startIndex = Math.min(
-            (startOffset + window.getSelection().anchorOffset),
-            (endOffset + window.getSelection().focusOffset)
-        )
-        
-        let endIndex = Math.max(
-            (startOffset + window.getSelection().anchorOffset),
-            (endOffset + window.getSelection().focusOffset)
-        )
+        let minIndex = Math.min(startIndex, endIndex)
+        let maxIndex = Math.max(startIndex, endIndex)
 
-        this.setState({
-            startIndex: startIndex,
-            endIndex: endIndex,
-            mouseDownElement: null,
-            activeAnnotation: 'create'
-        })
-        
+        if (maxIndex - minIndex > 0) {
+            this.setState({
+                startIndex: minIndex,
+                endIndex: maxIndex,
+                mouseDownElement: null,
+                activeAnnotation: 'create'
+            })
+        } else {
+            this.setState({
+                mouseDownElement: null,
+                activeAnnotation: null,
+            })
+        }
     }
 
 
@@ -84,6 +85,8 @@ class TrackShow extends React.Component {
                 <AnnotationCreateContainer 
                     startIndex={this.state.startIndex}
                     endIndex={this.state.endIndex}
+                    match={this.props.match}
+                    selectAnnotation={this.selectAnnotation}
                 />
             )
         } else if (this.state.activeAnnotation) {
@@ -114,11 +117,12 @@ class TrackShow extends React.Component {
                 <div className="track-content">
                     <div className="lyrics-container">
                         <h4 className="lyrics-header">{this.props.track.title.toUpperCase() + ' LYRICS'}</h4>
-                        {/* <p className="lyrics-text">{this.props.track.lyrics}</p> */}
                         <TrackLyrics 
                             track={this.props.track}
                             annotations={this.props.annotations}
                             selectAnnotation={this.selectAnnotation}
+                            handleMouseDown={this.handleMouseDown}
+                            handleMouseUp={this.handleMouseUp}
                         />
                     </div>
                     <div className="track-modal">

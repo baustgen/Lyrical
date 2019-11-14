@@ -7,7 +7,7 @@ class AnnotationForm extends React.Component {
         this.state = {
             body: this.props.annotation.body,
             start_index: parseInt(this.props.annotation.startIndex),
-            end_index: parseInt(this.props.annotation.startIndex),
+            end_index: parseInt(this.props.annotation.endIndex),
             track_id: this.props.annotation.trackId,
         };
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -21,6 +21,7 @@ class AnnotationForm extends React.Component {
         e.preventDefault();
         const formAnnotation = Object.assign({}, this.state)
         this.props.processAnnotation(formAnnotation)
+        this.props.selectAnnotation(null)
     }
 
     handleInput(type) {
@@ -36,8 +37,8 @@ class AnnotationForm extends React.Component {
         ))
 
         return (
-                <div className="form-container">
-                    <h2 className="form-header">{formType} Annotation</h2>
+                <div className="anno-form-container">
+                    <h2 className="anno-form-header">{this.props.formType} Annotation</h2>
                     <p className="annotation-lyric">
                         {this.props.tracks[this.props.annotation.trackId]
                             .lyrics
@@ -54,8 +55,8 @@ class AnnotationForm extends React.Component {
                             onChange={this.handleInput('body')}
                             value={this.state.body}
                         />
-                        <div className="form-button-container">
-                            <button className="form-button">{formType}</button>
+                        <div className="anno-form-button-container">
+                            <button className="anno-form-button">{this.props.formType}</button>
                         </div>
                     </form>
                 </div>

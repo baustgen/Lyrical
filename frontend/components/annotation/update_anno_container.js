@@ -6,7 +6,8 @@ const mapSTP = (state, ownProps) => ({
     errors: state.errors.annotation,
     annotation: state.entities.annotations[ownProps.annotationId],
     tracks: state.entities.tracks,
-    formType: 'Update'
+    formType: 'Update',
+    selectAnnotation: ownProps.selectAnnotation,
 });
 
 const mapDTP = (dispatch, ownProps) => ({

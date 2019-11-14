@@ -21,8 +21,9 @@ class AnnotationShow extends React.Component {
 
     render() {
         let edit;
+        debugger;
 
-        if (this.props.annotation.userId === this.props.currentUserId) {
+        if (this.props.annotation.userId === parseInt(this.props.currentUserId)) {
             edit = (
                 <button className="annotataion-edit-button" onClick={this.handleEdit}>Edit</button>
             )
@@ -33,12 +34,11 @@ class AnnotationShow extends React.Component {
                 <>
                     <AnnotationUpdateContainer
                         annotationId={this.props.annotation.id}
+                        selectAnnotation={this.props.selectAnnotation}
                     />
-                    <button 
-                        className="edit-cancel" 
-                        value="Cancel"
-                        onClick={this.cancelEdit}
-                    />
+                    <button className="anno-form-button" onClick={this.cancelEdit}>Cancel</button>
+                    
+
                 </>
             )
         }

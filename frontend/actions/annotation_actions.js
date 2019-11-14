@@ -7,7 +7,7 @@ export const REMOVE_ANNOTATIONS_ERRORS = "REMOVE_ANNOTATIONS_ERRORS"
 
 
 export const receiveAnnotation = (payload) => ({
-    type: RECEIVE_ANNOTATIONS,
+    type: RECEIVE_ANNOTATION,
     payload
 })
 

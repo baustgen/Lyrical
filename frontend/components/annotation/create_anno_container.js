@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { createAnnotation } from "../../actions/annotation_actions";
+import { createAnnotation, removeErrors } from "../../actions/annotation_actions";
 import AnnotationForm from "./annotation_form";
 
 const mapSTP = (state, ownProps) => ({
@@ -11,7 +11,8 @@ const mapSTP = (state, ownProps) => ({
         trackId: ownProps.match.params.trackId,
     },
     tracks: state.entities.tracks,
-    formType: 'Create'
+    formType: 'Create',
+    selectAnnotation: ownProps.selectAnnotation,
 });
 
 const mapDTP = (dispatch, ownProps) => ({
