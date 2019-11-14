@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TrackLyrics from "./track_lyrics";
 
 
 class TrackShow extends React.Component {
@@ -47,7 +48,11 @@ class TrackShow extends React.Component {
                 <div className="track-content">
                     <div className="lyrics-container">
                         <h4 className="lyrics-header">{this.props.track.title.toUpperCase() + ' LYRICS'}</h4>
-                        <p className="lyrics-text">{this.props.track.lyrics}</p>
+                        {/* <p className="lyrics-text">{this.props.track.lyrics}</p> */}
+                        <TrackLyrics 
+                            track={this.props.track}
+                            annotations={this.props.annotations}
+                        />
                     </div>
                     <div className="track-modal">
                         <h4 className="annotations-header">ANNOTATIONS</h4>

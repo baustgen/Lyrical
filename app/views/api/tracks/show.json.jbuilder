@@ -11,7 +11,7 @@ json.artists do
 end
 
 json.annotations do
-    @tracks.annotations.each do |annotation|
+    @track.annotations.each do |annotation|
         json.set! annotation.id do
             json.partial! 'api/annotations/annotation', annotation: annotation
         end

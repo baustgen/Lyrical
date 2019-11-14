@@ -5,7 +5,14 @@ import TrackShow from "./track_show";
 const mapSTP = (state, ownProps) => ({
     track: state.entities.tracks[ownProps.match.params.trackId],
     artists: state.entities.artists,
-    annotations: state.entities.annotations
+    annotations: Object.values(state.entities.annotations).sort((a,b) => {
+        if (a.startIndex < b.startIndex) {
+            return -1
+        } else {
+            return 1
+        }
+    }),
+    
 });
 
 const mapDTP = (dispatch, ownProps) => ({
