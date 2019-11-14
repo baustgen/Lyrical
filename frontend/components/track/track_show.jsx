@@ -1,11 +1,58 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TrackLyrics from "./track_lyrics";
+import AnnotationCreateContainer from "../annotation/create_anno_container";
+import AnnotationShowContainer from "../annotation/annotation_show_container";
 
 
 class TrackShow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            startIndex: null,
+            endIndex: null,
+            activeAnnotation: null,
+            mouseDownElement: null,
+        }
+        this.selectAnnotation = this.selectAnnotation.bind(this)
+        this.clearAnnotation = this.clearAnnotation.bind(this)
+        this.handleMouseDown = this.handleMouseDown.bind(this)
+        this.handleMouseUp = this.handleMouseUp.bind(this)
+    }
+
+    selectAnnotation(value) {
+        this.setState({activeAnnotation: value})
+    }
+
+    clearAnnotation() {
+        this.setState({activeAnnotation: null})
+    }
+
+    handleMouseDown(e) {
+        this.setState({mouseDownElement: e.target})
+    }
+
+    handleMouseUp(e) {
+        let startOffset = parseInt(this.state.mouseDownElement.getAttribute('data-indexoffset'));
+        let endOffset = parseInt(e.target.getAttribute('data-indexoffset'));
+        
+        let startIndex = Math.min(
+            (startOffset + window.getSelection().anchorOffset),
+            (endOffset + window.getSelection().focusOffset)
+        )
+        
+        let endIndex = Math.max(
+            (startOffset + window.getSelection().anchorOffset),
+            (endOffset + window.getSelection().focusOffset)
+        )
+
+        this.setState({
+            startIndex: startIndex,
+            endIndex: endIndex,
+            mouseDownElement: null,
+            activeAnnotation: 'create'
+        })
+        
     }
 
 
@@ -23,13 +70,32 @@ class TrackShow extends React.Component {
     render() {
         if (this.props.track === undefined || this.props.artists[this.props.track.artistId] === undefined) return null;
 
+        let annotationSidebar;
 
-        let modal = (
-            <div className="annotation-instructions">
-                <p>Click a highlighted lyric to view its annotation</p>
-                <p>Highlight lyrics to add an annotation</p>
-            </div>
-        );
+        if (this.state.activeAnnotation === null) {
+            annotationSidebar = (
+                <div className="annotation-instructions">
+                    <p>Click a highlighted lyric to view its annotation</p>
+                    <p>Highlight lyrics to add an annotation</p>
+                </div>
+            );
+        } else if (this.state.activeAnnotation === 'create') {
+            annotationSidebar = (
+                <AnnotationCreateContainer 
+                    startIndex={this.state.startIndex}
+                    endIndex={this.state.endIndex}
+                />
+            )
+        } else if (this.state.activeAnnotation) {
+            annotationSidebar = (
+                <AnnotationShowContainer
+                    annotationId={this.state.activeAnnotation}
+                    selectAnnotation={this.selectAnnotation}
+                    match={this.props.match}
+                />
+            )
+        }
+        
         
         return (
             <div className="track-show">
@@ -52,11 +118,12 @@ class TrackShow extends React.Component {
                         <TrackLyrics 
                             track={this.props.track}
                             annotations={this.props.annotations}
+                            selectAnnotation={this.selectAnnotation}
                         />
                     </div>
                     <div className="track-modal">
                         <h4 className="annotations-header">ANNOTATIONS</h4>
-                        {modal}
+                        {annotationSidebar}
                     </div>
                 </div>
             </div>

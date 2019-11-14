@@ -27,9 +27,9 @@ class TrackLyrics extends React.Component {
 
             annotatedLyrics.push(
                 <a key={key++} 
-                    data-indexoffset={prevIndex}
-                    // onClick={selectAnnotation(annotation.id)}
+                    onClick={() => {selectAnnotation(annotation.id)}}
                     className="lyric-annotated"
+                    unselectable="on"
                 >
 
                     {lyric}

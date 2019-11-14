@@ -1,13 +1,45 @@
 import React from "react";
+import AnnotationUpdateContainer from "./update_anno_container";
 
 class AnnotationShow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            edit: false
+        }
+        this.handleEdit = this.handleEdit.bind(this)
+        this.cancelEdit = this.cancelEdit.bind(this)
+    }
+
+    handleEdit(e) {
+        this.setState({edit: true})
+    }
+
+    cancelEdit(e) {
+        this.setState({edit: false})
+    }
 
     render() {
         let edit;
 
         if (this.props.annotation.userId === this.props.currentUserId) {
             edit = (
-                <button className="annotataion-edit-button" onClick={}>Edit</button>
+                <button className="annotataion-edit-button" onClick={this.handleEdit}>Edit</button>
+            )
+        }
+
+        if (this.state.edit === true) {
+            edit = (
+                <>
+                    <AnnotationUpdateContainer
+                        annotationId={this.props.annotation.id}
+                    />
+                    <button 
+                        className="edit-cancel" 
+                        value="Cancel"
+                        onClick={this.cancelEdit}
+                    />
+                </>
             )
         }
 

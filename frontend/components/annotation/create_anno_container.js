@@ -6,9 +6,9 @@ const mapSTP = (state, ownProps) => ({
     errors: state.errors.annotation,
     annotation: {
         body: '',
-        start_index: ownProps.start_index,
-        end_index: ownProps.end_index,
-        track_id: ownProps.match.params.trackId,
+        startIndex: ownProps.startIndex,
+        endIndex: ownProps.endIndex,
+        trackId: ownProps.match.params.trackId,
     },
     tracks: state.entities.tracks,
     formType: 'Create'

@@ -3,8 +3,8 @@ import { requestTrack } from "../../actions/track_actions";
 import AnnotationShow from "./annotation_show";
 
 const mapSTP = (state, ownProps) => ({
+    annotation: state.entities.annotations[ownProps.annotationId],
     track: state.entities.tracks[ownProps.match.params.trackId],
-    artists: state.entities.artists,
     currentUserId: state.session.currentUserId
 });
 

@@ -6,8 +6,8 @@ class AnnotationForm extends React.Component {
         super(props);
         this.state = {
             body: this.props.annotation.body,
-            start_index: parseInt(this.props.annotation.start_index),
-            end_index: parseInt(this.props.annotation.start_index),
+            start_index: parseInt(this.props.annotation.startIndex),
+            end_index: parseInt(this.props.annotation.startIndex),
             track_id: this.props.annotation.trackId,
         };
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -42,7 +42,7 @@ class AnnotationForm extends React.Component {
                         {this.props.tracks[this.props.annotation.trackId]
                             .lyrics
                             .split("")
-                            .slice(this.props.annotation.start_index, this.props.annotation.end_index)
+                            .slice(this.props.annotation.startIndex, this.props.annotation.endIndex)
                             .join("")}
                     </p>
                     <form onSubmit={this.handleSubmit}>
