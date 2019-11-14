@@ -22,6 +22,14 @@ class TrackShow extends React.Component {
     render() {
         if (this.props.track === undefined || this.props.artists[this.props.track.artistId] === undefined) return null;
 
+
+        let modal = (
+            <div className="annotation-instructions">
+                <p>Click a highlighted lyric to view its annotation</p>
+                <p>Highlight lyrics to add an annotation</p>
+            </div>
+        );
+
         let lyrics = this.props.track.lyrics.split("\n").map((line) => {
             return (
                 <>
@@ -51,7 +59,8 @@ class TrackShow extends React.Component {
                         <p className="lyrics-text">{lyrics}</p>
                     </div>
                     <div className="track-modal">
-                        
+                        <h4 className="annotations-header">Annotations</h4>
+                        {modal}
                     </div>
                 </div>
             </div>
