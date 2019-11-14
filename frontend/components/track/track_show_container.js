@@ -5,6 +5,7 @@ import TrackShow from "./track_show";
 const mapSTP = (state, ownProps) => ({
     track: state.entities.tracks[ownProps.match.params.trackId],
     artists: state.entities.artists,
+    annotations: state.entities.annotations
 });
 
 const mapDTP = (dispatch, ownProps) => ({
