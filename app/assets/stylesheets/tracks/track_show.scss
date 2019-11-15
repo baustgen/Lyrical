@@ -86,11 +86,9 @@
 }
 
 .annotation-instructions {
-    position: sticky;
-    top: 140px;
     font-size: 14px;
-    margin: 20px auto;
     width: 85%;
+    margin: auto;
     background-color: rgb(70, 70, 70);
     color: rgb(255, 255, 50);
     border-radius: 1px;
@@ -104,4 +102,10 @@
 
 .lyric-annotated {
     background-color: rgb(240, 240, 240);
+}
+
+.track-modal-content-container {
+    position: sticky;
+    top: 140px;
+    margin: 20px auto;
 }
