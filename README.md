@@ -25,55 +25,55 @@ handleMouseDown(e) {
         this.setState({mouseDownElement: e.target})
     }
 
-    handleMouseUp(e) {
-        let startOffset = parseInt(this.state.mouseDownElement.getAttribute('data-indexoffset'));
-        let endOffset = parseInt(e.target.getAttribute('data-indexoffset'));
-        let startIndex = (startOffset + window.getSelection().anchorOffset);
-        let endIndex = (endOffset + window.getSelection().focusOffset)
-        
-        let minIndex = Math.min(startIndex, endIndex)
-        let maxIndex = Math.max(startIndex, endIndex)
+handleMouseUp(e) {
+    let startOffset = parseInt(this.state.mouseDownElement.getAttribute('data-indexoffset'));
+    let endOffset = parseInt(e.target.getAttribute('data-indexoffset'));
+    let startIndex = (startOffset + window.getSelection().anchorOffset);
+    let endIndex = (endOffset + window.getSelection().focusOffset)
+    
+    let minIndex = Math.min(startIndex, endIndex)
+    let maxIndex = Math.max(startIndex, endIndex)
 
-        
-        if (maxIndex - minIndex > 0) {
-            if (this.props.annotations.length) {
-                let safe = true;
-                for (let i = 0; i < this.props.annotations.length; i++) {
-                    const annotation = this.props.annotations[i];
-        
-                    if ((annotation.startIndex >= minIndex) && (annotation.endIndex <= maxIndex)) {
-                        safe = false
-                    }
+    
+    if (maxIndex - minIndex > 0) {
+        if (this.props.annotations.length) {
+            let safe = true;
+            for (let i = 0; i < this.props.annotations.length; i++) {
+                const annotation = this.props.annotations[i];
+    
+                if ((annotation.startIndex >= minIndex) && (annotation.endIndex <= maxIndex)) {
+                    safe = false
                 }
-                if (safe) {
-                    this.setState({
-                        startIndex: minIndex,
-                        endIndex: maxIndex,
-                        mouseDownElement: null,
-                        activeAnnotation: 'create'
-                    })
-                } else {
-                    this.setState({
-                        mouseDownElement: null,
-                        activeAnnotation: null
-                    })
-                }
-
-                
-            } else {
+            }
+            if (safe) {
                 this.setState({
                     startIndex: minIndex,
                     endIndex: maxIndex,
                     mouseDownElement: null,
                     activeAnnotation: 'create'
                 })
+            } else {
+                this.setState({
+                    mouseDownElement: null,
+                    activeAnnotation: null
+                })
             }
+
+            
         } else {
             this.setState({
+                startIndex: minIndex,
+                endIndex: maxIndex,
                 mouseDownElement: null,
-                activeAnnotation: null,
+                activeAnnotation: 'create'
             })
         }
-
+    } else {
+        this.setState({
+            mouseDownElement: null,
+            activeAnnotation: null,
+        })
     }
+
+}
 ```
