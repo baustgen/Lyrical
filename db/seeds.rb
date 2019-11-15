@@ -232,3 +232,417 @@ No time for losers
 })
 champions_img = open('https://lyrical-seeds.s3.amazonaws.com/champions.jpg')
 champions.image.attach(io: champions_img, filename: 'champions.jpg')
+
+straightjacket = Track.create({ title: 'Straightjacket',
+    album: "The Story of Us",
+    lyrics: "[Verse 1]
+She's a psycho from a Midwest suburb
+No straightjacket could hold her
+Wild eyes, they would lure me in her trap
+I go mad just to hold her
+
+[Pre-Chorus]
+Until I noticed that something was strange
+Out of my range, there was no way back
+Something went off in my brain
+She was insane, here she goes again
+A psycho from a Midwest suburb
+I woke up and I told her
+
+[Chorus]
+You won't know me when the feelings are all gone
+And I tell everyone
+And the look on your face will slowly come undone
+'Cause it was all a front
+And quietly, I say it to your face
+That you will need to find another place to stay
+And no you won't know me when the feelings are all gone
+And I tell everyone, ay
+
+[Verse 2]
+She's a loose cannon with a temper, so absurd
+Hiding from the police, yeah
+Took pills with the name I'd never heard
+But they were for sleep, she fooled me
+
+[Pre-Chorus]
+That's when I noticed that something was strange
+Out of my range, there was no way back
+Something went off in my brain
+She was insane, here she goes again
+A psycho from a Midwest suburb
+I woke up and I told her
+
+[Chorus]
+You won't know me when the feelings are all gone
+And I tell everyone
+And the look on your face will slowly come undone
+'Cause it was all a front
+And quietly, I say it to your face
+That you will need to find another place to stay
+And now you won't know me when the feelings are all gone
+And I tell everyone, ay
+
+[Post-Chorus]
+And I tell everyone
+And I tell everyone
+And I tell everyone
+And I tell everyone
+
+[Pre-Chorus]
+I noticed that something was strange
+Out of my range, there was no way back
+Something went off in my brain, she was insane
+Here she goes again
+A psycho from a Midwest suburb
+I woke up and I told her
+
+[Chorus]
+You won't know me when the feelings are all gone
+And I tell everyone
+And the look on your face will slowly come undone
+'Cause it was all a front
+And quietly, I say it to your face
+That you will need to find another place to stay
+And now you won't know me when the feelings are all gone
+And I tell everyone, ay
+
+[Post-Chorus]
+And I tell everyone
+And I tell everyone
+And I tell everyone
+And I tell everyone, ay",
+    artist_id: quinn.id
+})
+straightjacket_img = open('https://lyrical-seeds.s3.amazonaws.com/straightjacket.jpg')
+straightjacket.image.attach(io: straightjacket_img, filename: 'straightjacket.jpg')
+
+dont_stop = Track.create({ title: "Don't Stop Me Now",
+    album: "Jazz",
+    lyrics: "[Intro]
+Tonight I'm gonna have myself a real good time
+I feel alive
+And the world, I'll turn it inside out, yeah
+I'm floating around in ecstasy, so (Don't stop me now)
+(Don't stop me) 'Cause I'm havin' a good time, havin' a good time
+
+[Verse 1]
+I'm a shooting star leaping through the sky
+Like a tiger defying the laws of gravity
+I'm a racing car passing by like Lady Godiva
+I'm gonna go, go, go, there's no stopping me
+
+[Pre-Chorus]
+I'm burning through the sky, yeah
+Two hundred degrees, that's why they call me Mister Fahrenheit
+I'm travelling at the speed of light
+I wanna make a supersonic man outta you
+
+[Chorus]
+(Don't stop me now)
+I'm having such a good time, I'm having a ball
+(Don't stop me now)
+If you wanna have a good time, just give me a call
+(Don't stop me now) 'Cause I'm having a good time
+(Don't stop me now) Yes, I'm having a good time
+I don't wanna stop at all, yeah
+
+[Verse 2]
+I'm a rocket ship on my way to Mars on a collision course
+I am a satellite, I'm out of control
+I'm a sex machine ready to reload
+Like an atom bomb about to, oh, oh, oh, oh, oh, explode!
+
+[Pre-Chorus]
+I'm burning through the sky, yeah
+Two hundred degrees, that's why they call me Mister Fahrenheit
+I'm travelling at the speed of light
+I wanna make a supersonic woman of you
+
+[Bridge]
+(Don't stop me, don't stop me, don't stop me) Hey, hey, hey
+(Don't stop me, don't stop me, ooh, ooh, ooh) I like it
+(Don't stop me, don't stop me) Have a good time, good time
+(Don't stop me, don't stop me) Woah
+Let loose, honey, all right
+
+[Guitar Solo]
+
+[Pre-Chorus]
+Oh, I'm burning through the sky, yeah
+Two hundred degrees, that's why they call me Mister Fahrenheit, hey
+Travelling at the speed of light
+I wanna make a supersonic man outta you (Yeah, yeah)
+
+[Chorus]
+(Don't stop me now)
+I'm having such a good time, I'm having a ball
+(Don't stop me now)
+If you wanna have a good time, just give me a call (Ooh, alright)
+(Don't stop me now) 'Cause I'm having a good time (Yeah, yeah)
+(Don't stop me now) Yes, I'm having a good time
+I don't wanna stop at all
+
+[Outro]
+Ah, da da da da
+Da da ah ah
+Ah da da, ah ah ah
+Ah, da da
+Ah, da da ah ah
+Ooh, ooh ooh, ooh ooh",
+    artist_id: queen.id
+})
+dont_stop_img = open('https://lyrical-seeds.s3.amazonaws.com/dont_stop.jpg')
+dont_stop.image.attach(io: dont_stop_img, filename: 'dont_stop.jpg')
+
+sad_still = Track.create({ title: "Sad Still",
+    album: "From Michigan With Love",
+    lyrics: "[Chorus]
+We don't wanna feel this bad
+Rather sweep it under the mat
+We take this red pill, green pill, black pill
+I know deep down, we're sad still
+It's not normally how we act
+They should see what's under our mask
+We need something stronger than Advil
+I know deep down, we're sad still
+
+[Verse 1]
+We don't ever gotta talk about it, what do you mean?
+Cabinet full of orange vials, they prescribe what I need
+Wanna treat the term \"anxiety\" like it's taboo
+Come off that opinion, I think you need this more than I do
+I wake at 8 AM and pad my floor with pillows and stand
+'Cause all this vertigo is makin' me unsure where I land
+I need to breathe, need religion, need fiancé on phone
+Since our last conversation, I don't trust bein' alone
+
+[Pre-Chorus]
+Year feels like 3000 and Andre
+Flood my head with vloggers, go throw on that Kanye
+Oh, I hate this shakin', oh, I hate this achin'
+Nothin' that they say these days is groundbreakin', ahh!
+
+[Chorus]
+We don't wanna feel this bad
+Rather sweep it under the mat
+We take this red pill, green pill, black pill
+I know deep down, we're sad still
+It's not normally how we act
+They should see what's under our mask
+We need something stronger than Advil
+I know deep down, we're sad still
+
+[Verse 2]
+We don't ever gotta talk about it, what do you mean?
+Yeah, all you ever see on Instagram is low-cut jeans
+From girls that I can bet are probably going through some shit
+But make a fake smile 'til their white blood cells lit
+Your conversations with friends, family go long ways
+That's how I cope with crawling out my skin like RuPaul's waves
+My milligrams are lower, but I still don't know where I'm headed
+Each time my heart starts beating, I look for symptoms on Reddit
+
+[Pre-Chorus]
+Yeah, this year's like 3000 and Andre
+Flood my head with vloggers, go throw on that Kanye
+Oh, I hate this shakin', oh, I hate this achin'
+Nothin' that they say these days is groundbreakin', ahh!
+
+[Chorus]
+We don't wanna feel this bad
+Rather sweep it under the mat
+We take this red pill, green pill, black pill
+I know deep down, we're sad still
+It's not normally how we act
+They should see what's under our mask
+We need something stronger than Advil
+I know deep down, we're sad still
+
+[Bridge]
+Red pill, green pill, black pill
+How do you feel?
+Pink pill, yellow pill, purple pill
+How do you feel?
+(Feels like 3000 and Andre)
+Red pill, green pill, black pill
+(Flood my head with vloggers, go throw on that Kanye)
+How do you feel?
+(Oh, I hate this shakin', oh, I hate this achin')
+Pink pill, yellow pill, purple pill
+(Nothin' that they say these days is groundbreakin')
+How do you feel?
+
+[Chorus]
+We don't wanna feel this bad
+Rather sweep it under the mat
+We take this red pill, green pill, black pill
+I know deep down, we're sad still
+It's not normally how we act
+They should see what's under our mask
+We need something stronger than Advil
+I know deep down, we're sad still",
+    artist_id: quinn.id
+})
+sad_still_img = open('https://lyrical-seeds.s3.amazonaws.com/sad_still.jpg')
+sad_still.image.attach(io: sad_still_img, filename: 'sad_still.jpg')
+
+sounds_like_you = Track.create({ title: "Sounds Like You",
+    album: "The Name Above The Title",
+    lyrics: "[Verse 1]
+Okay this one feel like 10th grade
+Just finished school and I'm still buzzing off my mixtapes
+You drive me crazy and I mean that in the best way
+And I was shit out of my luck
+And then I went and got my shit straight
+I wrote a song and it sounds just like you
+Short and sweet and natural and got no autotune
+And I would say it's got a ring to it
+But that would imply commitment
+And we with this, I'm in too deep to quit this yeah
+Ok now this one got a bounce to it
+Ain't talking Yeezus but I'm bound to it
+I think that us got a nice sound to it
+And I told that you that I would do it
+I just finally got around to it
+
+[Hook]
+If your body was a song
+Your face would be the hook
+All the chords would get along
+And your legs would be the bridge
+And the verse would be your lips
+And your whoop would be the kick drum
+Bounce like this
+And you told me that you always want a song
+You want a song yeah
+But I just knew I would always do it wrong
+Yeah I could never find the words
+So I just went and turned you into one
+
+[Verse 2]
+I know you hate it when I cuss
+But fuck it, yeah you the shit (fuck it)
+I just tell it how it is
+You got that ego
+Don't bring all that around me though
+And I love it when you quote 50
+But your favorite rappers 'Bino
+I swear to God this can't be life
+Oh no this can't be right
+It's like with you I really got to go and think things twice
+Feel like I need a little more me time
+But we mess around in the meantime
+And they say that time is money
+So I don't give out no free time, yeah
+But with you I might say fuck it I love it
+If time is money, I'm a run up my budget with you
+A young kid's gotta do what he gotta do
+And if this ain't no hit, well you know that I'm trying to
+
+[Hook]
+
+[Bridge]
+Just like the trumpet let me take you out, ok that's it
+Just like the piano let me take you out too, perfect
+Just like the drums let me take you out, yeah
+And now that we're in silence hear me out
+Cause sometimes I make music
+And you're what I make it about
+
+[Outro]
+Ok I went and made a song and it sound just like you",
+    artist_id: quill.id
+})
+sounds_like_you_img = open('https://lyrical-seeds.s3.amazonaws.com/sounds_like_you.png')
+sounds_like_you.image.attach(io: sounds_like_you_img, filename: 'sounds_like_you.png')
+
+opener = Track.create({ title: "The Opener",
+    album: "94.3 The Reel",
+    lyrics: "[Chorus]
+I'm just the opener, no one came to see me
+Singing all my songs and nobody know em
+I'm just the opener, handing out my CDs
+Standing by the table if they want a photo
+Yeah, and I'm the first on stage
+But they don't know my name
+These next few songs will be my 15 of fame
+I'm the opener, yeah, just the opener
+
+[Verse 1]
+Tour's good, it's going good so far
+I don't get a green room, so I changed in my car
+Yeah, I got my, my favorite songs on my setlist
+But I can't get none of my homies on the guest list
+But fuck it they gas me up and call me famous
+Girls at the bar probably don't know what my name is
+But I ain't even trippin', you know I find it funny
+'Cause I brought a bunch of drugs with my merch money
+
+[Pre-Chorus]
+I'm just the opener, yeah that's what I am
+And I just came to sing, maybe make a new fan
+I know that you don't care, yeah I know where I stand
+But I appreciate the love, would you give me a chance
+
+[Chorus]
+Because I'm just the opener, no one came to see me
+Singing all my songs and nobody know em
+I'm just the opener, handing out my CDs
+Standing by the table if they want a photo
+Yeah, and I'm the first on stage
+But they don't know my name
+These next few songs will be my 15 of fame
+I'm the opener, yeah, the opener
+
+[Verse 2]
+Hell no, I didn't get a soundcheck
+Yeah, don't even know what time my set's at
+Yeah, but that's all part of the biz
+Well, if your asking me, that shit just don't make sense
+Sleep at a Red Roof Inn, yeah, they nice
+My homies shared a bed, so it's half the price
+At least the venue gave me money for food
+But what I do, I just skip the meal and bought more booze
+
+[Pre-Chorus]
+Because I'm just the opener, yeah that's what I am
+She only hit the show 'cause she knows the band
+She stand at the back like she isn't a fan
+But knows the words, gots the merch
+I just don't understand
+
+[Chorus]
+Because I'm just the opener, no one came to see me
+Singing all my songs that nobody knows
+I'm just the opener, handing out my CDs
+Standing by the table if they want a photo
+Yeah, and I'm the first on stage
+But they don't know my name
+These next few songs will be my 15 of fame
+I'm the opener, yeah, the opener
+
+[Bridge]
+Okay, the Beetles used to open shows
+Yeah, Elton John used to open shows
+Yeah, Lady Gaga used to open shows
+Yeah, Kendrick Lamar used to open shows
+Uh, even Beyoncé used to open shows
+Yeah, ACDC used to open shows
+Yeah, so damn right I still open shows
+
+[Outro]
+Yeah, but I'm more than the opener
+More than my CD
+More than these lights, I just want people to see me
+I know I ain't made it yet
+But I know you won't forget
+The first time that you saw me tonight
+Yeah, I was the first on stage but they didn't know my name
+These last few songs were my 15 of fame
+I'm the opener
+Yeah, the opener",
+    artist_id: quill.id
+})
+opener_img = open('https://lyrical-seeds.s3.amazonaws.com/opener.jpg')
+opener.image.attach(io: opener_img, filename: 'opener.jpg')
