@@ -30,6 +30,7 @@ const App = () => (
                 <Route path="/artists/:letter" component={ArtistsIndexContainer}/>
                 <Route path="/tracks/:trackId" component={TrackShowContainer}/>
                 <Route path="/artists/" component={ArtistsIndexContainer}/>
+                <Route path="/" component={ArtistsIndexContainer}/>
             </Switch>
             <Footer />
         </main>
