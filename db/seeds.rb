@@ -8,10 +8,10 @@
 
 require 'open-uri'
 
-User.destroy_all
-Artist.destroy_all
-Track.destroy_all
 Annotation.destroy_all
+Track.destroy_all
+Artist.destroy_all
+User.destroy_all
 
 User.create({ username: "LyricalGenius", password: "password123"})
 
