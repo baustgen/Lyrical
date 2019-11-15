@@ -4,7 +4,6 @@ const annotationErrorsReducer = (state = [], action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ANNOTATIONS_ERRORS:
-            debugger;
             return action.errors;
         case REMOVE_ANNOTATIONS_ERRORS:
             return [];
