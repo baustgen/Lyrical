@@ -53,7 +53,7 @@
     padding: 10px 0;
     line-height: 30px;
     font-size: 16px;
-    white-space: pre;
+    white-space: pre-line;
 }
 
 .track-content {
@@ -101,7 +101,12 @@
 }
 
 .lyric-annotated {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(200, 200, 200);
+}
+
+.lyric-annotated:hover {
+    background-color: rgb(255, 255, 50);
+    cursor: pointer;
 }
 
 .track-modal-content-container {
