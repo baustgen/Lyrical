@@ -5,6 +5,7 @@ class AnnotationForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: this.props.annotation.id,
             body: this.props.annotation.body,
             start_index: parseInt(this.props.annotation.startIndex),
             end_index: parseInt(this.props.annotation.endIndex),
@@ -54,6 +55,7 @@ class AnnotationForm extends React.Component {
                         <textarea 
                             onChange={this.handleInput('body')}
                             value={this.state.body}
+                            required
                         />
                         <div className="anno-form-button-container">
                             <button className="anno-form-button">{this.props.formType}</button>

@@ -155,7 +155,9 @@ class TrackShow extends React.Component {
                     </div>
                     <div className="track-modal">
                         <h4 className="annotations-header">ANNOTATIONS</h4>
-                        {annotationSidebar}
+                        <div className="track-modal-content-container">
+                            {annotationSidebar}
+                        </div>
                     </div>
                 </div>
             </div>

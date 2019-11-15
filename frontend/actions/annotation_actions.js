@@ -25,10 +25,12 @@ export const removeErrors = () => ({
     type: REMOVE_ANNOTATIONS_ERRORS,
 })
 
-export const receiveErrors = (errors) => ({
-    type: RECEIVE_ANNOTATIONS_ERRORS,
-    errors
-})
+export const receiveErrors = (errors) => {
+    return {
+        type: RECEIVE_ANNOTATIONS_ERRORS,
+        errors
+    }
+}
 
 export const createAnnotation = (annotation) => (dispatch) => (
     AnnotationAPIUtil.createAnnotation(annotation)
@@ -42,6 +44,7 @@ export const updateAnnotation = (annotation) => (dispatch) => (
         .then(
             (res) => dispatch(receiveAnnotation(res)),
             (errors) => dispatch(receiveErrors(errors.responseJSON)))
+                
 )
 
 export const deleteAnnotation = (annotationId) => (dispatch) => (

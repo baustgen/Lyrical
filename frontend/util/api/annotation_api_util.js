@@ -6,13 +6,13 @@ export const createAnnotation = (annotation) => (
     })
 )
 
-export const updateAnnotation = (annotation) => (
-    $.ajax({
+export const updateAnnotation = (annotation) => {
+    return $.ajax({
         url: `/api/annotations/${annotation.id}`,
         method: 'PATCH',
         data: { annotation }
     })
-)
+}
 
 export const deleteAnnotation = (annotationId) => (
     $.ajax({

@@ -17,7 +17,7 @@ class Api::AnnotationsController < ApplicationController
 
     def update
         @annotation = Annotation.find_by(id: params[:id])
-        if @annotation.update(annotation_params)
+        if @annotation.update_attributes(annotation_params)
             render :show
         else
             render json: @annotation.errors.full_messages, status: 422
