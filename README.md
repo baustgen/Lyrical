@@ -20,7 +20,8 @@ This was implemented using `onmousedown` and `onmouseup` event handlers on the l
 
 The lyrics text is subdivided into `span` and `a` elements based on existing annotations, so the `onmousedown` handler stores in local state the element that the selection started in. `onmouseup` then finds the beginning and ending indexes of the user's selection and sets the smaller to the start_index and the larger to the end_index in local state, as well as setting `activeAnnotation` state to render the Annotation form.
 
-```handleMouseDown(e) {
+```
+handleMouseDown(e) {
         this.setState({mouseDownElement: e.target})
     }
 
