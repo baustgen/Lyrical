@@ -104,7 +104,7 @@ And I'm sure you'd win in an altercation
 But you're still insecure to me
 Oh, so mess me up
 I know you're not so tough",
-    artist_id: 1
+    artist_id: quinn.id
 })
 tough_img = open('https://lyrical-seeds.s3.amazonaws.com/tough.png')
 tough.image.attach(io: tough_img, filename: 'tough.png')
@@ -174,7 +174,7 @@ Still I dial those numbers every time
 Why do I replay those messages that you left at the tone last May?
 Slowly wishing you were never mine
 (Slowly wishing you were never mine)",
-    artist_id: 1
+    artist_id: quinn.id
 })
 flare_guns_img = open('https://lyrical-seeds.s3.amazonaws.com/flare_guns.jpg')
 flare_guns.image.attach(io: flare_guns_img, filename: 'flare_guns.jpg')
@@ -228,7 +228,7 @@ We are the champions
 We are the champions
 No time for losers
 'Cause we are the champions...",
-    artist_id: 3
+    artist_id: queen.id
 })
 champions_img = open('https://lyrical-seeds.s3.amazonaws.com/champions.jpg')
 champions.image.attach(io: champions_img, filename: 'champions.jpg')
