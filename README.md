@@ -13,15 +13,15 @@ Addtionally, JBuilder was used to create API responses and AWS S3 cloud storage 
 ### User Authentication
 
 ### Annotations
+![no annotation](./gh_docs/no-anno.png)
 
 Implementing the annotations feature presented some challenges, particularly on the front end. Users can create new annotations by highlighting the text that they would like to annotate. A form then appears with a field for users to add an annotation.
 
+![active annotation](./gh_docs/active-anno.png)
 This was implemented using `onmousedown` and `onmouseup` event handlers on the lyrics body.
 
 The lyrics text is subdivided into `span` and `a` elements based on existing annotations, so the `onmousedown` handler stores in local state the element that the selection started in. `onmouseup` then finds the beginning and ending indexes of the user's selection and sets the smaller to the start_index and the larger to the end_index in local state, as well as setting `activeAnnotation` state to render the Annotation form.
 
-![no annotation](./gh_docs/no-anno.png)
-![active annotation](./gh_docs/active-anno.png)
 
 ```
 handleMouseDown(e) {
