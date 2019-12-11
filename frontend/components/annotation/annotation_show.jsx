@@ -34,6 +34,7 @@ class AnnotationShow extends React.Component {
                     <AnnotationUpdateContainer
                         annotationId={this.props.annotation.id}
                         selectAnnotation={this.props.selectAnnotation}
+                        clearAnnotation={this.props.clearAnnotation}
                     />
                     <button className="anno-form-button" onClick={this.cancelEdit}>Cancel</button>
                     

@@ -25,11 +25,16 @@ class TrackShow extends React.Component {
     }
 
     clearAnnotation() {
-        this.setState({activeAnnotation: null})
+        this.setState({
+            startIndex: null,
+            endIndex: null,
+            activeAnnotation: null,
+        })
     }
 
     handleMouseDown(e) {
         this.setState({mouseDownElement: e.target})
+        this.clearAnnotation()
     }
 
     handleMouseUp(e) {
@@ -99,6 +104,22 @@ class TrackShow extends React.Component {
     render() {
         if (this.props.track === undefined || this.props.artists[this.props.track.artistId] === undefined) return null;
 
+        let liveAnnotations;
+        if (this.state.startIndex === null) {
+            liveAnnotations = this.props.annotations;
+        } else {
+            liveAnnotations = [
+                {id: 'new', startIndex: this.state.startIndex, endIndex: this.state.endIndex},
+                ...this.props.annotations
+            ].sort((a, b) => {
+                if (a.startIndex < b.startIndex) {
+                    return -1
+                } else {
+                    return 1
+                }
+            })
+        }
+
         let annotationSidebar;
 
         if (this.state.activeAnnotation === null) {
@@ -115,6 +136,7 @@ class TrackShow extends React.Component {
                     endIndex={this.state.endIndex}
                     match={this.props.match}
                     selectAnnotation={this.selectAnnotation}
+                    clearAnnotation={this.clearAnnotation}
                 />
             )
         } else if (this.state.activeAnnotation) {
@@ -122,6 +144,7 @@ class TrackShow extends React.Component {
                 <AnnotationShowContainer
                     annotationId={this.state.activeAnnotation}
                     selectAnnotation={this.selectAnnotation}
+                    clearAnnotation={this.clearAnnotation}
                     match={this.props.match}
                 />
             )
@@ -147,7 +170,7 @@ class TrackShow extends React.Component {
                         <h4 className="lyrics-header">{this.props.track.title.toUpperCase() + ' LYRICS'}</h4>
                         <TrackLyrics 
                             track={this.props.track}
-                            annotations={this.props.annotations}
+                            annotations={liveAnnotations}
                             selectAnnotation={this.selectAnnotation}
                             handleMouseDown={this.handleMouseDown}
                             handleMouseUp={this.handleMouseUp}

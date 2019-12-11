@@ -8,6 +8,7 @@ const mapSTP = (state, ownProps) => ({
     tracks: state.entities.tracks,
     formType: 'Update',
     selectAnnotation: ownProps.selectAnnotation,
+    clearAnnotation: ownProps.clearAnnotation,
 });
 
 const mapDTP = (dispatch, ownProps) => ({

@@ -23,6 +23,7 @@ class AnnotationForm extends React.Component {
         const formAnnotation = Object.assign({}, this.state)
         this.props.processAnnotation(formAnnotation)
         this.props.selectAnnotation(null)
+        this.props.clearAnnotation()
     }
 
     handleInput(type) {

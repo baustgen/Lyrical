@@ -7,6 +7,18 @@ class TrackLyrics extends React.Component {
 
 
         const { track, annotations, handleMouseUp, handleMouseDown, selectAnnotation } = this.props;
+        // let sortedAnnotations;
+        // if (newAnno.startIndex === null) {
+        //     sortedAnnotations = annotations;
+        // } else {
+        //     sortedAnnotations = [newAnno, ...annotations].sort((a, b) => {
+        //         if (a.startIndex < b.startIndex) {
+        //             return -1
+        //         } else {
+        //             return 1
+        //         }
+        //     })
+        // }
 
         let annotatedLyrics = [];
         let prevIndex = 0;
@@ -25,16 +37,24 @@ class TrackLyrics extends React.Component {
                 </span>
             );
 
-            annotatedLyrics.push(
-                <a key={key++} 
-                    onClick={() => {selectAnnotation(annotation.id)}}
-                    className="lyric-annotated"
-                    unselectable="on"
-                >
 
-                    {lyric}
-                </a>
-            )
+            if (annotation.id === 'new') {
+                annotatedLyrics.push(
+                    <span className="lyric-selected">{lyric}</span>
+                )
+            } else {
+                annotatedLyrics.push(
+                    <a key={key++}
+                        onClick={() => { selectAnnotation(annotation.id) }}
+                        className="lyric-annotated"
+                        unselectable="on"
+                    >
+
+                        {lyric}
+                    </a>
+                )
+            }
+            
 
             prevIndex = annotation.endIndex
 

@@ -7,6 +7,7 @@ const mapSTP = (state, ownProps) => ({
     track: state.entities.tracks[ownProps.match.params.trackId],
     currentUserId: state.session.currentUserId,
     selectAnnotation: ownProps.selectAnnotation,
+    clearAnnotation: ownProps.clearAnnotation,
 });
 
 const mapDTP = (dispatch, ownProps) => ({
