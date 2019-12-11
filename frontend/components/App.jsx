@@ -4,11 +4,12 @@ import NavLinks from "./nav_bar/nav_links";
 import Footer from "./footer";
 import SignupFormContainer from "./auth/signup_form_container";
 import LoginFormContainer from "./auth/login_form_container";
-import AuthRoute from "../util/route_util";
+import {AuthRoute, ProtectedRoute} from "../util/route_util";
 import UserLinksContainer from "./nav_bar/user_links_container";
 import ArtistsIndexContainer from "./artist/artists_index_container";
 import ArtistShowContainer from "./artist/artist_show_container";
 import TrackShowContainer from "./track/track_show_container";
+import Splash from './splash/splash'
 
 const App = () => (
     <div>
@@ -24,13 +25,13 @@ const App = () => (
         <main>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
+            <AuthRoute exact path="/" component={Splash}/>
                 
             <Switch>
-                <Route path="/artists/:letter/:artistId" component={ArtistShowContainer}/>
-                <Route path="/artists/:letter" component={ArtistsIndexContainer}/>
-                <Route path="/tracks/:trackId" component={TrackShowContainer}/>
-                <Route path="/artists/" component={ArtistsIndexContainer}/>
-                <Route exact path="/" component={ArtistsIndexContainer}/>
+                <ProtectedRoute path="/artists/:letter/:artistId" component={ArtistShowContainer}/>
+                <ProtectedRoute path="/artists/:letter" component={ArtistsIndexContainer}/>
+                <ProtectedRoute path="/tracks/:trackId" component={TrackShowContainer}/>
+                <ProtectedRoute path="/artists/" component={ArtistsIndexContainer}/>
             </Switch>
             <Footer />
         </main>
