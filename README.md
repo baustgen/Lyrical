@@ -7,10 +7,10 @@ Lyrical is a single-page application based on genius.com which allows users to a
 Lyrical was created with a Ruby on Rails backend, PostgreSQL database, and React.js with Redux for the front end.
 
 Addtionally, JBuilder was used to create API responses and AWS S3 cloud storage was used to store images remotely.
+</br>
+</br>
 
-## Features
-
-### Annotations
+## Annotations
 ![View Annotation](./public/ViewAnno.gif)
 
 Users can create new annotations by highlighting the text that they would like to annotate. A form then appears with a field for users to add an annotation.
@@ -73,5 +73,3 @@ handleMouseUp(e) {
     }
 }
 ```
-
-## Additional Considerations
