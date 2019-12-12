@@ -35,8 +35,6 @@ class TrackShow extends React.Component {
 
     handleMouseDown(e) {
         this.setState({
-            // startIndex: null,
-            // endIndex: null,
             activeAnnotation: null,
             mouseDownElement: e.target
         }) 
@@ -105,9 +103,7 @@ class TrackShow extends React.Component {
             })
         }
 
-        let annotationModal = null;
         let annotationSidebar;
-
         if (this.state.activeAnnotation === null) {
             annotationSidebar = (
                 <div className="annotation-instructions">
@@ -116,9 +112,6 @@ class TrackShow extends React.Component {
                 </div>
             );
         } else if (this.state.activeAnnotation === 'create') {
-            annotationModal = (
-                <div className="modal-blocker" onClick={this.clearAnnotation}></div>
-            );
             annotationSidebar = (
                 <AnnotationCreateContainer 
                     startIndex={this.state.startIndex}
@@ -156,7 +149,6 @@ class TrackShow extends React.Component {
                 </div>
                 <div className="track-content">
                     <div className="lyrics-container">
-                        {/* {annotationModal} */}
                         <h4 className="lyrics-header">{this.props.track.title.toUpperCase() + ' LYRICS'}</h4>
                         <TrackLyrics 
                             track={this.props.track}
