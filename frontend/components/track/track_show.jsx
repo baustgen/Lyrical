@@ -35,12 +35,11 @@ class TrackShow extends React.Component {
 
     handleMouseDown(e) {
         this.setState({
-            startIndex: null,
-            endIndex: null,
+            // startIndex: null,
+            // endIndex: null,
             activeAnnotation: null,
             mouseDownElement: e.target
-        })
-        
+        }) 
     }
 
     handleMouseUp(e) {
@@ -74,7 +73,6 @@ class TrackShow extends React.Component {
         } else {
             this.clearAnnotation()
         }
-
     }
 
     componentDidMount() {
@@ -158,7 +156,7 @@ class TrackShow extends React.Component {
                 </div>
                 <div className="track-content">
                     <div className="lyrics-container">
-                        {annotationModal}
+                        {/* {annotationModal} */}
                         <h4 className="lyrics-header">{this.props.track.title.toUpperCase() + ' LYRICS'}</h4>
                         <TrackLyrics 
                             track={this.props.track}
