@@ -51,42 +51,31 @@ class TrackShow extends React.Component {
         
         let minIndex = Math.min(startIndex, endIndex)
         let maxIndex = Math.max(startIndex, endIndex)
-        if (maxIndex - minIndex > 0) {
-            if (this.props.annotations.length) {
-                let safe = true;
-                for (let i = 0; i < this.props.annotations.length; i++) {
-                    const annotation = this.props.annotations[i];
-        
-                    if ((annotation.startIndex >= minIndex) && (annotation.endIndex <= maxIndex)) {
-                        safe = false
-                    }
-                }
-                if (safe) {
-                    this.setState({
-                        startIndex: minIndex,
-                        endIndex: maxIndex,
-                        mouseDownElement: null,
-                        activeAnnotation: 'create'
-                    })
-                } else {
-                    this.clearAnnotation()
-                }
 
-                
-            } else {
+        if (maxIndex - minIndex > 0) {
+            let safe = true;
+            for (let i = 0; i < this.props.annotations.length; i++) {
+                const annotation = this.props.annotations[i];
+
+                if ((annotation.startIndex >= minIndex) && (annotation.endIndex <= maxIndex)) {
+                    safe = false
+                }
+            }
+            if (safe) {
                 this.setState({
                     startIndex: minIndex,
                     endIndex: maxIndex,
                     mouseDownElement: null,
                     activeAnnotation: 'create'
                 })
+            } else {
+                this.clearAnnotation()
             }
         } else {
-            this.clearAnnotation()  
+            this.clearAnnotation()
         }
 
     }
-
 
     componentDidMount() {
         this.props.requestTrack(this.props.match.params.trackId)
