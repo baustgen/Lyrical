@@ -21,6 +21,8 @@ This was implemented using `onMouseDown` and `onMouseUp` event handlers on the l
 The lyrics text is rendered in a single `p` element. This element is then subdivided into `span` and `a` elements based on existing annotations. The `onMouseDown` handler (`handleMouseDown`) stores the element that the selection started in, `e.target`, as well as clearing the sidebar if the editor or another annotation is open.  
 
 ```javascript
+// frontend/components/track/track_show.jsx
+
 handleMouseDown(e) {
     this.setState({
         activeAnnotation: null,
@@ -36,6 +38,8 @@ The `onMouseUp` handler (`handleMouseUp`) then finds the beginning and ending in
 
 
 ```javascript
+// frontend/components/track/track_show.jsx
+
 handleMouseUp(e) {
     let startOffset = parseInt(this.state.mouseDownElement.getAttribute('data-indexoffset'));
     let endOffset = parseInt(e.target.getAttribute('data-indexoffset'));
@@ -69,3 +73,5 @@ handleMouseUp(e) {
     }
 }
 ```
+
+## Additional Considerations

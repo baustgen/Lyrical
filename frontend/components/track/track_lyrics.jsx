@@ -2,24 +2,8 @@ import React from "react";
 
 class TrackLyrics extends React.Component {
 
-
     render () {
-
-
         const { track, annotations, handleMouseUp, handleMouseDown, selectAnnotation } = this.props;
-        // let sortedAnnotations;
-        // if (newAnno.startIndex === null) {
-        //     sortedAnnotations = annotations;
-        // } else {
-        //     sortedAnnotations = [newAnno, ...annotations].sort((a, b) => {
-        //         if (a.startIndex < b.startIndex) {
-        //             return -1
-        //         } else {
-        //             return 1
-        //         }
-        //     })
-        // }
-
         let annotatedLyrics = [];
         let prevIndex = 0;
         let key = 0
@@ -29,14 +13,11 @@ class TrackLyrics extends React.Component {
             const lyric = track.lyrics.slice(annotation.startIndex, annotation.endIndex)
             let before = track.lyrics.slice(prevIndex, annotation.startIndex);
 
-        
-
             annotatedLyrics.push(
                 <span key={key++} data-indexoffset={prevIndex}>
                     {before}
                 </span>
             );
-
 
             if (annotation.id === 'new') {
                 annotatedLyrics.push(
@@ -49,13 +30,11 @@ class TrackLyrics extends React.Component {
                         className="lyric-annotated"
                         unselectable="on"
                     >
-
                         {lyric}
                     </a>
                 )
             }
-            
-
+        
             prevIndex = annotation.endIndex
 
             if (i === annotations.length - 1) {
@@ -64,12 +43,11 @@ class TrackLyrics extends React.Component {
                         {track.lyrics.slice(prevIndex, track.lyrics.length)}
                     </span>
                 )
-            }
-            
+            }  
         }
+
         if (annotatedLyrics.length) {
             return (
-    
                 <p className="lyrics-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown}>
                     {annotatedLyrics}
                 </p>
@@ -81,7 +59,6 @@ class TrackLyrics extends React.Component {
                 </p>
             )
         }
-
     }
 }
 
