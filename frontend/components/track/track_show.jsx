@@ -29,12 +29,18 @@ class TrackShow extends React.Component {
             startIndex: null,
             endIndex: null,
             activeAnnotation: null,
+            mouseDownElement: null
         })
     }
 
     handleMouseDown(e) {
-        this.setState({mouseDownElement: e.target})
-        this.clearAnnotation()
+        this.setState({
+            startIndex: null,
+            endIndex: null,
+            activeAnnotation: null,
+            mouseDownElement: e.target
+        })
+        
     }
 
     handleMouseUp(e) {
@@ -45,8 +51,6 @@ class TrackShow extends React.Component {
         
         let minIndex = Math.min(startIndex, endIndex)
         let maxIndex = Math.max(startIndex, endIndex)
-
-        
         if (maxIndex - minIndex > 0) {
             if (this.props.annotations.length) {
                 let safe = true;
@@ -65,10 +69,7 @@ class TrackShow extends React.Component {
                         activeAnnotation: 'create'
                     })
                 } else {
-                    this.setState({
-                        mouseDownElement: null,
-                        activeAnnotation: null
-                    })
+                    this.clearAnnotation()
                 }
 
                 
@@ -81,10 +82,7 @@ class TrackShow extends React.Component {
                 })
             }
         } else {
-            this.setState({
-                mouseDownElement: null,
-                activeAnnotation: null,
-            })
+            this.clearAnnotation()  
         }
 
     }
@@ -120,6 +118,7 @@ class TrackShow extends React.Component {
             })
         }
 
+        let annotationModal = null;
         let annotationSidebar;
 
         if (this.state.activeAnnotation === null) {
@@ -130,6 +129,9 @@ class TrackShow extends React.Component {
                 </div>
             );
         } else if (this.state.activeAnnotation === 'create') {
+            annotationModal = (
+                <div className="modal-blocker" onClick={this.clearAnnotation}></div>
+            );
             annotationSidebar = (
                 <AnnotationCreateContainer 
                     startIndex={this.state.startIndex}
@@ -167,6 +169,7 @@ class TrackShow extends React.Component {
                 </div>
                 <div className="track-content">
                     <div className="lyrics-container">
+                        {annotationModal}
                         <h4 className="lyrics-header">{this.props.track.title.toUpperCase() + ' LYRICS'}</h4>
                         <TrackLyrics 
                             track={this.props.track}
