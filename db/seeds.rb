@@ -65,6 +65,54 @@ frnd = Artist.create({ name: 'FRND', bio: "FRND, aka Andrew Goldstein, is a Los 
 frnd_img = open('https://lyrical-seeds.s3.amazonaws.com/frnd.jpg')
 frnd.image.attach(io: frnd_img, filename: 'frnd.jpg')
 
+fratellis = Artist.create({ name: 'Fratellis', bio: "The Fratellis is a three-part Scottish rock band from Glasgow who formed in 2005. The band name originated from the crime family from the famous movie, “The Goonies”. When translated from Italian—Fratelli means brother—indicating that they are brothers despite having no blood-relation."})
+fratellis_img = open('https://lyrical-seeds.s3.amazonaws.com/fratellis.jpg')
+fratellis.image.attach(io: fratellis_img, filename: 'fratellis.jpg')
+
+goody_grace = Artist.create({ name: 'Goody Grace', bio: "Goody Grace has certainly come a long way from the tiny Manitoba town of Selkirk [pop. 8,000]. 
+Since moving to Los Angeles in 2014 at just 17, the singer, songwriter, and producer went from couch surfing to headlining sold-out gigs and averaging 833K monthly listeners on Spotify by January 2018. 
+His rise can be credited to a signature “cinematic” style, encompassing pop, punk, hip-hop, and folk and nodding to influences as diverse as David Lynch, Misfits, Morrissey, and The Watchmen."})
+goody_grace_img = open('https://lyrical-seeds.s3.amazonaws.com/goody_grace.jpg')
+goody_grace.image.attach(io: goody_grace_img, filename: 'goody_grace.jpg')
+
+gianni_kyle = Artist.create({ name: 'gianni & kyle', bio: "gianni & kyle (Gianni DiBernado and Kyle Devore) are two young rappers from Annapolis, MD that really broke out with their singles, “fuckboi” and “we ain’t”. With “fuckboi”, they were featured in Spotify’s “United States Viral 50” playlist as #10.
+
+On the 21st of February 2017 they released their first album, backstreet boy meets world featuring 6 full length tracks."})
+gianni_kyle_img = open('https://lyrical-seeds.s3.amazonaws.com/gianni_kyle.jpg')
+gianni_kyle.image.attach(io: gianni_kyle_img, filename: 'gianni_kyle.jpg')
+
+houses = Artist.create({ name: 'Houses', bio: "Houses' Dexter Tortoriello and Megan Messina hail from Chicago"})
+houses_img = open('https://lyrical-seeds.s3.amazonaws.com/houses.jpg')
+houses.image.attach(io: houses_img, filename: 'houses.jpg')
+
+hoodie_allen = Artist.create({ name: 'Hoodie Allen', bio: "Hoodie Allen (born August 19, 1988) is a rapper from Long Island, NY. His real life name is Steven Markowitz – the stage name Hoodie Allen came from his youth nickname “Hoodie” and is a wordplay with actor Woody Allen.
+
+He would gain first success with several mixtapes and EPs such as Leap Year, All American and Crew Cuts, before going on to release his first studio album People Keep Talking in 2014.
+
+His style is a mixture of rap and pop – catchy hooks are often embedded in two or three fast spoken verses. His lyrics mostly deal with fame, girls and parties and are very reference-heavy."})
+hoodie_allen_img = open('https://lyrical-seeds.s3.amazonaws.com/hoodie_allen.png')
+hoodie_allen.image.attach(io: hoodie_allen_img, filename: 'hoodie_allen.png')
+
+ingrid_michaelson = Artist.create({ name: 'Ingrid Michaelson', bio: "Ingrid Michaelson (born December 8, 1979) is an American, New York-based indie pop singer-songwriter. Her first album Slow the Rain was released in 2005 and since then she has released five more albums: Girls and Boys, Be OK, Everybody, Human Again, and Lights Out."})
+ingrid_michaelson_img = open('https://lyrical-seeds.s3.amazonaws.com/ingrid_michaelson.jpg')
+ingrid_michaelson.image.attach(io: ingrid_michaelson_img, filename: 'ingrid_michaelson.jpg')
+
+iron_wine = Artist.create({ name: 'Iron & Wine', bio: "Under that elemental handle, the bushily-bearded singer-songwriter plays a kind of new-millennial Americana. Sam Beam sings songs steeped in the imagery of the rural South.
+
+Earlier albums feature his husky, whispery voice over mostly-acoustic tunes, while more recent releases utilize a wider range of instruments and more open vocal cords."})
+iron_wine_img = open('https://lyrical-seeds.s3.amazonaws.com/iron_wine.jpg')
+iron_wine.image.attach(io: iron_wine_img, filename: 'iron_wine.jpg')
+
+jon_bellion = Artist.create({ name: 'Jon Bellion', bio: "Jon Bellion is an American singer, songwriter, producer and rapper born and raised in Long Island, New York. He was born on December 26, 1990 and is signed with both Capitol Records and Visionary Music Group, alongside Logic. He first started making beats on his brother’s beat pad when he was a young kid. He would end up going to college on a basketball scholarship only to drop out to pursue his music career.
+
+Jon pulls influences from many artists and producers, including Kanye West, Timbaland and J. Dilla. His ability to blend genres often makes it tough to categorize his sound, but his inspirations are evident throughout his projects."})
+jon_bellion_img = open('https://lyrical-seeds.s3.amazonaws.com/jon_bellion.jpg')
+jon_bellion.image.attach(io: jon_bellion_img, filename: 'jon_bellion.jpg')
+
+joey_burbs = Artist.create({ name: 'Joey Burbs', bio: "Born in Milwaukee and now living in Chicago, Joey Burbs began playing piano at the age of 7.  His first original project, The Redshirt EP, was released in 2015, and since then, Joey has developed a unique, genre-blending sound combining organic pop melodies with soulful hip-hop and R&B sounds."})
+joey_burbs_img = open('https://lyrical-seeds.s3.amazonaws.com/joey_burbs.jpg')
+joey_burbs.image.attach(io: joey_burbs_img, filename: 'joey_burbs.png')
+
 
 # END ARTISTS
 
@@ -1797,10 +1845,1048 @@ But you could never hurt me
 How do you stay beautiful in this ugly world
 Sticks and stones may break my bones
 But you know how to kill me, girl",
-    artist_id: eminem.id
+    artist_id: frnd.id
 })
 sticks_and_stones_img = open('https://lyrical-seeds.s3.amazonaws.com/sticks_and_stones.jpg')
 sticks_and_stones.image.attach(io: sticks_and_stones_img, filename: 'sticks_and_stones.jpg')
+
+henrietta = Track.create({ title: "Henrietta",
+    album: "Costello Music",
+    lyrics: "[Verse 1]
+Henrietta, we got no flowers for you
+Just these three miserable cunts
+Sitting on the back seat, tapping on the off beat
+We know you love us and you probably do
+Although your husband may cut us
+He's an animal, though everything is possible
+
+[Chorus]
+Give us a kiss and maybe we can go out
+It's hard to miss you when you follow us about
+Buy us some shoes and maybe take us for cola
+We'll get you there in some filthy big gondola
+And it's, clean out the bank and bump off your daddy, you can
+Come live with us amongst the has-beens and the addicts
+These are crazy times down at Costello music you can
+Answer the phone and talk anyway you choose it, come on
+Oh, come on
+Oh, come on
+Oh-oh-oh-oh-oh-oh-oh-oh
+Uh-uh-uh-uh
+
+[Verse 2]
+Dear Henrietta, we're just three lonely boys
+Though the girls love us, we're so
+Into you incredibly, we'd love to see you terribly
+We'd love to hate you but we don't have no choice
+Come be our wa-ha-ha-ha
+Honey, honey three four, one time, once more
+
+[Chorus]
+Give us a kiss and maybe we can go out
+It's hard to miss you when you follow us about
+Buy us some shoes and maybe take us for cola
+We'll get you there in some filthy big gondola
+And it's, clean out the bank and bump off your daddy, you can
+Come live with us amongst the has-beens and the addicts
+These are crazy times down at Costello music you can
+Answer the phone and talk anyway you choose it, come on
+Oh-oh-oh-oh
+Oh-oh-oh-oh-oh-oh-oh
+Oh-oh-oh-oh
+Oh-oh-oh-oh-oh-oh-oh
+
+[Outro]
+Clean out the bank and bump off your daddy, you can
+Come live with us amongst the has-beens and the addicts
+These are crazy times down at Costello music you can
+Answer the phone and talk anyway you choose it, come on
+Clean out the bank and bump off your daddy, you can
+Come live with us amongst the has-beens and the addicts
+These are crazy times down at Costello music you can
+Answer the phone and talk anyway you choose it, come on
+Oh come on
+Oh come on
+Oh come on
+Oh come on
+Oh come on
+Oh come on
+Oh-oh-oh-oh-oh-oh-oh-oh",
+    artist_id: fratellis.id
+})
+henrietta_img = open('https://lyrical-seeds.s3.amazonaws.com/henrietta.jpg')
+henrietta.image.attach(io: henrietta_img, filename: 'henrietta.jpg')
+
+chelsea_dagger = Track.create({ title: "Chelsea Dagger",
+    album: "Costello Music",
+    lyrics: "[Verse 1]
+Well, you must be a girl with shoes like that
+She said, \"You know me well\"
+I seen you and little Steven and Joanna
+'Round the back of my hotel, oh yeah
+Someone said you was asking after me
+But I know you best as a blagger
+I said, \"Tell me your name, is it sweet?\"
+She said, \"My boy, it's Dagger\", oh yeah
+
+[Chorus]
+I was good, she was hot
+Stealin' everything she got
+I was bold, she was over the worst of it
+Gave me gear; thank you, dear
+Bring your sister over here
+Let her dance with me just for the hell of it
+
+[Verse 2]
+Well, you must be a boy with bones like that
+She said, \"You got me wrong\"
+I would've sold them to you if I could've
+Just to have kept the last of my clothes on, oh yeah
+Call me up, take me down with you when you go
+I could be your regular belle
+And I shall dance for little Steven and Joanna
+'Round the back of my hotel, oh yeah
+
+[Chorus]
+I was good, she was hot
+Stealin' everything she got
+I was bold, she was over the worst of it
+Gave me gear; thank you, dear
+Bring your sister over here
+Let her dance with me just for the hell of it
+
+[Bridge]
+Chelsea, Chelsea, I believe
+When you're dancing slowly, sucking your sleeve
+The boys get lonely after you leave
+It's one for the Dagger
+And another for the one you believe
+Chelsea, I believe
+When you're dancing slowly, sucking your sleeve
+The boys get lonely after you leave
+It's one for the Dagger
+And another for the one you believe
+
+[Outro]
+One you believe
+One you believe, oh no",
+    artist_id: fratellis.id
+})
+chelsea_dagger_img = open('https://lyrical-seeds.s3.amazonaws.com/chelsea_dagger.jpg')
+chelsea_dagger.image.attach(io: chelsea_dagger_img, filename: 'chelsea_dagger.jpg')
+
+pretend = Track.create({ title: "Pretend",
+    album: "Infinite",
+    lyrics: "[Verse 1]
+Fuck you and your high class friends
+They wouldn't know the difference between love and sex
+And I wouldn't say intelligence is something they possess
+At least I haven't noticed in the time we've spent
+On the weekends when we pretend that we're something more than friends
+When we sleep in and it feels like how we feel we'll never end
+
+[Chorus]
+And we pretend
+We pretend
+We pretend
+We pretend
+
+[Verse 2]
+Fuck you and your new boyfriend
+I bet he doesn't know the things that I know and
+I bet he doesn't know your hidden love for punk bands
+Or your infatuation with drunk romance
+Can we pretend that you leave him and we can be more than friends?
+We can return to how we were when we met
+
+[Chorus]
+And we'll pretend
+We'll pretend
+We'll pretend
+We'll pretend
+
+[Verse 3]
+Fuck you and what your parents say
+I'm sorry that I doubted when you said that they're insane
+Cause they always said I don't know how to act my age
+They always said that I'm no good for you but hey
+Can we pretend on the weekend that we maybe more than friends?
+We can sleep in all weekend again
+
+[Chorus]
+And we'll pretend
+We'll pretend
+We'll pretend
+We'll pretend
+Oh we'll pretend
+We'll pretend
+We'll pretend
+Oh we'll pretend",
+    artist_id: goody_grace.id
+})
+pretend_img = open('https://lyrical-seeds.s3.amazonaws.com/pretend.jpg')
+pretend.image.attach(io: pretend_img, filename: 'pretend.jpg')
+
+vanilla_coke = Track.create({ title: "Vanilla Coke",
+    album: "Vanilla Coke",
+    lyrics: "[Verse 1]
+
+Don't give a fuck and I don't think that'll change
+Hollywood Hills I be rolling up with my gang
+Things are a little bit different now I suppose
+I just might fuck around and text your girl a rose
+
+Yeah I don't give a fuck and I dont think that'll change
+Hollywood Hills I been rolling up with my gang
+Things are a little different now I suppose
+I just might fuck around and text your girl a rose
+
+[Chorus]
+
+She don't want your love
+She just knows you're gonna blow
+She don't want your love
+She just wants you for your gold
+She don't want your love (x3)
+She just wants Vanilla Coke (what are you people, on dope?)
+
+Yeah (x4) (she don't want your love)
+
+[Verse 2]
+
+Got the club going up even though we're underage
+If you wanna roll up she might just light this shit
+But that's not what she came here for, no way
+
+[Chorus]
+
+She don't want your love
+She just knows you're gonna blow
+She don't want your love
+She just wants you for your gold
+She don't want your love (x3)
+She just wants Vanilla Coke (what are you people, on dope?)
+
+Yeah (x4) (she don't want your love)
+
+[Verse 3]
+
+Don't give a fuck and I don't think that'll change
+Hollywood Hills I be rolling up with my gang
+Things are a little bit different now I suppose
+I just might fuck around and text (what are you people, on dope?) your girl a rose
+
+Yeah (x10)",
+    artist_id: goody_grace.id
+})
+vanilla_coke_img = open('https://lyrical-seeds.s3.amazonaws.com/vanilla_coke.jpg')
+vanilla_coke.image.attach(io: vanilla_coke_img, filename: 'vanilla_coke.jpg')
+
+miss_me = Track.create({ title: "Do u even miss me at all?",
+    album: "she's no angel",
+    lyrics: "[Intro: Kyle Devore]
+Yeah, yeah
+
+[Pre-Chorus: Kyle Devore]
+Do you even miss me at all?
+When I post that, video of women on my SnapChat
+Only really tryna get a way to see you call
+But do you even miss me at all?
+'Cause I need that thing from you
+Like I'm the only one in this game for two
+Hope that you would be there when I fall
+
+[Chorus: Gianni DiBernado]
+But do you even miss me at all?
+Do you even miss me at all?
+Do you even miss me at all?
+'Cause I need that thing from you
+Like I'm the only one in this game for two
+Hope that you would be there when I fall
+But do you even miss me at all?
+
+[Verse 1: Kyle Devore]
+Yeah
+Girl you say you love me
+Then you go behind my back saying fuck me (Skrr)
+Coulda gave your ass the world, and you lucky
+Used to say there was \"No one else above me\"
+(But I can't get a text back though)
+Girl I used to love you
+Now all the shit you doin' make it hard to trust you
+Stab me in the back know it cut deep
+You saying \"Fuck me,\" I'm saying \"Fuck you\" (Ooh)
+All your history I don't wanna know that
+See me on IG, asking where the hoes at
+I can have another you by the morning
+Used to kill the pussy, go and get a toe tag
+Aye fuck it, tell me don't you love it
+Once you leave bitches chasing cause' the way I run it
+High-key, coulda made you wifey
+One of one, no one else like me (Ooh)
+
+[Chorus: Kyle Devore]
+Do you even miss me at all?
+When I post that video of women on my snapchat
+Only really tryna get a way to see you call
+
+[Chorus: Gianni DiBernado]
+Do you even miss me at all?
+Do you even miss me at all?
+Do you even miss me at all?
+'Cause I need that thing from you
+Like I'm the only one in this game for two
+Hope that you would be there when I fall
+But do you even miss me at all?
+
+[Verse 2: Kyle Devore & *Gianni DiBernado*]
+Girl we had plans
+Then you cut me out, I don't really understand
+Used to be *all about the romance*
+Now I steady wonder if you're with another man, 'cause I
+*Stay buggin' bout' the things you do
+Forgettin' everything that we've been through
+But do you need me, like I need you?
+Don't tell me that you care about me if it ain't true*
+
+[Chorus: Kyle Devore & *Gianni DiBernado*]
+Do you even miss me at all?
+When I post that (*Post that*) video of women on my snapchat (*Baby)
+Only really tryna get a way to see you call
+Do you even miss me at all?
+Cause' I need that thing from you
+Like I'm the only one in this game for two
+Hope that you'd be there when I fall
+
+[Chorus: Gianni DiBernado]
+Do you even miss me at all? (Do you miss me baby?)
+Do you even miss me at all? (I gotta know nah nah nah nah nah)
+Do you even miss me at all?
+Cause' I need that thing from you
+Like I'm the only one in this game for two
+Hope that you'd be there when I fall but
+Do you even miss me at all?",
+    artist_id: gianni_kyle.id
+})
+miss_me_img = open('https://lyrical-seeds.s3.amazonaws.com/miss_me.jpg')
+miss_me.image.attach(io: miss_me_img, filename: 'miss_me.jpg')
+
+hit_my_line = Track.create({ title: "Hit my line",
+    album: "Hit my line",
+    lyrics: "When you call him on the phone
+And you just get dial-toned
+You know I could be the one to pick you up
+You can hit my line
+Anything you need
+You can hit my line
+You can count on me
+You can hit my line
+Tell me where you at
+You can hit my line
+Imma hit you right back
+You can hit my line
+
+Im the one you call first (woo)
+Im the one you call for the best news
+And you call for the worst
+Look, I barely pick up my cell
+Usually keep it on lock
+If I see ya ten digits, damn
+I always pick up and talk
+Look, bad ass attitude yeah
+Tell me if you comin' through yeah
+I'm the only one that pick up
+Look, true colors stay true yeah
+Girl you got all the authority
+The only one ever ignoring me
+The only one that if you callin'
+I walk out the room and I drop everything that I'm doin'
+And pick up cause you my priority
+Look, you can hit me with a text
+Look, pick you up from LAX (woo)
+Then we have some LA sex
+Look, drunk as fuck stuck at 1OAK
+Got pick yo ass up cause you know I'm the best
+Yeah, you don't gotta call Lyft
+I'll be yo ride, fuck UberX
+
+When you call him on the phone
+And you just get dial-toned
+You know I could be the one to pick you up
+You can hit my line
+Anything you need
+You can hit my line
+You can count on me
+You can hit my line
+Tell me where you at
+You can hit my line
+Imma hit you right back
+You can hit my line
+
+Yeah, yeah, yeah
+Hit my line
+If you ever feelin' for the pipe
+Imma come through and imma get you right
+Cause I know you need it like all the time
+And I got it, I got it
+Pull up on you in a Mazi
+The way you shakin that body
+Got a nigga hypnotizin'
+Girl I swear I want you in all of the wrong ways
+I might fuck you right here in the hallway
+You gon' get this dick you had a long day
+You can hit my line I'm just one call away
+Hey, no rubbers in the Louis wylin
+Girl you know I'm always on the go
+Two hunnid on that dance she feelin' on it
+Then she know I hit it on the road
+I'm the only one to get a job done
+Swear that pussy's so awesome
+And if you ever feelin' lonely shawty
+All you gotta do is pick the phone up
+
+When you call him on the phone
+And you just get dial-toned
+You know I could be the one to pick you up
+You can hit my line
+Anything you need
+You can hit my line
+You can count on me
+You can hit my line
+Tell me where you at
+You can hit my line
+Imma hit you right back
+You can hit my line",
+    artist_id: gianni_kyle.id
+})
+hit_my_line_img = open('https://lyrical-seeds.s3.amazonaws.com/hit_my_line.jpg')
+hit_my_line.image.attach(io: hit_my_line_img, filename: 'hit_my_line.jpg')
+
+fast_talk = Track.create({ title: "Fast Talk",
+    album: "Drugstore Heaven - EP",
+    lyrics: "[Verse 1]
+Me and my best friends cruising down West End Street
+Hiding from cops and driving circles around the block all week
+All of my friends died out on West End Street
+They say we're born to die young
+But we're just trying to live in peace
+
+[Chorus]
+So maybe heaven is a ghetto with no bad blocks
+Shangri-La dealers at the bus stops
+And maybe God is just a cop that we can fast talk
+So if you're guilty and you know it, put your hands up
+'Cause karma's just a different word for bad luck
+And what if death is just another pair of handcuffs?
+Then we'd better run
+Then we'd better run
+
+[Verse 2]
+All of our friends went crazy on LSD
+Sailing their cars through the big bright city streets
+And everyone who knows our name
+Says that we ain't ever gonna change
+They say we're born to die young
+But we're trying to find a better way
+They say we're born to die young
+But we're trying to find a better way
+
+[Chorus]
+Maybe heaven is a ghetto with no bad blocks
+Shangri-La dealers at the bus stops
+And maybe God is just a cop that we can fast talk
+So if you're guilty and you know it, put your hands up
+'Cause karma's just a different word for bad luck
+And what if death is just another pair of handcuffs?
+Then we'd better run
+Then we'd better run
+
+[Spoken]
+Word up?
+Hey, what's up, man?
+Just sitting around and I'm gonna be 32 years old tomorrow
+And I feel half completely alive and half completely dead
+
+[Bridge]
+We hope and we pray day after day
+They say we're born to die young
+But we're gonna find a better way
+We hope and we pray day after day
+They say we're born to die young
+But we're trying to find a better way
+
+[Chorus]
+So maybe heaven is a ghetto with no bad blocks
+Shangri-La dealers at the bus stops
+And maybe God is just a cop that we can fast talk
+So if you're guilty and you know it, put your hands up
+'Cause karma's just different word for bad luck
+And what if death is just another pair of handcuffs?
+Then we'd better run
+Then we'd better run
+Then we'd better run",
+    artist_id: houses.id
+})
+fast_talk_img = open('https://lyrical-seeds.s3.amazonaws.com/fast_talk.jpg')
+fast_talk.image.attach(io: fast_talk_img, filename: 'fast_talk.jpg')
+
+wasting_time = Track.create({ title: "Wasting All My Time",
+    album: "Wasting All My Time",
+    lyrics: "[Verse]
+You never make it simple, but I'm down for the challenge
+I've been caught up in the middle
+Tryna find a balance and I should have seen it coming
+When you turn into a savage, but you got something special
+All the other girls are average
+
+[Pre-Chorus]
+And I still got my eyes on you, after all this shit you put me through
+And I know I never say I do, but I like wasting my time on you
+
+[Chorus]
+I like, wasting all my time, wasting, wasting all my time
+Wasting all my time on you
+I like, wasting all my time, wasting, wasting all my time
+Wasting all my time on you
+(You're a bad bitch, know I gotta have it)
+
+[Verse]
+Only have a couple minutes, turn to hours by the time we finished
+And I know I should have kept my distance, but I didn't now you got me trippin'
+
+[Pre-Chorus]
+And I still got my eyes on you, after all this shit you put me through
+And I know I never say I do, but I like wasting my time on you
+
+[Chorus]
+I like, wasting all my time, wasting, wasting all my time
+Wasting all my time on you
+I like, wasting all my time, wasting, wasting all my time
+Wasting all my time on you
+
+[Verse]
+Yo, I fell in love when we first met, not a lot of moments I would regret
+And I know this shit is bittersweet, we both know this ain't meant to be
+'Cause we live two different lives, and I'm always on the other side
+The only thing that money couldn't buy, was just a little more time
+
+[Pre-Chorus]
+But I still got my eyes on you, after all this shit you put me through
+And I know I never say I do, but I like wasting my time on you
+
+[Chorus]
+I like, wasting all my time, wasting, wasting all my time
+Wasting all my time on you
+I like, wasting all my time, wasting, wasting all my time
+Wasting all my time on you",
+    artist_id: hoodie_allen.id
+})
+wasting_time_img = open('https://lyrical-seeds.s3.amazonaws.com/wasting_time.jpg')
+wasting_time.image.attach(io: wasting_time_img, filename: 'wasting_time.jpg')
+
+operation = Track.create({ title: "Operation",
+    album: "Operation",
+    lyrics: "[Intro]
+Yeah
+First team
+That OG shit, check it
+
+[Verse 1]
+It was a Brooklyn summer like no other
+She got me feeling like I really love her
+And I don’t know if it’s the feeling but I didn’t see it coming
+Talking Michael Oher meet Stevie Wonder
+I wonder if she’ll break my heart
+If I recover will it hurt and will I suffer
+Will.i.am but got no Fergie, immature and almost thirty
+Think the world has done me dirty but it treat me just like any other
+But fuck it I need opinions like I need my mother
+Aka I’m so dependent on 'em
+Please don’t be offended by the things I say when I’m around ya
+I just get a little tongue tied, mouth dry, does it sound familiar?
+If you feel the way I feel, baby keep it real
+Cause you the total package even got the sex-appeal
+Murder in the first degree cause she dressed to kill
+I could be the JT to your Jessie Biel
+
+[Chorus]
+If you want it you can get it
+Na na na
+If you want it you can get it
+Na na na
+If you want my heart then you can cut me open
+Treat me like a surgeon fix it when it’s broken
+If you want it you can get it
+Na na na
+If you want it you can get it
+Na na na
+If you want my mind then read it like a psychic
+Keep you by my hip babe you can be my sidekick
+
+[Verse 2]
+If you want my love you gotta keep it simple
+I tell her lay it all on me like it’s rudimental
+I could play a couple songs by homie Ed
+It’s gonna get your pussy wet, get your pussy wet
+I apologize for saying pussy
+I’m a rookie when it comes to long-term I am always playing hooky
+Trying to find a way out, or way to take a day off
+R.I.P. to my relationship, we need a seance
+She be feeling so empowered that she just turned Bey' on
+Should have stayed together till the end
+You were my day one
+But you know how a player do
+I always gotta play on
+I guess you gotta cut me open just like operation, operation
+We don’t stay too long girl it’s only a vacation
+I know you said some crazy things
+I said some too
+But the truth is I’m better off with you
+
+[Chorus]
+If you want it you can get it
+Na na na
+If you want it you can get it
+Na na na
+If you want my heart then you can cut me open
+Treat me like a surgeon fix it when it’s broken
+If you want it you can get it
+Na na na
+If you want it you can get it
+Na na na
+If you want my mind then read it like a psychic
+Keep you by my hip babe you can be my sidekick
+If you want it you can get it
+Na na na
+You can get it
+Na na na
+If you want it you can get it
+Na na na
+You can get it
+Na na na
+If you want my",
+    artist_id: hoodie_allen.id
+})
+operation_img = open('https://lyrical-seeds.s3.amazonaws.com/operation.jpg')
+operation.image.attach(io: operation_img, filename: 'operation.jpg')
+
+way_i_am = Track.create({ title: "The Way I Am",
+    album: "Girls and Boys",
+    lyrics: "[Verse 1]
+If you were falling
+Then I would catch you
+You need a light
+I'd find a match
+
+[Chorus]
+Cause I love the way you say good morning
+And you take me the way I am
+
+[Verse 2]
+If you are chilly
+Here, take my sweater
+Your head is aching
+I'll make it better
+
+[Chorus]
+Cause I love the way you call me baby
+And you take me the way I am
+
+[Verse 3]
+I'd buy you Rogaine
+When you start losing all your hair
+Sew on patches
+To all you tear
+
+[Chorus]
+Cause I love you more than I could ever promise
+And you take me the way I am
+You take me the way I am
+You take me the way I am",
+    artist_id: ingrid_michaelson.id
+})
+way_i_am_img = open('https://lyrical-seeds.s3.amazonaws.com/way_i_am.jpg')
+way_i_am.image.attach(io: way_i_am_img, filename: 'way_i_am.jpg')
+
+girls_chase_boys = Track.create({ title: "Girls Chase Boys",
+    album: "Lights Out",
+    lyrics: "[Chorus]
+All the broken hearts in the world still beat
+Let's not make it harder than it has to be
+Ooh, it's all the same thing
+Girls chase boys chase girls
+All the broken hearts in the world still beat
+Let's not make it harder than it has to be
+Ooh, it's all the same thing
+Girls chase boys chase girls
+
+[Verse 1]
+I'm a little let down, but I'm not dead
+There's a little bit more that has to be said (oh, oh)
+You play me, now I play you too
+Let's just call it over
+
+[Chorus]
+All the broken hearts in the world still beat
+Let's not make it harder than it has to be
+Ooh, it's all the same thing
+Girls chase boys chase girls
+All the broken hearts in the world still beat
+Let's not make it harder than it has to be
+Ooh, it's all the same thing
+Girls chase boys chase girls
+
+[Post-Chorus]
+Chase girls chase boys chase boys chase girls
+
+[Verse 2]
+I'm a little bit home, but I'm not there yet
+It's one to forgive, but it's hard to forget
+Don't call me, I won't call you, too
+Let's just call it over
+
+[Chorus]
+All the broken hearts in the world still beat
+Let's not make it harder than it has to be
+Ooh, it's all the same thing
+Girls chase boys chase girls
+All the broken hearts in the world still beat
+Let's not make it harder than it has to be
+Ooh, it's all the same thing
+Girls chase boys chase girls
+
+[Post-Chorus]
+Chase girls chase boys chase boys chase girls
+
+[Bridge]
+I got two hands, one beating heart
+And I'll be alright, I'm gonna be alright
+Yeah I got two hands, one beating heart
+And I'll be alright
+Gonna be alright
+
+[Chorus]
+All the broken hearts in the world still beat
+Let's not make it harder than it has to be
+Ooh, it's all the same
+Girls chase boys chase girls
+All the broken hearts in the world still beat
+Let's not make it harder than it has to be
+Ooh, it's all the same thing
+Girls chase boys chase girls
+
+[Chorus]
+All the broken hearts in the world still beat
+(Oh, everything is going to be fine)
+Let's not make it harder than it has to be
+Ooh, it's all the same thing
+(Ooh, everybody loves you, baby)
+Girls chase boys chase girls
+
+[Chorus]
+All the broken hearts in the world still beat
+Let's not make it harder than it has to be
+(Ooh, everything is going to be fine)
+Ooh, it's all the same thing
+Girls chase boys chase girls
+
+[Interloped with Chorus]
+Ooh, everything is going to be fine
+Ooh, everybody loves you, baby
+Ooh, everything is going to be fine
+
+[Outro]
+Ooh, it's all the same thing
+Girls chase boys chase girls",
+    artist_id: ingrid_michaelson.id
+})
+girls_chase_boys_img = open('https://lyrical-seeds.s3.amazonaws.com/girls_chase_boys.png')
+girls_chase_boys.image.attach(io: girls_chase_boys_img, filename: 'girls_chase_boys.png')
+
+boy_coin = Track.create({ title: "Boy With a Coin",
+    album: "The Shepherd's Dog",
+    lyrics: "[Verse 1]
+A boy with a coin he found in the weeds
+With bullets and pages of trade magazines
+Close to a car that flipped on the turn
+When God left the ground to circle the world
+
+[Verse 2]
+A girl with a bird she found in the snow
+Then flew up her gown and that's how she knows
+That God made her eyes for crying at birth
+Then left the ground to circle the Earth
+
+[Verse 3]
+A boy with a coin he crammed in his jeans
+Then making a wish he tossed in the sea
+Walked to a town that all of us burn
+When God left the ground to circle the world",
+    artist_id: iron_wine.id
+})
+boy_coin_img = open('https://lyrical-seeds.s3.amazonaws.com/boy_coin.jpg')
+boy_coin.image.attach(io: boy_coin_img, filename: 'boy_coin.jpg')
+
+flightless_bird = Track.create({ title: "Flightless Bird, American Mouth",
+    album: "The Shepherd's Dog",
+    lyrics: "[Verse 1]
+I was a quick wet boy
+Diving too deep for coins
+All of your street light eyes
+Wide on my plastic toys
+Then when the cops closed the fair
+I cut my long baby hair
+Stole me a dog-eared map
+And called for you everywhere
+
+[Chorus]
+Have I found you? Flightless bird
+Jealous, weeping
+Or lost you? American mouth
+Big pill looming
+
+[Verse 2]
+Now I'm a fat house cat
+Nursing my sore blunt tongue
+Watching the warm poison rats
+Curl through the wide fence cracks
+Pissing on magazine photos
+Those fishing lures
+Thrown in the cold and clean
+Blood of Christ mountain stream
+
+[Chorus]
+Have I found you? Flightless bird
+Grounded, bleeding
+Or lost you? American mouth
+Big pill, stuck going down",
+    artist_id: iron_wine.id
+})
+flightless_bird_img = open('https://lyrical-seeds.s3.amazonaws.com/flightless_bird.jpg')
+flightless_bird.image.attach(io: flightless_bird_img, filename: 'flightless_bird.jpg')
+
+all_time_low = Track.create({ title: "All Time Low",
+    album: "The Human Condition",
+    lyrics: "[Verse 1]
+I was the knight in shining armor in your movie
+Would put your lips on mine and love the aftertaste
+Now I'm a ghost, I call your name, you look right through me
+You're the reason I'm alone and masturbate
+
+[Pre-Chorus]
+I, I've been trying to fix my pride
+But that shit's broken, that shit's broken
+Lie, lie, l-lie I tried to hide
+But now you know it
+
+[Chorus]
+That I'm at an all time
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+
+[Verse 2]
+I was the prototype like 3 Stacks on that CD
+An example of the perfect candidate
+Now all your girlfriends say that you don't want to see me
+You're the reason that I just can't concentrate
+
+[Pre-Chorus]
+I, (I, I) I've been trying to fix my pride
+But that shit's broken, that shit's broken
+Lie (lie, lie), lie, l-lie I tried to hide
+But now you know it
+
+[Chorus]
+That I'm at an all time
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+
+[Bridge]
+I, I, I, I've been trying to fix my pride
+But that shit's broken, that shit's broken
+Lie (lie, lie), lie, l-lie and try to hide
+But now you know it
+That I'm at an all time
+Low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low, low, low
+Low, low
+Low, low, low, low, low, low, low, low, low, low, low, low
+Lie, l-lie, I try to hide, but now you know it
+That I'm at an all time...
+Hey!
+
+[Outro]
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low
+Low, low, low, low, low, low, low, low, low",
+    artist_id: jon_bellion.id
+})
+all_time_low_img = open('https://lyrical-seeds.s3.amazonaws.com/all_time_low.png')
+all_time_low.image.attach(io: all_time_low_img, filename: 'all_time_low.png')
+
+overwhelming = Track.create({ title: "Overwhelming",
+    album: "The Human Condition",
+    lyrics: "[Verse 1]
+Yeah, I think I got one
+Her soul is presidential like Barack, son
+Yeah, she call me Goose, I call her Maverick 'cause of Top Gun
+They say we annoying, they just jealous 'cause we got love
+(Aw, yeah)
+Yeah, I got a hot one
+She don't want no problem if there's not one
+But people come around and try some stupid shit to start one
+She'll give you the people's fuckin' elbow like The Rock, son
+(Aw, yeah)
+
+[Pre-Chorus]
+There is a potion in your lips, so sweet, I'd die
+There is an ocean in your hips, so deep, I'd dive
+I hear an opus when we kiss that completes my life
+Yeah, I think I got one
+And every single little thing about her is so—
+
+[Chorus]
+Overwhelming
+Everything about you is so overwhelming
+When I think about you, it gets overwhelming
+'Cause everything about you is so overwhelming
+Come over here and overwhelm me
+
+[Verse 2]
+“Hey, do I impress you?”
+I really like the way you rock a sweatsuit
+When you working out
+And I'm just watching how your legs move
+They would think that you was, like, developed in a test tube
+(Aw, yeah)
+You deserve a theme song
+You could be the shoulder that I lean on
+Love it when you're late for work and try to slip your jeans on
+You be bumping Chili Peppers all up in your Nissan
+(Aw, yeah)
+
+[Pre-Chorus]
+There is a potion in your lips, so sweet, I'd die
+There is an ocean in your hips, so deep, I'd dive
+I hear an opus when we kiss that completes my life
+Yeah, I think I got one
+And every single little thing about her is so—
+
+[Chorus]
+Overwhelming
+Everything about you is so overwhelming
+When I think about you, it gets overwhelming
+'Cause everything about you is so overwhelming
+Come over here and overwhelm me
+
+[Bridge]
+You write checks that my ass can't cash
+I bit a little more than I can chew
+I bit a little more than I can chew
+You write checks that my ass can't cash
+I bit a little more than I can chew
+I bit a little more than I can chew
+'Cause everything about you is so—
+
+[Chorus]
+Overwhelming
+Everything about you is so overwhelming
+When I think about you, it gets overwhelming
+'Cause everything about you is so overwhelming
+Come over here and overwhelm me",
+    artist_id: jon_bellion.id
+})
+overwhelming_img = open('https://lyrical-seeds.s3.amazonaws.com/overwhelming.jpg')
+overwhelming.image.attach(io: overwhelming_img, filename: 'overwhelming.jpg')
+
+smile_too = Track.create({ title: "smile_too",
+    album: "The Human Condition",
+    lyrics: "[Verse 1]
+I don’t need to hear that you love me
+But when you’re ready I’ll say the same
+‘Cause ever since I saw you out the corner of my eye
+I swear that I can’t seem to ever look away
+Don’t you wanna want me the way i want you
+Got a little time so why don’t you come through
+We don’t play the games, not the way that some do
+We just got the night, cuz we know it’s young too
+She don’t need no diamond ring
+‘Cause she knows that I’ll never leave
+I’ve got all I want right here
+
+[Pre-Chorus]
+‘Cause every day I see the world
+In your eyes
+I know every little thing 
+Is alright
+ 
+ [Chorus]
+Something ‘bout the way you look
+Just got me feeling in the mood
+So when you look at me with that smile
+I smile too
+I smile too
+I smile too
+I smile too
+
+[Verse 2]
+Swear you got that something that I need some more of
+I’m just trying to give you all these options we could
+Get that body moving just keep dancing through the night
+And then maybe we can do things we can turn off all the lights
+Every day Ive tried my best
+To find some kind of happiness
+I feel like I found my way
+
+[Pre Chorus]
+‘Cause every day I see the world
+In your eyes
+I know every little thing 
+Is alright
+
+ [Chorus]
+Something ‘bout the way you look
+Just got me feeling in the mood
+So when you look at me with that smile
+I smile too
+I smile too
+I smile too
+I smile too
+
+[Bridge]
+Get that body moving just keep dancing through the night
+And then maybe we can do things we can turn off all the lights
+Every day Ive tried my best
+To find some kind of happiness
+I feel like I found my way
+
+[Pre-Chorus]
+‘Cause every day I see the world
+In your eyes
+I know every little thing 
+Is alright
+ 
+[Chorus]
+Something ‘bout the way you look
+Just got me feeling in the mood
+So when you look at me with that smile
+I smile too
+I smile too
+I smile too
+I smile too",
+    artist_id: joey_burbs.id
+})
+smile_too_img = open('https://lyrical-seeds.s3.amazonaws.com/smile_too.jpg')
+smile_too.image.attach(io: smile_too_img, filename: 'smile_too.jpg')
 
 
 # END TRACKS
