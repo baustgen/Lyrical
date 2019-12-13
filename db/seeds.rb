@@ -110,8 +110,12 @@ jon_bellion_img = open('https://lyrical-seeds.s3.amazonaws.com/jon_bellion.jpg')
 jon_bellion.image.attach(io: jon_bellion_img, filename: 'jon_bellion.jpg')
 
 joey_burbs = Artist.create({ name: 'Joey Burbs', bio: "Born in Milwaukee and now living in Chicago, Joey Burbs began playing piano at the age of 7.  His first original project, The Redshirt EP, was released in 2015, and since then, Joey has developed a unique, genre-blending sound combining organic pop melodies with soulful hip-hop and R&B sounds."})
-joey_burbs_img = open('https://lyrical-seeds.s3.amazonaws.com/joey_burbs.jpg')
+joey_burbs_img = open('https://lyrical-seeds.s3.amazonaws.com/joey_burbs.png')
 joey_burbs.image.attach(io: joey_burbs_img, filename: 'joey_burbs.png')
+
+kate_nash = Artist.create({ name: 'Kate Nash', bio: "Kate Nash is an English singer and songwriter based in London. She had a UK #2 hit “Foundations” in 2007, followed by the platinum selling UK number 1 album Made of Bricks. Nash’s second album, My Best Friend Is You debuted in 2010, with the lead single “Do Wah Do”. MBFIS, while similar in sound to Made of Bricks, showed early signs of Nash’s departure from singer-songwriter piano driven pop music towards heavier punk and riot grrrl inspired music, to which she is now more grounded in."})
+kate_nash_img = open('https://lyrical-seeds.s3.amazonaws.com/kate_nash.jpg')
+kate_nash.image.attach(io: kate_nash_img, filename: 'kate_nash.jpg')
 
 
 # END ARTISTS
@@ -2808,8 +2812,8 @@ Come over here and overwhelm me",
 overwhelming_img = open('https://lyrical-seeds.s3.amazonaws.com/overwhelming.jpg')
 overwhelming.image.attach(io: overwhelming_img, filename: 'overwhelming.jpg')
 
-smile_too = Track.create({ title: "smile_too",
-    album: "The Human Condition",
+smile_too = Track.create({ title: "Smile Too",
+    album: "Not in That Order",
     lyrics: "[Verse 1]
 I don’t need to hear that you love me
 But when you’re ready I’ll say the same
@@ -2887,6 +2891,125 @@ I smile too",
 })
 smile_too_img = open('https://lyrical-seeds.s3.amazonaws.com/smile_too.jpg')
 smile_too.image.attach(io: smile_too_img, filename: 'smile_too.jpg')
+
+nicest_thing = Track.create({ title: "Nicest Thing",
+    album: "Made of Bricks",
+    lyrics: "All I know is that you're so nice
+You're the nicest thing I've seen
+I wish that we could give it a go
+See if we could be something
+
+I wish I was your favorite girl
+I wish you thought I was the reason you are in the world
+I wish my smile was your favorite kind of smile
+I wish the way that I dressed was your favourite kind of style
+
+I wish you couldn't figure me out
+That you'd always wanna know what I was about
+I wish you'd hold my hand
+When I was upset
+I wish you'd never forget
+The look on my face when we first met
+
+I wish you had a favorite beauty spot
+That you loved secretly
+Cause it was on a hidden bit
+That nobody else could see
+Basically, I wish that you loved me
+I wish that you needed me
+I wish that you knew when I said two sugars
+Actually I meant three
+
+I wish that without me your heart would break
+Yeah, I wish that without me you'd be spending the rest of your nights awake
+I wish that without me you couldn't eat
+Yeah, I wish I was the last thing on your mind before you went to sleep
+
+Look, all I know is that
+You're the nicest thing I've ever seen
+And I wish that we could see if we could be something
+Yeah, I wish that we could see if we could be something",
+    artist_id: kate_nash.id
+})
+nicest_thing_img = open('https://lyrical-seeds.s3.amazonaws.com/nicest_thing.png')
+nicest_thing.image.attach(io: nicest_thing_img, filename: 'nicest_thing.png')
+
+foundations = Track.create({ title: "Foundations",
+    album: "Made of Bricks",
+    lyrics: "[Verse1]
+Thursday night, everything's fine
+Except you've got that look in your eye
+When I'm telling a story and you find it boring
+You're thinking of something to say
+You'll go along with it, then drop it
+And humiliate me in front of our friends
+
+Then I'll use that voice that you find annoyin'
+And say something like, \"Yeah, intelligent input darlin'
+Why don't you just have another beer then?\"
+Then you'll call me a bitch
+And everyone we're with will be embarrassed
+And I won't give a shit
+
+[Chorus]
+My fingertips are holding onto
+The cracks in our foundation
+And I know that I should let go, but I can't
+And every time we fight I know it's not right
+Every time that you're upset and I smile
+I know I should forget, but I can't
+
+[Verse 2]
+You said I must eat so many lemons
+Cause I am so bitter
+I said \"I'd rather be with your friends mate
+Cause they are much fitter\"
+
+Yes it was childish
+And you got aggressive
+And I must admit that I was a bit scared
+But it gives me thrills to wind you up
+
+[Chorus]
+My fingertips are holding onto
+The cracks in our foundation
+And I know that I should let go, but I can't
+And every time we fight I know it's not right
+Every time that you're upset and I smile
+I know I should forget, but I can't
+
+[Verse 3]
+Your face is pasty
+Cause you've gone and got so wasted, what a surprise
+Don't want to look at your face
+Cause it's making me sick
+
+You've gone and got sick on my trainers
+I only got these yesterday
+Oh my gosh, I cannot be bothered with this
+
+Well I'll leave you there 'til the mornin'
+And I purposely won't turn the heating on
+And dear God, I hope I'm not stuck with this one
+
+[Chorus]
+My fingertips are holding onto
+The cracks in our foundation
+And I know that I should let go, but I can't
+And every time we fight I know it's not right
+Every time that you're upset and I smile
+I know I should forget, but I can't
+
+And every time we fight I know it's not right
+Every time that you're upset and I smile
+I know I should forget, but I can't
+And every time we fight I know it's not right
+Every time that you're upset and I smile
+I know I should forget, but I can't",
+    artist_id: kate_nash.id
+})
+foundations_img = open('https://lyrical-seeds.s3.amazonaws.com/foundations.jpg')
+foundations.image.attach(io: foundations_img, filename: 'foundations.jpg')
 
 
 # END TRACKS
