@@ -117,6 +117,20 @@ kate_nash = Artist.create({ name: 'Kate Nash', bio: "Kate Nash is an English sin
 kate_nash_img = open('https://lyrical-seeds.s3.amazonaws.com/kate_nash.jpg')
 kate_nash.image.attach(io: kate_nash_img, filename: 'kate_nash.jpg')
 
+luke_combs = Artist.create({ name: 'Luke Combs', bio: "Born in Asheville, North Carolina, Luke Combs has been a passionate vocalist and musician since a young age, having even performed a solo performance at Carnegie Hall while still in high school. After dabbling in country music during his time at Appalachian State University, he dropped out his senior year to pursue a music career."})
+luke_combs_img = open('https://lyrical-seeds.s3.amazonaws.com/luke_combs.jpg')
+luke_combs.image.attach(io: luke_combs_img, filename: 'luke_combs.jpg')
+
+louis_the_child = Artist.create({ name: 'Louis The Child', bio: "Louis the Child is a Chicago electronic music duo of Freddy Kennett and Robby Hauldren, prominently recognized for their hit single “It’s Strange” with K. Flay, as well as for their numerous remixes."})
+louis_the_child_img = open('https://lyrical-seeds.s3.amazonaws.com/louis_the_child.jpg')
+louis_the_child.image.attach(io: louis_the_child_img, filename: 'louis_the_child.jpg')
+
+mxpx = Artist.create({ name: 'MxPx', bio: "MxPx is an American pop/skate-punk band from Bremerton, Washington. Frontman Mike Herrera has played bass and sung lead vocals since the band’s formation in 1992 (under the name “Magnified Plaid”), when he and drummer Yuri Ruley were still in high school. The young band was signed to Christian rock label Tooth & Nail, which released its debut album Pokinatcha.
+
+After that first LP, founding member Andy Husted left the band, and Herrera’s friend Tom Wisniewski replaced him on guitar. The trio of Herrera, Ruley, and Wisniewski formed the band’s lineup for more than 20 years; in 2016, Chris Adkins became a guitarist and backing vocalist for the group."})
+mxpx_img = open('https://lyrical-seeds.s3.amazonaws.com/mxpx.jpg')
+mxpx.image.attach(io: mxpx_img, filename: 'mxpx.jpg')
+
 
 # END ARTISTS
 
@@ -3010,6 +3024,326 @@ I know I should forget, but I can't",
 })
 foundations_img = open('https://lyrical-seeds.s3.amazonaws.com/foundations.jpg')
 foundations.image.attach(io: foundations_img, filename: 'foundations.jpg')
+
+rains_pours = Track.create({ title: "When It Rains It Pours",
+    album: "This One's For You",
+    lyrics: "[Verse 1]
+Sunday morning man
+She woke up fightin' mad
+Bitchin' and moanin' on and on
+'Bout the time I had
+And by Tuesday you could say
+That girl was good as gone
+Then when Thursday came around I was all alone
+So I went for a drive to clear my mind
+Ended up at a Shell on I-65
+
+[Chorus 1]
+Then I won a hundred bucks on a scratch-off ticket
+I bought two 12-packs and a tank of gas with it
+She swore they were a waste of time
+Oh, but she was wrong
+I was caller number five on a radio station
+Won a four day, three night beach vacation
+Deep sea señorita fishing down in Panama
+And I ain't gotta see my
+Ex-future-mother-in-law anymore
+Oh Lord, when it rains it pours
+
+[Verse 2]
+Now she was sure real quick to up and apologize
+When she heard about my newfound luck
+On that FM dial
+And it's crazy how lately now
+It just seems to come in waves
+What I thought was gonna be the death of me
+Was my saving grace
+It's got me thinking that her leaving
+Is the only logical reason
+
+[Chorus 2]
+That I got the last spot in the Hooters' parking lot
+And the waitress left her number on my check with a heart
+She picked up on the first ring when I gave her a call
+And I only spent five bucks at the Moose Club raffle
+Won a used 4-wheeler and three free passes
+For me and two of my buddies to play a round of golf
+And I ain't gotta see my
+Ex-future-mother-in-law anymore
+Oh Lord, when it rains it pours
+When it rains it pours
+
+[Bridge]
+Well I've been on one hell of a redneck roll
+For three weeks now
+And it all started on the day that she walked out
+
+[Chorus 1]
+Then I won a hundred bucks on a scratch-off ticket
+Bought two 12-packs and a tank of gas with it
+She swore they were a waste of time
+Oh, but she was wrong
+And I was caller number five on a radio station
+Won a four day, three night beach vacation
+Deep sea señorita fishing down in Panama
+And I ain't gotta see my
+Ex-future-mother-in-law anymore
+Oh Lord, when it rains it pours
+When it rains it pours",
+    artist_id: luke_combs.id
+})
+rains_pours_img = open('https://lyrical-seeds.s3.amazonaws.com/rains_pours.jpg')
+rains_pours.image.attach(io: rains_pours_img, filename: 'rains_pours.jpg')
+
+hurricane = Track.create({ title: "Hurricane",
+    album: "This One's For You",
+    lyrics: "[Verse 1]
+Hadn't had a good time
+Since you know when
+Got talked into going out
+With hopes you were staying in
+I was feeling like myself for the first time
+In a long time
+'Til I bumped into some of your friends
+Over there talkin' to mine
+
+[Chorus]
+Then you rolled in with your hair in the wind
+Baby, without warning
+I was doing alright but just your sight
+Had my heart stormin’
+The moon went hidin’, stars quit shinin’
+Rain was drivin’, thunder n' lightning
+You wrecked my whole world when you came
+And hit me like a hurricane
+You hit me like a hurricane
+
+[Verse 2]
+Knew it was gonna be a long night
+From the moment when
+We locked eyes over whiskey on ice
+Started talking 'bout us again
+If I would've just laid my drink down
+And walked out
+I wouldn't be in my truck
+Driving us to your house
+
+[Chorus]
+But you rolled in with your hair in the wind
+Baby, without warning
+I was doing alright but just your sight
+Had my heart stormin’
+The moon went hidin’, stars quit shinin’
+Rain was drivin’, thunder n' lightning
+You wrecked my whole world when you came
+And hit me like a hurricane
+You hit me like a hurricane
+
+[Bridge]
+Yeah, you hit me Category 5
+With your smile
+Blew me away
+And girl, it ain't but midnight
+You done killed the lights
+Bent my heart back to your bedside
+
+[Chorus]
+Then you rolled in with your hair in the wind
+Baby, without warning
+'Cause I was doing alright but just your sight
+Had my heart storming
+The moon went hidin’, stars quit shinin’
+Rain was drivin’, thunder n' lightning
+You wrecked my whole world when you came
+And hit me like a hurricane
+You hit me like a hurricane
+You hit me like a hurricane",
+    artist_id: luke_combs.id
+})
+hurricane_img = open('https://lyrical-seeds.s3.amazonaws.com/hurricane.jpg')
+hurricane.image.attach(io: hurricane_img, filename: 'hurricane.jpg')
+
+better_not = Track.create({ title: "Better Not",
+    album: "Kids At Play - EP",
+    lyrics: "[Verse 1]
+I know it's hard to admit it that you found love
+It's hard to stay in it, but he's better
+Than anyone I've seen you with before
+So talk to me, tell me 'bout all your insecurities
+And I'm tryna make you see what I see
+You're happier than I've ever seen you
+
+[Chorus]
+It's true love, don't fake it
+You better not, you better not
+It's right here, don't waste it
+You better not, you better not
+Don't say you can't figure it out, figure it out
+I know you can figure it out, figure it out
+It's true love, don't waste it
+You better not, you better not
+
+[Post-Chorus]
+You better not
+
+[Verse 2]
+Don't overthink it
+Let it go and try to trust the feeling
+You know it in your gut you're healing
+From every time that you've been hurt before
+I see it, I see it
+
+[Chorus]
+It's true love, don't fake it
+You better not, you better not
+It's right here, don't waste it
+You better not, you better not
+Don't say you can't figure it out, figure it out
+I know you can figure it out, figure it out
+It's true love, don't waste it
+You better not, you better not
+
+[Post-Chorus]
+You better not
+You better not
+
+[Bridge]
+I know you can figure it out, figure it out
+It's true love, don't waste it
+Don't say you can't figure it out, figure it out
+You better not, you better not
+
+[Post-Chorus]
+You better not
+You better not
+
+[Outro]
+It's true love, don't fake it
+You better not, you better not
+It's right here, don't waste it
+You better, you better not",
+    artist_id: louis_the_child.id
+})
+better_not_img = open('https://lyrical-seeds.s3.amazonaws.com/better_not.png')
+better_not.image.attach(io: better_not_img, filename: 'better_not.png')
+
+bremerton = Track.create({ title: "Move to Bremerton",
+    album: "Life in General",
+    lyrics: "[Verse 1]
+When I meet a special girl
+She always lives somewhere else in the world
+Don't want to call her on the phone
+Wanna talk to her when I'm at home
+
+[Chorus]
+Move to Bremerton - we'll hang out
+Move to Bremerton - we'll go all out
+Move to Bremerton - will you be mine?
+
+[Verse 2]
+I'll change the street signs you drive down
+So you end up in my town
+I'll re-draw the maps all one by one
+So they all lead to Bremerton
+
+[Pre-Chorus]
+Drop out of school and run away
+Quit your job, you got a place to stay
+Pack your bags and hitch a ride
+Bremerton's a good place to reside
+
+[Chorus]
+Move to Bremerton - we'll hang out
+Move to Bremerton - we'll go all out
+Move to Bremerton - will you be mine?
+Move to Bremerton - we'll hang out
+Move to Bremerton - we'll go all out
+Move to Bremerton - 'till the end of time
+
+[Verse 3]
+If you own a brain and use it too
+You gotta know I have a crush on you
+I'm a sucker for a level headed girl with a pretty smile
+She gots to have ideas, yeah, and she gots to have style
+
+[Pre-Chorus]
+Drop out of school and run away
+Quit your job, you got a place to stay
+Pack your bags and hitch a ride
+Bremerton's a good place to reside
+
+[Chorus]
+Move to Bremerton - we'll hang out
+Move to Bremerton - we'll go all out
+Move to Bremerton - will you be mine?
+Move to Bremerton - we'll hang out
+Move to Bremerton - we'll go all out
+Move to Bremerton - 'till the end of time
+
+[Chorus]
+Move to Bremerton - we'll hang out (move to Bremer-)
+Move to Bremerton - we'll go all out (tonnnnn - Will you be mine?)
+Move to Bremerton - will you be mine? (yeah yeah mine)
+Move to Bremerton - we'll hang out (move to Bremer-)
+Move to Bremerton - we'll go all out (tonnnn - 'Til the end of time)
+Move to Bremerton - 'till the end of time (will you be mine?)
+
+[Chorus]
+Move to Bremerton - we'll hang out (move to Bremer-)
+Move to Bremerton - we'll go all out (tonnnnn - Will you be mine?)
+Move to Bremerton - will you be mine? (yeah yeah mine)
+Move to Bremerton - we'll hang out (move to Bremer-)
+Move to Bremerton - we'll go all out (tonnnn - 'Til the end of time)
+Move to Bremerton - 'till the end of time (will you be mine?)",
+    artist_id: mxpx.id
+})
+bremerton_img = open('https://lyrical-seeds.s3.amazonaws.com/bremerton.jpg')
+bremerton.image.attach(io: bremerton_img, filename: 'bremerton.jpg')
+
+responsibility = Track.create({ title: "Responsibility",
+    album: "The Ever Passing Moment",
+    lyrics: "I don't want this responsibility
+And don't use me because I don't agree
+
+Why lie, do or die?
+Why lie, do or?
+
+Responsibility? What's that?
+Responsibility? not quite yet
+Responsibility? What's that?
+I don't want to think about it; we'd be better off without it
+
+You think I'm so simplistic
+I'm onto you and your tricks
+
+Why lie, do or die?
+Why lie, do or?
+
+Responsibility? What's that?
+Responsibility? not quite yet
+Responsibility? What's that?
+I don't want to think about it; we'd be better off without it
+
+I'm still young and I'd like to stay that way
+'Cause growing up won't make everything okay
+I'm still young and I'd like to stay that way
+I've got a voice and I've got a lot to say
+I've got a lot to say. . .I got a lot to say
+
+Responsibility? What's that?
+Responsibility? not quite yet
+Responsibility? What's that?
+I don't want to think about it;
+
+Responsibility? What's that?
+Responsibility? not quite yet
+Responsibility? What's that?
+I don't want to think about it;we'd be better off without it
+I don't want to think about.",
+    artist_id: mxpx.id
+})
+responsibility_img = open('https://lyrical-seeds.s3.amazonaws.com/responsibility.jpg')
+responsibility.image.attach(io: responsibility_img, filename: 'responsibility.jpg')
 
 
 # END TRACKS
