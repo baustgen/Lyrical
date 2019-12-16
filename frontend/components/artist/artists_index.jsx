@@ -33,8 +33,6 @@ class ArtistsIndex extends React.Component {
     }
 
     render() {
-
-        // let artistArray = Object.values(this.props.artists);
         if (this.props.artists.order === undefined) return null;
         let artistItems = this.props.artists.order.map(({ id }) => {
             return (
