@@ -10,6 +10,11 @@ const Footer = () => {
             </li>
         )
     })
+    letterItems.push(
+        <li key={'num'} className="footer-letter">
+            <Link to={"/artists/" + 'num'}>0-9</Link>
+        </li>
+    )
 
     return (
         <footer className="footer">

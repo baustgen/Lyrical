@@ -24,15 +24,17 @@ class ArtistsIndex extends React.Component {
             if (this.props.match.params.letter === undefined) {
                 this.letter = "All";
             }
-            else {
-                this.letter = this.props.match.params.letter.toUpperCase()
+            else if (this.props.match.params.letter === 'num') { 
+                this.letter = "0 - 9"
+            } else {
+                this.letter = this.props.match.params.letter.toUpperCase();
             }
         }
     }
 
     render() {
 
-        let artistArray = Object.values(this.props.artists);
+        // let artistArray = Object.values(this.props.artists);
         if (this.props.artists.order === undefined) return null;
         let artistItems = this.props.artists.order.map(({ id }) => {
             return (
@@ -43,12 +45,19 @@ class ArtistsIndex extends React.Component {
             )
         })
 
+        let title;
+        if (this.letter = 'num') {
+            title = '0 - 9';
+        } else {
+            title = this.letter;
+        }
+
         return (
             <div className="gray-out">
                 <div className="artists-index-container">
-                    <p className='artists-index-breadcrumbs'><Link to='/artists'>Artists</Link> > <span className="current-letter">{this.letter}</span></p>
+                    <p className='artists-index-breadcrumbs'><Link to='/artists'>Artists</Link> > <span className="current-letter">{title}</span></p>
 
-                    <h2 className='artists-index-header'>{this.letter} Artists on Lyrical</h2>
+                    <h2 className='artists-index-header'>{title} Artists on Lyrical</h2>
                     <ul className="artists-index">
                         {artistItems}
                     </ul>

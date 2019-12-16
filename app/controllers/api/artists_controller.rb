@@ -2,8 +2,8 @@ class Api::ArtistsController < ApplicationController
 
     def index
         alpha = ("a".."z").to_a + ("A".."Z").to_a
-        if (params[:letter] == '#')
-            @artists = Artist.where(name: "0%".."9%").order(:name)
+        if (params[:letter] == 'num')
+            @artists = Artist.where(name: "0%".."9%").includes(:image).order(:name)
         else
             @artists = Artist.where("name ILIKE ?", "#{params[:letter]}%").order(:name)
         end
