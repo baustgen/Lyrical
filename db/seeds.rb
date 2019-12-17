@@ -131,6 +131,42 @@ After that first LP, founding member Andy Husted left the band, and Herrera’s 
 mxpx_img = open('https://lyrical-seeds.s3.amazonaws.com/mxpx.jpg')
 mxpx.image.attach(io: mxpx_img, filename: 'mxpx.jpg')
 
+mike_posner = Artist.create({ name: 'mike_posner', bio: "Born in Detroit, Michigan, Posner has never shied away from telling folks where he’s from. Growing up with childhood friend Big Sean, music quickly grabbed his attention. Garnering fame in August of 2010 with 31 Minutes to Take Off, he has quickly established himself as not only a singer of pop music but also a songwriter to big names."})
+mike_posner_img = open('https://lyrical-seeds.s3.amazonaws.com/mike_posner.jpg')
+mike_posner.image.attach(io: mike_posner_img, filename: 'mike_posner.jpg')
+
+nate_good = Artist.create({ name: 'Nate Good', bio: "Nate Good is a Hip-Hop artist from Northern Virginia.
+
+Residing in the small town of Purcellville in Northern Virginia, Nate Good has spent the better part of the last decade molding his skills as a rapper/singer/songwriter/engineer. With his father being a trumpet player, his mother, a piano player, and his sister, a singer, Nate was exposed at an early age to a wide variety of music from The Beatles and The Temptations to Eminem and John Mayer. Such influences, among others, were staples in the foundation of his consonant delivery as an artist today."})
+nate_good_img = open('https://lyrical-seeds.s3.amazonaws.com/nate_good.jpg')
+nate_good.image.attach(io: nate_good_img, filename: 'nate_good.jpg')
+
+noah_whale = Artist.create({ name: 'Noah and the Whale', bio: "Noah and the Whale were a British folk band from Twickenham, formed in 2006.
+
+The band’s last line-up consisted of Charlie Fink (vocals, guitar), Tom Hobden (violin/keyboards), Matt “Urby Whale” Owens (bass guitar), Fred Abbott (guitar/keys), and Michael Petulla (drums). Doug Fink (drums), the brother of lead singer Charlie, and Laura Marling (backing vocals) were also past members of the band.
+
+They disbanded in 2015, after two years of hiatus."})
+noah_whale_img = open('https://lyrical-seeds.s3.amazonaws.com/noah_whale.jpg')
+noah_whale.image.attach(io: noah_whale_img, filename: 'noah_whale.jpg')
+
+old_crow = Artist.create({ name: 'Old Crow Medicine Show', bio: "Old Crow Medicine Show is a string band based in Nashville, TN. They started in 1998 by busking on street corners from New York state through northeast Canada. In 2000, they traveled to Boone, NC, hoping to catch the attention of the legendary Doc Watson, and they did, while playing in front of the same pharmacy he did many years earlier. He invited them band to play at his MerleFest Music Festival, and that launched their career.
+
+The group’s music is considered old-time folk because many of the songs they perform are pre-WW2 blues and folk songs, but done with punk rock energy. Their sound influenced Mumford & Sons and contributed to a revival of banjo-picking string bands that play Americana music"})
+old_crow_img = open('https://lyrical-seeds.s3.amazonaws.com/old_crow.jpg')
+old_crow.image.attach(io: old_crow_img, filename: 'old_crow.jpg')
+
+ok_go = Artist.create({ name: 'OK Go', bio: "Formed in Chicago in 1998, OK Go; Damian Kulash, Dan Konopka, Timothy Nordwind, and Andy Ross, is an indie alternative rock band, known for their eye-catching, low-budget music videos.
+
+In 2002, as Damian Kulash, Timothy Nordwind, Dan Konopka, and Andy Duncan, they released their self-titled debut, to generally positive claim, and has since attained a cult following among fans and critics alike.
+
+In 2005, as Andy Duncan left, “Oh No” was released to more positive reviews, as Andy Ross joined, and “Here It Goes Again” reached #38 on the Billboard Hot 100."})
+ok_go_img = open('https://lyrical-seeds.s3.amazonaws.com/ok_go.jpg')
+ok_go.image.attach(io: ok_go_img, filename: 'ok_go.jpg')
+
+passenger = Artist.create({ name: 'Passenger', bio: "Passenger aka Mike Rosenberg is a multi award winning, platinum selling singer-songwriter from Brighton, UK. His career so far has spanned over a decade and taken him on a journey that has seen him travel multiple times around the globe playing street corners to stadiums and headlining some of the most iconic venues and stages."})
+passenger_img = open('https://lyrical-seeds.s3.amazonaws.com/passenger.jpg')
+passenger.image.attach(io: passenger_img, filename: 'passenger.jpg')
+
 
 # END ARTISTS
 
@@ -3344,6 +3380,939 @@ I don't want to think about.",
 })
 responsibility_img = open('https://lyrical-seeds.s3.amazonaws.com/responsibility.jpg')
 responsibility.image.attach(io: responsibility_img, filename: 'responsibility.jpg')
+
+pill_ibiza = Track.create({ title: "I took a Pill in Ibiza",
+    album: "At Night, Alone.",
+    lyrics: "[Verse 1]
+I took a pill in Ibiza
+To show Avicii I was cool
+And when I finally got sober, felt 10 years older
+But fuck it, it was something to do
+I'm living out in LA
+I drive a sports car just to prove
+I'm a real big baller cause I made a million dollars
+And I spend it on girls and shoes
+
+[Chorus]
+But you don't wanna be high like me
+Never really knowing why like me
+You don't ever wanna step off that roller coaster
+And be all alone
+You don't wanna ride the bus like this
+Never knowing who to trust like this
+You don't wanna be stuck up on that stage singing
+Stuck up on that stage singing
+All I know are sad songs, sad songs
+Darling, all I know are sad songs, sad songs
+
+[Verse 2]
+I'm just a singer who already blew his shot
+I get along with old timers
+Cause my name's a reminder of a pop song people forgot
+And I can't keep a girl, no
+'Cause as soon as the sun comes up
+I cut 'em all loose and work's my excuse
+But the truth is I can't open up
+
+[Chorus]
+Now you don't wanna be high like me
+Never really knowing why like me
+You don't ever wanna step off that roller coaster
+And be all alone
+You don't wanna ride the bus like this
+Never knowing who to trust like this
+You don't wanna be stuck up on that stage singing
+Stuck up on that stage singing
+All I know are sad songs, sad songs
+Darling, all I know are sad songs, sad songs
+
+[Verse 3]
+I took a plane to my home town
+I brought my pride and my guitar
+All my friends are all gone but there's manicured lawns
+And the people still think I'm a star
+I walked around downtown
+I met some fans on Lafayette
+They said tell us how to make it cause we're getting real impatient
+So I looked 'em in the eye and said
+
+[Chorus]
+You don't wanna be high like me
+Never really knowing why like me
+You don't ever wanna step off that roller coaster
+And be all alone
+You don't wanna ride the bus like this
+Never knowing who to trust like this
+You don't wanna be stuck up on that stage singing
+Stuck up on that stage singing
+All I know are sad songs, sad songs
+Darling, all I know are sad songs, sad songs",
+    artist_id: mike_posner.id
+})
+pill_ibiza_img = open('https://lyrical-seeds.s3.amazonaws.com/pill_ibiza.jpg')
+pill_ibiza.image.attach(io: pill_ibiza_img, filename: 'pill_ibiza.jpg')
+
+be_as_you_are = Track.create({ title: "Be As You Are",
+    album: "At Night, Alone.",
+    lyrics: "[Verse 1]
+Virginia Woolf and poetry
+No one seemed to notice me
+Being young was getting so old
+Cheap beer and cigarettes
+Life was like a movie set
+And I seemed to be given no role
+
+[Pre-Chorus]
+But in times of trouble
+I can turn to my mother
+And I know that she gon' understand
+So at age 18
+I cried to my mother
+And she told me, \"young man\"
+
+[Chorus]
+\"There are moments when you fall to the ground
+But you are stronger than you feel you are now
+You don't always have to speak so loud, no
+Just be as you are
+Life is not always a comfortable ride
+Everybody's got scars that they hide
+And everybody plays the fool sometimes, yeah
+Just be as you are\"
+
+[Verse 2]
+They played me on the radio
+And everything was changing, so
+I thought I was all the way grown
+But I can still remember in that cold November
+When I realized I'm all alone
+
+[Pre-Chorus]
+But in times of trouble
+I can turn to my mother
+And I know that she gon' understand
+So at age 22
+I cried to my mother
+And she told me, \"young man\"
+
+[Chorus 2]
+\"There are moments when you fall to the ground
+But you are stronger than you feel you are now
+You don't always have to speak so loud, no
+Just be as you are
+It doesn't matter if you become some star
+Life is better when you open your heart
+You don't always have to act so hard, no
+Just be as you are (Just be as you are)\"
+Be as you are (Whoa)
+Be as, be as you are (Be as you are)
+Be as you are
+(Be as you are) Be as, be as you are
+
+[Bridge]
+If I'm speaking truthfully
+I'm not who I used to be
+And I know some people might laugh
+'Cause my music doesn't sound the same
+And my head's no longer shaved
+I'm worried if I'm on the right path
+
+[Pre-Chorus]
+But in times of trouble
+I can turn to my mother
+And I know that she gon' understand
+So at age 26
+I spoke to my mother
+And she told me, \"young man\"
+
+[Chorus 2]
+\"There are moments when you fall to the ground
+But you are stronger than you feel you are now
+You don't always have to speak so loud, no
+Just be as you are
+It doesn't matter if you become some star
+Life is better when you open your heart
+You don't always have to act so hard, no
+Just be as you are (Be as you are)\"
+Be as you are (Be as you are)
+Be as, be as you are (Be as you are)
+Be as you are (Be as you are)
+Be as, be as you are
+Be as you are",
+    artist_id: mike_posner.id
+})
+be_as_you_are_img = open('https://lyrical-seeds.s3.amazonaws.com/be_as_you_are.jpg')
+be_as_you_are.image.attach(io: be_as_you_are_img, filename: 'be_as_you_are.jpg')
+
+slide = Track.create({ title: "Slide",
+    album: "Seventeen Drops",
+    lyrics: "[Intro]
+Let's do it
+Yeah
+Yeah
+Yeah
+Yeah
+
+[Verse 1]
+Back to get it like I never left
+Hottest one up on the treble clef
+Turn it up until it's loud as fuck
+Shawty tell me are you down to what?
+Burning up just like a pound a bud
+Hit it a minute I'm lit as fuck
+Living the life that I'm livin' was never a given at all
+Nah I'm appalled by y'all
+We used to run in the halls
+You gave a crickets applause
+And now you hit me with calls
+Thought I was dropping the ball
+Now she wanna hop on my balls 
+Superficial shady lady
+Girl you must be goin' crazy
+
+[Pre-Chorus]
+Keeping track of my priorities and goals
+Locked up in the studio just chillin' with my bros
+I say I say let's just take the show up on the road
+Walking round the W in slippers and a robe
+
+[Hook]
+Turning back
+Turning back
+Turning back
+Turning back
+Turning back
+Push it to the max
+Pumping stats
+Chasing plaques
+Till the day that I collapse
+No, I can't let it slip
+No, I can't let it slide
+The people jumping ship now they look me in the eye
+Tryna to ride the coat
+Treat me like a king when I needed you the most
+No I couldn't get a thing
+
+[Verse 2]
+Back to get it for another run like I just hopped the lift and I'm about to hit the slope
+Heard a couple labels looking at me but I haven't heard a word from Interscope
+Independent but I'm still ascending
+Flow I'm working with is patent pending
+Humble out the gay for happy endings
+All my dedication's upward trending
+Never bending
+Never budging
+Never breaking
+I'm enlightened
+I'm awakened
+Fuck the fronting and the faking
+I've been thinking, contemplating
+Time you're spending, stressing, waiting
+Leaves you lost and lonely, shaking
+Pacing with your stomach aching
+
+[Pre-Chorus]
+Most important thing in my life right now is me
+Think that I was blinded to the fact but now I see
+All my kin is good but great is what I wanna be
+If you're great at something better make them pay the fee
+'Cause life ain't cheap
+
+[Hook]
+Turning back
+Turning back
+Turning back
+Turning back
+Turning back
+Push it to the max
+Pumping stats
+Chasing plaques
+Till the day that I collapse
+No, I can't let it slip
+No, I can't let it slide
+The people jumping ship now they look me in the eye
+Tryna to ride the coat
+Treat me like a king when I needed you the most
+No I couldn't get a thing
+
+[Bridge]
+I throw a couple fingers up and chuck a deuce with it
+I'm 'bouta roll the fucking windows down and cruise with it
+Switch up the mood with it
+I like to groove with it
+I keep it smooth with it
+Why? I'm making moves with it
+Fuck getting bent up outta shape
+I got too much on my plate
+Take some Hennny to the face
+While I chill and I create
+Finding people turn their back, then they circle back around
+Tryna catch me when I'm up, homie, we were never down
+
+[Hook]
+Turning back
+Turning back
+Turning back
+Turning back
+Turning back
+Push it to the max
+Pumping stats
+Chasing plaques
+Till the day that I collapse
+No, I can't let it slip
+No, I can't let it slide
+The people jumping ship now they look me in the eye
+Tryna to ride the coat
+Treat me like a king when I needed you the most
+No I couldn't get a thing
+
+[Outro]
+Most important thing in my life right now is me
+Think that I was blinded to the fact but now I see
+All my kin is good but great is what I wanna be
+If you're great at something better make them pay the fee
+'Cause life ain't cheap",
+    artist_id: nate_good.id
+})
+slide_img = open('https://lyrical-seeds.s3.amazonaws.com/slide.jpg')
+slide.image.attach(io: slide_img, filename: 'slide.jpg')
+
+slide = Track.create({ title: "Gold Coast",
+    album: "The Remedy",
+    lyrics: "[Intro]
+It's all good
+It's all good
+It's all good
+It's all good
+It's all good
+It's all good
+It's all good
+It's all good
+
+Yeah, Good
+I just took like 14 adderall, drank 72 red bulls
+Finished my intro the day of the release
+
+[Verse 1]
+I chase bad bitches, accolades
+Got will son, no Castaway
+I'm twice as good, get half the praise
+Throw a sniper up and I blast away
+You ain't getting through me, nah
+Tim Howard been here 10 hours
+My chick sour, risin' and fallin' together though like we the Twin Towers
+Nothin's takin' I'm frustrated
+If I could only get just to blaze it
+Ain't no doubt that I'd muster greatness
+No chip off of that old block
+All eyes on me but I'm no pac
+Fully loaded off gold shots
+That bass'll knock you like cold clocks
+I'm number one
+Big Mac'in my flow the ice that my wrist lackin', I been happenin', they been slackin'
+They been doubtin' I been 'bout it, my mojo back, Raps gold remember
+Boutta be one cold winter, got the game on my ring finger
+I'm VA and that's overhaul
+Been killin' shit cause that's protocol
+
+[Bridge]
+I don't do this for y'all
+Nah I just do this for me
+I flipped the game on its head
+180 degrees
+Baby please, baby please
+I know you're dying to stay
+I ain't gon' stop you from walkin'
+Always remember the name
+
+[Hook]
+I'm the man, I'm the man, I'm the man
+I'ma get it cause I can, cause I can, cause I can
+In my fitted in my vans, in my vans, in my vans
+I think baby girl a fan, she a fan, she a fan (she a fan, she a fan)
+
+[Post-Hook]
+I'm highly touted from the valley to the mountains
+I ain't finished till I coordinate a car with my outfit
+Came to steal your thunder like Miami in the summer man
+I'm just getting over all the pressure I was under, down
+
+[Bridge 2]
+Cool cat, know I had to go the whole 9
+Told you I was golden as corona's on the coastline
+These days, I don't know what's worthy of a co-sign
+Ain't a 49er I'm just sitting on a gold mine
+
+[Verse 2]
+Let it burn like the tropics
+All my pockets crave is profit
+I'm obnoxious to a nuisance rocking J's out here hoopin'
+Hidden in my hoodie from the haters, fuck the drama
+I was sent to show the world they're dealing with a problem
+From the get-go, let's go
+Ready for the next show
+Finding time for anything but anytime to rest so
+I get it in the morning til' the sun fall back
+Then hit it til' it rises an I don't call back
+Wa-sushi wasabe sake sippin’ tipsin’ topsy turvy t’isn’t 22 ta- ta- ta-riffic fuck the limit
+In a tizzy t-t-totally chillin’
+This room’s totally spinnin’
+Damn that tab is revealin’
+My credit’s headed the ceilin’
+And baby girl hit floor, be out here drankin' til 4
+When it's raining it pours, oh yeah I done this before
+I just thought you should know, I plan on taking you home
+No way I'm leaving alone, plus you remind me of Sloan
+Drinkin' since 7, thought you walked in with a twin
+Hope my smile can switch the topic up ain't worried 'bout your friends
+More concerned with where we heading, than stressin' where you been
+Puttin’ out for time I put in, thought you couldn’t
+Thought you wouldn’t, but it’s good
+
+[Hook]
+I'm the man, I'm the man, I'm the man
+I'ma get it cause I can, cause I can, cause I can
+In my fitted in my vans, in my vans, in my vans
+I think baby girl a fan, she a fan, she a fan (she a fan, she a fan)
+
+[Post-hook]
+I'm highly touted from the valley to the mountains
+I ain't finished till a quarter made a car with my outfit
+Came to steal your thunder like Miami in the summer man
+I'm just getting over all the pressure I was under, damn
+
+[Bridge 2]
+Cool cats, you know I had to go the whole 9
+Told you I was gold and this corona's on the coastline
+These days, I don't know what's worthy of a co-sign
+Ain't a 49er I'm just sitting on a gold mine
+
+[Bridge]
+I'm doin' this for y'all
+Nah I'm just doin' this for me
+I flipped the game on its tail
+180 degrees
+Baby please, baby please
+I know you're dying to stay
+I ain't gon' stop you from walkin'
+Always remember the name
+Good",
+    artist_id: nate_good.id
+})
+slide_img = open('https://lyrical-seeds.s3.amazonaws.com/slide.jpg')
+slide.image.attach(io: slide_img, filename: 'slide.jpg')
+
+five_years_time = Track.create({ title: "5 Years Time",
+    album: "Peaceful, The World Lays Me Down",
+    lyrics: "Oh well, in five years time, we could be walking 'round a zoo
+With the sun shining down over me and you
+And there'll be love in the bodies of the elephants too
+And I'll put my hands over your eyes, but you'll peep through
+
+And there'll be sun, sun, sun all over our bodies
+And sun, sun, sun all down our necks
+And there'll sun, sun, sun all over our faces
+And sun, sun, sun - so what the heck!
+
+'Cause I'll be laughing at all your silly little jokes
+And we'll be laughing about how we used to smoke
+All those stupid little cigarettes and drink stupid wine
+'Cause it's what we needed to have a good time
+
+But it was fun, fun, fun when we were drinking
+It was fun, fun, fun when we were drunk
+And it was fun, fun, fun when we were laughing
+It was fun, fun, fun; oh it was fun
+
+Oh well, I look at you and say
+It's the happiest that I've ever been
+And I'll say I no longer feel I have to be James Dean
+And she'll say \"Yeah, well, I feel all pretty happy too
+And I'm always pretty happy when I'm just kicking back with you\"
+
+And it'll be love, love, love all through our bodies
+And love, love, love all through our minds
+And it'll be love, love, love all over her face
+And love, love, love all over mine
+
+Although maybe all these moments are just in my head
+I'll be thinking about them as I'm lying in bed
+And all that I believe, it might not even come true
+But in my mind I'm havin' a pretty good time with you
+
+In five years time, I might not know you
+In five years time, we might not speak
+In five years time, we might not get along
+In five years time, you might just prove me wrong
+
+Oh there'll be love, love, love
+Wherever you go
+There'll be love",
+    artist_id: noah_whale.id
+})
+five_years_time_img = open('https://lyrical-seeds.s3.amazonaws.com/five_years_time.jpg')
+five_years_time.image.attach(io: five_years_time_img, filename: 'five_years_time.jpg')
+
+two_atoms = Track.create({ title: "2 Atoms in a Molecule",
+    album: "Peaceful, The World Lays Me Down",
+    lyrics: "Last night I had a dream we were inseparably entwined
+Like a piece of rope made out of two pieces of vine
+Held together, holding each other with no one else in mind
+Like 2 atoms in a molecule inseparably combined
+
+But then I woke from the dream to realise I was alone
+A tragic event I must admit but let's not be overblown
+I'm not trying to write a love song just a sad, pathetic moan
+Maybe I just need a change, maybe I just need a new cologne
+
+Now I look at love like being stabbed in the heart
+You torture each other from day to day and then one day you part
+Most of the time it's misery but there's some joy at the start
+Oh for that I'd say it's worth it, just use a blade that's short and sharp on me
+
+And if love is just a game then how come it's no fun
+If love is just a game how come I've never won
+I guess maybe it's possible I might be playing it wrong
+And that's why every time I roll the dice I always come undone",
+    artist_id: noah_whale.id
+})
+two_atoms_img = open('https://lyrical-seeds.s3.amazonaws.com/two_atoms.jpg')
+two_atoms.image.attach(io: two_atoms_img, filename: 'two_atoms.jpg')
+
+oc_wagon_wheel = Track.create({ title: "Wagon Wheel",
+    album: "Old Crow Medicine Show",
+    lyrics: "[Verse 1]
+Headed down south to the land of the pines
+I'm thumbin' my way to North Caroline
+Starin' up the road
+And pray to God I see headlights
+I made it down the coast in seventeen hours
+Pickin' me a bouquet of dogwood flowers
+And I'm a-hopin' for Raleigh
+I can see my baby tonight
+
+[Chorus]
+So, rock me mama like a wagon wheel
+Rock me mama any way you feel
+Hey, mama rock me
+Rock me mama like the wind and the rain
+Rock me mama like a south-bound train
+Hey, mama rock me
+
+Runnin' from the cold up in New England
+I was born to be a fiddler in an old-time string band
+My baby plays the guitar
+I pick a banjo now
+Ah, the north country winters keep a-gettin' me
+And I lost my money playin' poker so I had to up and leave
+But I ain't a-turnin' back
+To livin' that old life no more
+
+[Chorus]
+So, rock me mama like a wagon wheel
+Rock me mama any way you feel
+Hey, mama rock me
+Rock me mama like the wind and the rain
+Rock me mama like a south-bound train
+Hey, mama rock me
+
+[Verse 3]
+Walkin' due south out of Roanoke
+I caught a trucker out of Philly
+Had a nice long toke
+But he's a-headed west from the Cumberland Gap
+To Johnson City, Tennessee
+And I gotta get a move on before the sun
+I hear my baby callin' my name
+And I know that she's the only one
+And if I die in Raleigh
+At least I will die free
+
+[Chorus]
+So, rock me mama like a wagon wheel
+Rock me mama any way you feel
+Hey, mama rock me
+Rock me mama like the wind and the rain
+Rock me mama like a south-bound train
+Hey, mama rock me",
+    artist_id: old_crow.id
+})
+oc_wagon_wheel_img = open('https://lyrical-seeds.s3.amazonaws.com/oc_wagon_wheel.jpg')
+oc_wagon_wheel.image.attach(io: oc_wagon_wheel_img, filename: 'oc_wagon_wheel.jpg')
+
+sweet_amarillo = Track.create({ title: "Sweet Amarillo",
+    album: "Remedy",
+    lyrics: "Well the world's greatest wonder from what I can tell
+Is how a cowgirl like you could ever look my way
+I was blinded by glory with a half-written story
+And a song spilling out off of every page
+
+Sweet Amarillo
+Tears on my pillow
+You never will know
+How much I cried
+Sweet Amarillo
+Like the wind in the willow
+Damn this old cowboy
+For my foolish pride
+
+So I drifted on down from the Iron Ore Range
+Across the wide Missouri where the cool waters flow
+When I got to Topeka I looked up your name
+But they said you rode off with the last rodeo
+
+Sweet Amarillo
+Tears on my pillow
+You never will know
+How much I cried
+Sweet Amarillo
+Like the wind in the willows
+Damn this old cowboy
+For my foolish pride
+
+Well the thunder's a-rumbling and the tumbleweed's tumbling
+And the rodeo clowns are painting their face
+I'm gunning the throttle for Ilano Estacado
+On a wild Appaloosa I'm blowing your way
+
+Down in Old Amarillo there's a light in the window
+Where a road weary shadow drifts into the arms
+Of a long distance lover then they turn back the covers
+And dance the Redova 'til the light of the dawn
+
+Sweet Amarillo
+Tears on my pillow
+You never will know
+How much I cried
+Sweet Amarillo
+Like the wind in the willows
+Damn this old cowboy
+For my foolish pride
+
+Sweet Amarillo
+Sweet Amarillo",
+    artist_id: old_crow.id
+})
+sweet_amarillo_img = open('https://lyrical-seeds.s3.amazonaws.com/sweet_amarillo.jpg')
+sweet_amarillo.image.attach(io: sweet_amarillo_img, filename: 'sweet_amarillo.jpg')
+
+here_it_goes = Track.create({ title: "Here It Goes Again",
+    album: "Oh No",
+    lyrics: "[Verse 1]
+It could be ten, but then again I can't remember
+Half an hour since a quarter to four
+Throw on your clothes, the second side of Surfer Rosa
+And you leave me with my jaw on the floor
+Hey!
+
+[Chorus]
+Oh, just when you think you're in control
+Just when you think you've got a hold
+Just when you get on a roll
+Oh here it goes, here it goes, here it goes again
+Oh here it goes again
+I should've known, should've known, should've known again
+But here it goes again
+Oh, oh here it goes again
+
+[Verse 2]
+Starts out easy, something simple, something sleazy
+Something inching past the edge of reserve
+Now through the lines of the cheap Venetian blinds
+Your car is pulling off of the curb
+Hey!
+
+[Chorus]
+Oh, just when you think you're in control
+Just when you think you've got a hold
+Just when you get on a roll
+Oh here it goes, here it goes, here it goes again
+Oh here it goes again
+I should've known, should've known, should've known again
+But here it goes again
+Oh here it goes
+Oh here it goes
+Oh here it goes again
+Oh, oh here it goes again
+
+[Bridge]
+Oh, oh
+Oh here it goes
+Yeah, oh here it goes again
+Hey, hey
+Oh here it goes
+Alright
+
+[Verse 3]
+I guess there's gotta be a break in the monotony
+But Jesus when it rains, how it pours
+Throw on your clothes, the second side of Surfer Rosa
+And you leave me, yeah you leave me
+
+[Chorus]
+Oh, oh here it goes, here it goes, here it goes again
+Oh here it goes again
+I should've known, should've known, should've known again
+But here it goes again
+
+[Outro]
+Oh here it goes
+Oh here it goes
+Oh here it goes again
+I should've known
+I should've known
+But here it goes again
+Oh here it
+Oh here it
+Oh here it
+Oh here it
+Oh here it goes again
+I should've
+I should've
+I should've
+I should've
+I should've known
+Oh, oh, yeah, I should've known
+Oh here it goes again
+Oh, oh here it goes again",
+    artist_id: ok_go.id
+})
+here_it_goes_img = open('https://lyrical-seeds.s3.amazonaws.com/here_it_goes.jpg')
+here_it_goes.image.attach(io: here_it_goes_img, filename: 'here_it_goes.jpg')
+
+this_too_shall = Track.create({ title: "This Too Shall Pass",
+    album: "Of the Blue Colour of the Sky",
+    lyrics: "[Verse 1]
+You know you can't keep lettin' it get you down
+And you can't keep draggin' that dead weight around
+If there ain't all that much to lug around
+Better run like hell when you hit the ground
+
+[Chorus]
+When the morning comes
+When the morning comes
+
+[Verse 2]
+You can't stop these kids from dancin'—why would you want to?
+'Specially when you are already gettin' yours
+'Cause if your mind don't move and your knees don't bend
+Well don't go blamin' the kids again
+
+[Chorus]
+When the morning comes
+When the morning comes
+When the morning comes
+When the morning comes
+When the morning comes
+When the morning comes
+
+[Bridge]
+Let it go, this too shall pass
+Let it go, this too shall pass
+
+[Outro]
+You know you can't keep lettin' it get you down
+No, you can't keep lettin' it get you down
+(Let it go, this too shall pass)
+Hey! Is it really all that much to lug around?
+Oh, you can't keep lettin' it get you down
+(Let it go, this too shall pass)
+
+When the morning comes
+(You can't keep lettin' it get you down
+You can't keep lettin' it get you down)
+When the morning comes
+(You can't keep lettin' it get you down
+No, you can't keep lettin' it get you down)
+When the morning comes
+(You can't keep lettin' it get you down
+You can't keep lettin' it get you down)
+When the morning comes
+(You can't keep lettin' it get you down
+No, you can't keep lettin' it get you down)
+When the morning comes!",
+    artist_id: ok_go.id
+})
+this_too_shall_img = open('https://lyrical-seeds.s3.amazonaws.com/this_too_shall.jpg')
+this_too_shall.image.attach(io: this_too_shall_img, filename: 'this_too_shall.jpg')
+
+let_her_go = Track.create({ title: "Let Her Go",
+    album: "All the Little Lights",
+    lyrics: "[Hook]
+Well you only need the light when it's burning low
+Only miss the sun when it starts to snow
+Only know you love her when you let her go
+Only know you've been high when you're feeling low
+Only hate the road when you're missing home
+Only know you love her when you let her go
+And you let her go...
+
+[Verse 1]
+Staring at the bottom of your glass
+Hoping one day you'll make a dream last
+But dreams come slow and they go so fast
+You see her when you close your eyes
+Maybe one day you'll understand why
+Everything you touch surely dies
+
+[Hook]
+But you only need the light when it's burning low
+Only miss the sun when it starts to snow
+Only know you love her when you let her go
+Only know you've been high when you're feeling low
+Only hate the road when you're missing home
+Only know you love her when you let her go
+
+[Verse 2]
+Staring at the ceiling in the dark
+Same old empty feeling in your heart
+'Cause love comes slow and it goes so fast
+Well you see her when you fall asleep
+But never to touch and never to keep
+'Cause you loved her too much and you dived too deep
+
+[Hook]
+Well you only need the light when it's burning low
+Only miss the sun when it starts to snow
+Only know you love her when you let her go
+Only know you've been high when you're feeling low
+Only hate the road when you're missing home
+Only know you love her when you let her go
+And you let her go...
+
+[Bridge]
+Oh, oh, woah, oh, oh
+And you let her go
+Oh, oh, woah, oh, oh
+When you let her go
+Whoa
+
+[Hook]
+'Cause you only need the light when it's burning low
+Only miss the sun when it starts to snow
+Only know you love her when you let her go
+Only know you've been high when you're feeling low
+Only hate the road when you're missing home
+Only know you love her when you let her go
+'Cause you only need the light when it's burning low
+Only miss the sun when it starts to snow
+Only know you love her when you let her go
+Only know you've been high when you're feeling low
+Only hate the road when you're missing home
+Only know you love her when you let her go
+And you let her go...",
+    artist_id: passenger.id
+})
+let_her_go_img = open('https://lyrical-seeds.s3.amazonaws.com/let_her_go.jpg')
+let_her_go.image.attach(io: let_her_go_img, filename: 'let_her_go.jpg')
+
+wrong_direction = Track.create({ title: "The Wrong Direction",
+    album: "All the Little Lights",
+    lyrics: "[Verse 1]
+When I was a kid the things I did were hidden under the grid
+Young and naive I never believed that love could be so well hid
+With regret I'm willing to bet and say the older you get
+It gets harder to forgive and harder to forget
+It gets under your shirt like a dagger at work
+The first cut is the deepest but the rest still flipping hurt
+You build your heart of plastic
+Get cynical and sarcastic
+And end up in the corner on your own
+
+[Hook]
+Cause I'd love to feel love but I can't stand the rejection
+I hide behind my jokes as a form of protection
+I thought I was close but under further inspection
+It seems I've been running in the wrong direction oh no
+
+[Verse 2]
+So what's the point in getting your hopes up
+When all you're ever getting is choked up
+When your coked up
+And can't remember the reason why you broke up
+You call her in the morning when you're coming down and falling
+Like an old man on the side of the road
+Cause when you're apart you don't want to mingle
+When you're together you want to be single
+Ever the chase to taste the kiss of bliss
+That made your heart tingle
+How much greener the grass is
+With those rose tinted glasses
+But the butterflies they flutter by and leave us on our asses
+
+[Hook]
+Cause I'd love to feel love but I can't stand the rejection
+I hide behind my jokes as a form of protection
+I thought I was close but under further inspection
+It seems I've been running in the wrong direction
+There's fish in the sea for me to make a selection
+I'd jump in if it wasn't for my ear infection
+Cause all I want to do is try to make a connection
+It seems I've been running in the wrong direction oh oh
+
+[Hook x2]
+
+[Outro]
+Seems like I'm running in the wrong direction oh
+Seems like I'm running in the wrong direction oh
+Well it seems I've been running in the wrong direction oh no
+Seems I've been running in the wrong direction oh",
+    artist_id: passenger.id
+})
+wrong_direction_img = open('https://lyrical-seeds.s3.amazonaws.com/wrong_direction.jpg')
+wrong_direction.image.attach(io: wrong_direction_img, filename: 'wrong_direction.jpg')
+
+patient_love = Track.create({ title: "Patient Love",
+    album: "All the Little Lights",
+    lyrics: "Got a pinch of tobacco in my pocket
+I'm not gonna roll it, no, I'm not gonna smoke it
+Till we're staring at the stars and the rockets
+Twinkling in the silvery night
+Two sips of whiskey in the flask
+But I'm not gonna drink 'em
+I swear I'll make it last
+Till we're- drinking out of the same glass again
+
+And though the sand may be washed by the sea
+And the old will be lost in the new
+Well four will not wait for three
+For three never waited for two
+And though you will not wait for me
+I'll wait for you
+
+Got a Polaroid picture in my wallet
+I'm not gonna tear it, no, I'm not gonna spoil it
+It's an unspoken heartbreak
+A heartbroken handshake
+I take with me where I go
+Three words on the tip of my tongue
+Not to be spoke nor sung
+Or whispered to anyone
+Till I scream 'em at the top of my lungs again
+
+And though the sand may be washed by the sea
+And the old will be lost in the new
+Well four will not wait for three
+For three never waited for two
+And though you will not wait for me
+I'll wait for you
+
+Oh, whoa
+And, oh, oh, oh
+I'll wait for you
+Oh, whoa
+And, oh, oh, oh
+And I'll wait for you
+Oh, oh
+
+Got a pinch of tobacco in my pocket
+I'm not gonna roll it, no, I'm not gonna smoke it
+Till we're staring at the stars and the rockets
+Twinkling in the silvery night",
+    artist_id: passenger.id
+})
+patient_love_img = open('https://lyrical-seeds.s3.amazonaws.com/patient_love.jpg')
+patient_love.image.attach(io: patient_love_img, filename: 'patient_love.jpg')
 
 
 # END TRACKS
