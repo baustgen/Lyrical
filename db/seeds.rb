@@ -4443,7 +4443,7 @@ But I'm holding you closer than most cause you are my heaven",
 drop_ocean_img = open('https://lyrical-seeds.s3.amazonaws.com/drop_ocean.jpg')
 drop_ocean.image.attach(io: drop_ocean_img, filename: 'drop_ocean.jpg')
 
-prefect_for_me = Track.create({ title: "Perfect For Me",
+perfect_for_me = Track.create({ title: "Perfect For Me",
     album: "The New England Sessions",
     lyrics: "You sit in the bathroom and you paint your toes
 I sit on the bed right now and I sing you a song
@@ -4480,8 +4480,8 @@ Oh my love I swear you're perfect
 Yes I promise, you're perfect for me",
     artist_id: ron_pope.id
 })
-prefect_for_me_img = open('https://lyrical-seeds.s3.amazonaws.com/prefect_for_me.jpg')
-prefect_for_me.image.attach(io: prefect_for_me_img, filename: 'prefect_for_me.jpg')
+perfect_for_me_img = open('https://lyrical-seeds.s3.amazonaws.com/perfect_for_me.jpg')
+perfect_for_me.image.attach(io: perfect_for_me_img, filename: 'perfect_for_me.jpg')
 
 girl_train = Track.create({ title: "Girl on a Train",
     album: "Alone Together",
