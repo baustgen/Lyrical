@@ -187,6 +187,46 @@ toussaint = Artist.create({ name: 'Toussaint Morrison', bio: "Toussaint Morrison
 toussaint_img = open('https://lyrical-seeds.s3.amazonaws.com/toussaint.jpg')
 toussaint.image.attach(io: toussaint_img, filename: 'toussaint.jpg')
 
+thomas_rhett = Artist.create({ name: 'Thomas Rhett', bio: "Thomas Rhett Akins, Jr. is a country superstar who has charmed listeners with romantic tracks like “Die a Happy Man.” He was born March 30, 1990 in Valdosta, Georgia to country music recording artist Rhett Akins, Sr. and wife Paige Braswell. In high school, he was the drummer in a punk rock band called the High Heeled Flip Flops. Thomas married his childhood sweetheart, Lauren Gregory, in October 2012, and they adopted their oldest daughter, Willa Gray Akins, in May 2017 and welcomed their second daughter Ada James Akins into the world on August 12th 2017."})
+thomas_rhett_img = open('https://lyrical-seeds.s3.amazonaws.com/thomas_rhett.jpg')
+thomas_rhett.image.attach(io: thomas_rhett_img, filename: 'thomas_rhett.jpg')
+
+uncle_kracker = Artist.create({ name: 'Uncle Kracker', bio: "Uncle Kracker is a Country/Rock/Hip-Hop Artist who formed his own solo career starting in 2000, eventually spawning such hits as “Follow Me,” “Drift Away,” and “Smile,” the first two reaching the 10 on the Billboard Hot 100. Kracker was originally the turntablist for Kid Rock’s supporting band, Twisted Brown Trucker"})
+uncle_kracker_img = open('https://lyrical-seeds.s3.amazonaws.com/uncle_kracker.jpg')
+uncle_kracker.image.attach(io: uncle_kracker_img, filename: 'uncle_kracker.jpg')
+
+vulfpeck = Artist.create({ name: 'Vulfpeck', bio: "Vulfpeck is an American funk group founded in 2011 at the University of Michigan. The band aims for a sound that is minimal, raw, and approaches that of a live performance where each instrument contributes just what it needs to and does not dominate. Recordings are done live with real instruments, and very seldom are different takes cut and mixed.
+
+The band has four core members: Joe Dart, Woody Goss, Theo Katzman, and Jack Stratton. However, they frequently collaborate and tour with Joey Dosik, Antwaun Stanley, and Cory Wong. Beyond this, they have have worked on their albums with many talented musicians including R&B legends such as David T. Walker, Michael Bland, and Bootsy Collins."})
+vulfpeck_img = open('https://lyrical-seeds.s3.amazonaws.com/vulfpeck.jpg')
+vulfpeck.image.attach(io: vulfpeck_img, filename: 'vulfpeck.jpg')
+
+william_bolton = Artist.create({ name: 'William Bolton', bio: "William Bolton, or Willy B, is an up-and-coming American singer-songwriter and producer. Being from Motown, Detroit his music often contain soul-vibes but his discography is primarily pop.
+
+He began his career distributing his music through Soundcloud, starting off under his alter ego ‘Times New Roman’. It was on Soundcloud he released his debut project Summer Breeze in 2015. His official debut album, Love Supreme was released a year later on all mainstream streaming platforms.
+
+In the second half of 2017, Willy released 3 EP’s, the final one being One of One, released on New Year’s Eve followed up by the compilation album Highlights on the 1st of January 2018 which contains most of his music released in 2017.
+
+His sophomore album, Anti Love Love Songs released in the Summer of 2018."})
+william_bolton_img = open('https://lyrical-seeds.s3.amazonaws.com/william_bolton.jpg')
+william_bolton.image.attach(io: william_bolton_img, filename: 'william_bolton.jpg')
+
+xuitcase = Artist.create({ name: 'XUITCASECITY', bio: "XUITCASECITY, pronounced “suitcase city”, is an American hip-hop, pop, and dance music duo from Florida, consisting of singer Mike Gomes and rapper Cam Young."})
+xuitcase_img = open('https://lyrical-seeds.s3.amazonaws.com/xuitcase.png')
+xuitcase.image.attach(io: xuitcase_img, filename: 'xuitcase.png')
+
+yellowcard = Artist.create({ name: 'Yellowcard', bio: "Formed in Jacksonville, Florida in 1997, and later based in Los Angeles, California in 2000, Yellowcard was a striving force in the pop punk community for twenty years. The band is known for its prominent use of the violin. The band’s revolving door of members featured Ryan Key, Sean Mackin, Ryan Mendez, Josh Portman, Longineu W. Parsons III, Peter Mosely, Sean O'Donnell, Ben Harper, Warren Cooke, Ben Dobson, Alex Lewis, and Todd Clary."})
+yellowcard_img = open('https://lyrical-seeds.s3.amazonaws.com/yellowcard.jpg')
+yellowcard.image.attach(io: yellowcard_img, filename: 'yellowcard.jpg')
+
+zac_brown_band = Artist.create({ name: 'Zac Brown Band', bio: "Zac Brown Band is an American country/folk band based in Atlanta, Georgia on the Southern Ground Artists label. The lineup consists of Zac Brown (lead vocals, guitar), Jimmy De Martini (fiddle, vocals), John Driskell Hopkins (bass guitar, vocals), Coy Bowles (guitar, keyboards), Chris Fryar (drums), Clay Cook (guitar, keyboards, mandolin, steel guitar, vocals), and Daniel de los Reyes (percussion)."})
+zac_brown_band_img = open('https://lyrical-seeds.s3.amazonaws.com/zac_brown_band.jpg')
+zac_brown_band.image.attach(io: zac_brown_band_img, filename: 'zac_brown_band.jpg')
+
+four_non_blondes = Artist.create({ name: '4 Non Blondes', bio: "4 Non Blondes began in 1989 as four San Fransciso lesbians who built a local following and got ‘a lot of press’ in the area, attracting a number of record labels who smelled a hit in their ballad “What’s Up?” – a song so powerful that bass player Christa Hillhouse actually stopped having sex and ran down the hall when she first heard Linda Perry playing the song to express how much she liked it."})
+four_non_blondes_img = open('https://lyrical-seeds.s3.amazonaws.com/four_non_blondes.jpg')
+four_non_blondes.image.attach(io: four_non_blondes_img, filename: 'four_non_blondes.jpg')
+
 
 # END ARTISTS
 
@@ -4813,6 +4853,1075 @@ I’d rather have you than snow today",
 })
 liquor_store_img = open('https://lyrical-seeds.s3.amazonaws.com/liquor_store.jpg')
 liquor_store.image.attach(io: liquor_store_img, filename: 'liquor_store.jpg')
+
+crash_and_burn = Track.create({ title: "Crash and Burn",
+    album: "Tangled Up",
+    lyrics: "[Verse: 1]
+So I guess it's over, baby
+Déjà vu again
+Who'd have thought that time don't stop?
+And somehow girl, the world keeps spinning
+I guess I've turned myself into a solitary man
+Ain't like I'm the only one that's in the shoes that I am
+
+[Chorus]
+Do you hear that? (Do you hear that?)
+I'm right back (I'm right back)
+At the sound of lonely calling
+Do you hear that? (Do you hear that?)
+It's where I'm at (It's where I'm at)
+It's the sound of teardrops falling down, down
+A slamming door and a lesson learned
+I let another lover crash and burn
+
+[Verse 2]
+I know that it might sound jaded
+And I have to say
+I think love is overrated
+But I don't like throwing it away
+I know you could probably tell me right where I went wrong
+Some guys can't have all the luck if others don't sing sad songs
+
+[Chorus]
+Do you hear that? (Do you hear that?)
+I'm right back (I'm right back)
+At the sound of lonely calling
+Do you hear that? (Do you hear that?)
+It's where I'm at (It's where I'm at)
+It's the sound of teardrops falling down, down
+A slamming door and a lesson learned
+I let another lover crash and burn
+
+[Bridge]
+That's right
+Another lover
+Another lover, crash and burn
+Ooh, yeah
+
+[Chorus]
+Do you hear that? (Do you hear that?)
+I'm right back (I'm right back)
+At the sound of lonely calling
+Do you hear that? (Do you hear that?)
+It's where I'm at (It's where I'm at)
+It's the sound of teardrops falling down, down
+A slamming door and a lesson learned
+I let another lover crash and burn
+Yeah, I let another lover crash and burn",
+    artist_id: thomas_rhett.id
+})
+crash_and_burn_img = open('https://lyrical-seeds.s3.amazonaws.com/crash_and_burn.jpg')
+crash_and_burn.image.attach(io: crash_and_burn_img, filename: 'crash_and_burn.jpg')
+
+tshirt = Track.create({ title: "Crash and Burn",
+    album: "Tangled Up",
+    lyrics: "[Verse 1]
+She wants to get married, she wants it perfect
+She wants her granddaddy preaching the service
+And she wants magnolias out in the country
+Not too many people, save her daddy some money
+
+[Pre-Chorus 1]
+Ooh, she got it all planned out
+Yeah, I can see it all right now
+
+[Chorus 1]
+I'll wear my black suit, black tie, hide out in the back
+I'll do a strong shot of whiskey straight out the flask
+I'll try to make it through without crying so nobody sees
+Yeah, she wanna get married
+But she don't wanna marry me
+
+[Verse 2]
+I remember the night when I almost kissed her
+Yeah, I kinda freaked out, we've been friends for forever
+And I'd always wonder if she felt the same way
+When I got the invite, I knew it was too late
+
+[Pre-Chorus 2]
+And I know her daddy's been dreading this day
+Oh, but he don't know he ain't the only one giving her away
+
+[Chorus 1]
+I'll wear my black suit, black tie, hide out in the back
+I'll do a strong shot of whiskey straight out the flask
+I'll try to make it through without crying so nobody sees
+Yeah, she wanna get married
+But she don't wanna marry me
+
+[Bridge]
+Bet she got on her dress now, welcoming the guests now
+I could try to find her, get it off of my chest now
+But I ain't gonna mess it up, so I wish her the best now
+
+[Chorus 2]
+So I'm in my black suit, black tie, hiding out in the back
+Doing a strong shot of whiskey straight out the flask
+I'll try to make it through without crying so nobody sees
+Yeah, she wanna get married
+Yeah, she gonna get married
+But she ain't gonna marry me
+Whoa, but she ain't gonna marry me, no",
+    artist_id: thomas_rhett.id
+})
+tshirt_img = open('https://lyrical-seeds.s3.amazonaws.com/tshirt.jpg')
+tshirt.image.attach(io: tshirt_img, filename: 'tshirt.jpg')
+
+marry_me = Track.create({ title: "Marry Me",
+    album: "Life Changes",
+    lyrics: "[Verse 1]
+She wants to get married, she wants it perfect
+She wants her granddaddy preaching the service
+And she wants magnolias out in the country
+Not too many people, save her daddy some money
+
+[Pre-Chorus 1]
+Ooh, she got it all planned out
+Yeah, I can see it all right now
+
+[Chorus 1]
+I'll wear my black suit, black tie, hide out in the back
+I'll do a strong shot of whiskey straight out the flask
+I'll try to make it through without crying so nobody sees
+Yeah, she wanna get married
+But she don't wanna marry me
+
+[Verse 2]
+I remember the night when I almost kissed her
+Yeah, I kinda freaked out, we've been friends for forever
+And I'd always wonder if she felt the same way
+When I got the invite, I knew it was too late
+
+[Pre-Chorus 2]
+And I know her daddy's been dreading this day
+Oh, but he don't know he ain't the only one giving her away
+
+[Chorus 1]
+I'll wear my black suit, black tie, hide out in the back
+I'll do a strong shot of whiskey straight out the flask
+I'll try to make it through without crying so nobody sees
+Yeah, she wanna get married
+But she don't wanna marry me
+
+[Bridge]
+Bet she got on her dress now, welcoming the guests now
+I could try to find her, get it off of my chest now
+But I ain't gonna mess it up, so I wish her the best now
+
+[Chorus 2]
+So I'm in my black suit, black tie, hiding out in the back
+Doing a strong shot of whiskey straight out the flask
+I'll try to make it through without crying so nobody sees
+Yeah, she wanna get married
+Yeah, she gonna get married
+But she ain't gonna marry me
+Whoa, but she ain't gonna marry me, no",
+    artist_id: thomas_rhett.id
+})
+marry_me_img = open('https://lyrical-seeds.s3.amazonaws.com/marry_me.jpg')
+marry_me.image.attach(io: marry_me_img, filename: 'marry_me.jpg')
+
+drift_away = Track.create({ title: "Drift Away",
+    album: "No Stranger to Change",
+    lyrics: "[Verse 1]
+Day after day, I'm more confused
+Yet, I look for the light through the pourin' rain
+You know that's a game that I hate to lose
+
+[Pre-Chorus 1]
+And I'm feelin' the strain
+Oh, ain't it a shame?
+
+[Chorus]
+Oh, give me the beat boys and free my soul
+I wanna get lost in your rock and roll and drift away
+Give me the beat boys and free my soul
+I wanna get lost in your rock and roll and drift away
+Won't you take me away?
+
+[Verse 2]
+Beginin' to think that I'm wastin' time
+I don't understand the things I do
+The world outside looks so unkind
+
+[Pre-Chorus 2]
+And I'm countin' on you
+You can carry me through
+
+[Chorus]
+Oh, give me the beat boys and free my soul
+I wanna get lost in your rock and roll and drift away
+Give me the beat boys and free my soul
+I wanna get lost in your rock and roll and drift away
+Won't you take me away?
+
+[Bridge]
+And when my mind is free
+You know a melody can move me
+When I'm feelin' blue
+The guitars come in through to soothe me
+Thanks for the joy that you've given me
+(Ooh, the joy that you've given me)
+I want you to know that I believe in your song (oh, yeah)
+Your rhythm, and rhyme, and harmony (mm)
+You helped me along (makin' me strong)
+Oh, you're makin' me strong
+
+[Breakdown]
+Oh, give me the beat boys and free my soul
+I wanna get lost in your rock and roll and drift away (drift away, ooh)
+And give me the beat boys and free my soul
+I wanna get lost in your rock and roll and drift away (drift away)
+
+[Chorus]
+Give me the beat boys and free my soul
+I wanna get lost in your rock and roll and drift away (drift away, oh)
+Give me the beat boys and free my soul
+I wanna get lost in your rock and roll and drift away
+
+[Outro]
+Yeah, won't you take me?
+Won't you take me?
+I wanna drift away (won't you take me away?)
+I wanna drift away
+I wanna drift away (won't you take me?)
+Take me home
+Let me drift away
+Won't you take me away?",
+    artist_id: uncle_kracker.id
+})
+drift_away_img = open('https://lyrical-seeds.s3.amazonaws.com/drift_away.jpg')
+drift_away.image.attach(io: drift_away_img, filename: 'drift_away.jpg')
+
+follow_me = Track.create({ title: "Follow Me",
+    album: "Double Wide",
+    lyrics: "[Verse 1]
+You don't know how you met me, you don't know why
+You can't turn around and say goodbye
+All you know is when I'm with you, I make you free
+And swim through your veins like a fish in the sea
+I'm singin'
+
+[Chorus]
+Follow me, everything is alright
+I'll be the one to tuck you in at night
+And if you want to leave, I can guarantee
+You won't find nobody else like me
+
+[Verse 2]
+I'm not worried 'bout the ring you wear
+'Cause as long as no one knows, then nobody can care
+You're feelin' guilty and I'm well aware
+But you don't look ashamed, and baby I'm not scared
+I'm singin'
+
+[Chorus]
+Follow me, everything is alright
+I'll be the one to tuck you in at night
+And if you want to leave, I can guarantee
+You won't find nobody else like me
+
+[Bridge]
+Won't give you money, I can't give you the sky
+You're better off if you don't ask why
+I'm not the reason that you go astray and
+We'll be alright if you don't ask me to stay
+
+[Chorus]
+(Follow me, everything is alright)
+I'll be the one to tuck you in at night
+And if you want to leave, I can guarantee
+You won't find nobody else like me
+
+[Verse 1]
+You don't know how you met me, you don't know why
+You can't turn around and say goodbye
+All you know is when I'm with you, I make you free
+And swim through your veins like a fish in the sea(17837211)
+I'm singin'
+
+[Chorus]
+Follow me, everything is alright
+I'll be the one to tuck you in at night
+And if you want to leave, I can guarantee
+You won't find nobody else like me
+I'm singin'
+Follow me, everything is alright
+I'll be the one to tuck you in at night
+And if you want to leave, I can guarantee
+You won't find nobody else like me
+I'm singin'
+
+[Outro]
+Follow me, everything is alright
+I'll be the one to tuck you in at night
+And if you want to leave, I can guarantee
+You won't find nobody else like me",
+    artist_id: uncle_kracker.id
+})
+follow_me_img = open('https://lyrical-seeds.s3.amazonaws.com/follow_me.jpg')
+follow_me.image.attach(io: follow_me_img, filename: 'follow_me.jpg')
+
+animal_spirits = Track.create({ title: "Follow Me",
+    album: "The Beautiful Game",
+    lyrics: "[Intro: Theo Katzman]
+All the world, yeah
+All the world, yeah
+All the world, yeah yeah
+Ooh yeah yeah
+
+[Verse 1: Theo Katzman]
+This is a true love story song
+A triumph, and a Glory song
+With only one small caveat
+This one hasn't happened yet
+It's not the strongest narrative
+But details aren't imperative
+What matters is the way it ends
+They've got sixteen mutual friends
+
+[Chorus: Theo Katzman Christine Hucal & Theo Katzman]
+And she's got
+Animal Spirits
+And he's got
+Heartfelt lyrics
+Put them together and
+You can hear it
+It's the song everyone knows
+And she's got
+Animal Spirits
+And he's got
+Heartfelt lyrics
+Put them together and
+You can hear it
+It's the way the story goes
+
+[Verse 2: Theo Katzman]
+Now everyone seems unaware
+That these two are a destined pair
+But I checked out their astral chart
+This one is a work of art
+Now I know she reads astrology
+And he can't stand astrology
+But he's quick with an apology
+When he wisecracks the zodiac
+
+[Chorus: Theo Katzman]
+And she's got
+Animal Spirits
+And he's got
+Heartfelt lyrics
+Put them together and
+You can hear it
+It's the song everyone knows
+And she's got
+Animal Spirits
+And he's got
+Heartfelt lyrics
+Put them together and
+You can hear it
+It's the way the story goes
+
+[Bridge: Theo Katzman]
+Oh oh oh
+And when the rising action rises
+There is only one thing left, and that's the climax
+
+[Break Down: Woody]
+
+[Count in: Jack Stratton]
+2, 3, 4
+
+[Ad lib: Theo Katzman]
+Oh oh oh yeah
+Oh
+
+[Outro: Christine Hucal]
+Twitter on your telly
+Ramen in your belly
+Economics
+Put it in my pocket
+Milty, Marx and Maynard
+Aries penny saver
+Set a market order
+Because I'm pretty sure I got this
+Boulder, Colorado
+Take a break at Yaddo
+Economics
+Put it in my pocket
+Milty, Marx and Maynard
+Fairmount and Brainard
+I can stay
+You can stay, L.A",
+    artist_id: vulfpeck.id
+})
+animal_spirits_img = open('https://lyrical-seeds.s3.amazonaws.com/animal_spirits.jpg')
+animal_spirits.image.attach(io: animal_spirits_img, filename: 'animal_spirits.jpg')
+
+back_pocket = Track.create({ title: "Back Pocket",
+    album: "Thrill of the Arts",
+    lyrics: "[Refrain]
+I know
+That it's taken me all this time to say girl
+I'm slow
+So it's taken me all this time to say girl
+Tip toe
+And I want to acknowledge my mistake girl
+Uh oh
+And I hope that you know it's not too late
+
+[Hook]
+Put it in my pocket
+Put it in my pocket
+In my back pocket
+Put it in my pocket
+In my pocket
+In my back pocket
+Oh oh oh
+And I'll
+Put it in my pocket
+Put it in my pocket
+In my back pocket
+Put it in my pocket
+In my pocket
+In my back pocket
+And I'll read it when I'm alone
+
+[Verse]
+Do you like me? Circle yes or no
+On this piece of paper
+'Cause I really really need to know
+Are you gonna be my fifth grade queen?
+Hand it back after second hour
+Then I will know if you're gonna be my special flower
+Ooh girl, 'cause I need to know
+I will
+
+[Hook]
+Put it in my pocket
+Put it in my pocket
+In my back pocket
+Put it in my pocket
+In my pocket
+In my back pocket
+Oh oh oh
+And I'll
+Put it in my pocket
+Put it in my pocket
+In my back pocket
+Put it in my pocket
+In my pocket
+In my back pocket
+And I'll read it when I'm alone
+
+[Bridge]
+When you kissed me on the playground
+I lost my breath, I had to lay down
+And assess what I had seen
+Then I had to write the words out
+'Cause you took them out of my mouth
+But it's hard for me to read
+Out loud
+Oh gee
+Oh gosh
+
+[Refrain]
+I know
+That it's taken me all this time to say, girl
+I'm slow
+So it's taken me all this time to say, girl
+Tip toe
+And I want to acknowledge my mistake, girl
+Uh oh
+And I hope that you know it's not too late, girl
+I know
+That it's taken me all this time to say, girl
+I'm slow
+So it's taken me all this time to say, girl
+Tip toe
+And I want to acknowledge my mistake, girl
+Uh oh
+And I hope that you know it's not too late
+
+[Clarinet Trio]",
+    artist_id: vulfpeck.id
+})
+back_pocket_img = open('https://lyrical-seeds.s3.amazonaws.com/back_pocket.jpg')
+back_pocket.image.attach(io: back_pocket_img, filename: 'back_pocket.jpg')
+
+nowhere = Track.create({ title: "Nowhere",
+    album: "Anti Love Love Songs",
+    lyrics: "[Intro]
+You ain't going nowhere, you ain't going nowhere, baby
+You ain't going nowhere, you ain't going nowhere
+
+[Verse 1]
+Says she wanna be a star, well, that'd be hard
+When all she do is talk her shit from her backyard
+And I can't even tell you why, she just sits and cries
+For a small-town girl, she got a lot of pride
+Want me to be sorry, babe, well, I'm not sorry, babe
+Love to play the victim, but you're the one to blame
+And I try to help her, she won't let me help her
+So when she text me late at night, I don't know what to say
+
+[Pre-Chorus]
+She love to fantasize about this perfect life
+Where she could get a fresh start (fresh start, start)
+Well, here's my best advice, stop wasting all your time
+You're breaking your own heart
+
+[Chorus]
+Don't cry
+Screamin' that it's no fair, no fair
+Don't lie
+Baby, you ain't going nowhere, nowhere
+Whoa, whoa, whoa
+Baby, you ain't going nowhere, nowhere
+Whoa, whoa, whoa, whoa, oh-whoa
+
+[Verse 2]
+Think that she should get a job, move out of mom's
+At best she's playing dress-up, not a model, that's just her facade
+And I think she jealous, nah, I know she jealous
+When girls give me attention, she start acting helpless
+
+[Pre-Chorus]
+She love to fantasize about this perfect life
+Where she could get a fresh start (fresh start, start)
+Well, here's my best advice, stop wasting all your time
+You're breaking your own heart
+
+[Chorus]
+Don't cry
+Screamin' that it's no fair, no fair
+Don't lie
+Baby, you ain't going nowhere, nowhere
+Whoa, whoa, whoa
+Baby, you ain't going nowhere, nowhere
+Whoa, whoa, whoa, whoa, oh-whoa
+
+[Bridge]
+Want me to be sorry, babe, well, I'm not sorry, babe
+'Cause you do it to yourself, and you're the one to blame
+So when you realize, I won't be surprised
+When you act like we were close, nah, bitch
+
+[Chorus]
+Don't cry
+Screamin' that it's no fair, no fair
+Don't lie
+Baby, you ain't going nowhere, nowhere
+Whoa, whoa, whoa
+Baby, you ain't going nowhere, nowhere
+Whoa, whoa, whoa
+Baby, you ain't going nowhere, nowhere",
+    artist_id: william_bolton.id
+})
+nowhere_img = open('https://lyrical-seeds.s3.amazonaws.com/nowhere.jpg')
+nowhere.image.attach(io: nowhere_img, filename: 'nowhere.jpg')
+
+secrets = Track.create({ title: "Secrets",
+    album: "Anti Love Love Songs",
+    lyrics: "[Intro]
+Oh, yeah
+Woah-oh-oh, oh-oh-oh
+
+[Chorus]
+Baby, tell me all your secrets
+I promise that I'll keep it (Oh, yeah)
+Wanna tell you all my secrets
+If nobody knows we'll keep it down on the low
+Our secrets
+Baby, tell me all your secrets ('Crets)
+So I know we're real friends (Ah)
+I think we should share secrets
+If nobody knows we'll keep it down on the low
+Our secrets
+
+[Verse 1]
+The oldest girl I've kissed is 36 (Ha)
+But she a milf though, got a couple kids (Hey, Will)
+I'm always, always, always off the shits
+I wear my grandma's chain, got no rollie on my wrist (Wrist, wrist, wrist)
+And I'm always late, over-worked, and underpaid
+I hit the stage and I make 'em say
+
+[Chorus]
+Baby, tell me all your secrets
+I promise that I'll keep it (Oh, yeah)
+Wanna tell you all my secrets
+If nobody knows we'll keep it down on the low
+Our secrets
+Baby, tell me all your secrets ('Crets)
+So I know we're real friends (Ah)
+I think we should share secrets
+If nobody knows we'll keep it down on the low
+Our secrets
+
+[Verse 2]
+Me and you
+Baby, they don't know about the things we do (They don't)
+And now you got me saying shit, oh my god (Oh my god)
+Why did I just tell you that you turn me on (Brr), you turn me on
+She just wanna have some fun (She do)
+Make out in a taxi to a sushi lunch
+Buys me shots of saki just to get me drunk (We lit)
+Meet me in the bathroom, but don't tell no one
+I wanna f– (Shh)
+
+[Bridge]
+Ooh, you make me say
+Ooh, ooh
+Yeah, I make 'em say
+Ooh, ooh
+Yeah, I make 'em say
+
+[Chorus]
+Baby, tell me all your secrets
+I promise that I'll keep it (Oh, yeah)
+Wanna tell you all my secrets
+If nobody knows we'll keep it down on the low
+Our secrets
+Baby, tell me all your secrets
+So I know we're real friends (Yeah)
+I think we should share secrets
+If nobody knows we'll keep it down on the low
+Our secrets
+
+[Outro]
+(Ooh, ooh)
+Our secrets
+(Ooh, ooh)
+If nobody knows we'll keep it down on the low",
+    artist_id: william_bolton.id
+})
+secrets_img = open('https://lyrical-seeds.s3.amazonaws.com/secrets.jpg')
+secrets.image.attach(io: secrets_img, filename: 'secrets.jpg')
+
+need_somebody = Track.create({ title: "Need Somebody",
+    album: "INDXGO - EP",
+    lyrics: "[Verse 1]
+I know you getting tired of Versace and the loafers
+You got every pair but need somebody that could hold you
+'Cause you got a hole in your heart that the bags can't fill
+Pain in your eyes that the cash can't heal
+Wake up everyday waiting for it to be over
+
+[Pre-Chorus]
+You had a taste of love
+But he fucked up and now you're numb
+You said your over and done
+Over and done with love
+
+[Chorus]
+I know that you can do it all by yourself
+You probably really don't need my help
+But we all need somebody to love
+We all need somebody
+We all need somebody
+I know that you can do it all by yourself
+You probably really don't need my help
+But we all need somebody to love
+
+[Verse 2]
+I need your lovin', I put no one up above ya
+Been feeling like you a secret I keep you so undercover though
+No one knows about you don't mean that I don't trust you
+Girl you got my heart and can't nobody take it from you
+Take you everywhere you want to go and not your money
+Flippin' pages of the past, movin' forward different story, yah-yah
+Different chapter, yeah
+Switching up my faction, yeah
+I'm infatuated, yeah
+Got me so distracted, yeah-yeah
+Girl I'm locked in, don't know why you asking now
+Treat you like my music
+I love you with a passion, yeah
+
+[Pre-Chorus]
+You had a taste of love
+But he fucked up and now you're numb
+You said your over and done
+Over and done with love
+
+[Chorus]
+I know that you can do it all by yourself
+You probably really don't need my help
+But we all need somebody to love
+We all need somebody
+We all need somebody
+I know that you can do it all by yourself
+You probably really don't need my help
+But we all need somebody to love
+
+[Outro]
+I know that you can do it all by yourself
+You probably really don't need my help
+But we all need somebody to love
+We all need somebody
+We all need somebody",
+    artist_id: xuitcase.id
+})
+need_somebody_img = open('https://lyrical-seeds.s3.amazonaws.com/need_somebody.png')
+need_somebody.image.attach(io: need_somebody_img, filename: 'need_somebody.png')
+
+ocean_avenue = Track.create({ title: "Ocean Avenue",
+    album: "Ocean Avenue",
+    lyrics: "[Intro]
+There's a place off Ocean Avenue
+Where I used to sit and talk with you
+We were both sixteen and it felt so right
+Sleepin' all day, stayin' up all night
+Stayin' up all night
+
+[Verse 1]
+There's a place on the corner of Cherry Street
+We would walk on the beach in our bare feet
+We were both eighteen and it felt so right
+Sleepin' all day, stayin' up all night
+Stayin' up all night
+
+[Chorus]
+If I could find you now things would get better
+We could leave this town and run forever
+Let your waves crash down on me
+And take me away
+
+[Verse 2]
+There's a piece of you that's here with me
+It's everywhere I go, it's everything I see
+When I sleep, I dream and it gets me by
+I can make believe that you're here tonight
+That you're here tonight
+
+[Chorus]
+If I could find you now things would get better
+We could leave this town and run forever
+I know somewhere, somehow we'll be together
+Let your waves crash down on me
+And take me away
+
+[Bridge]
+I remember the look in your eyes
+When I told you that this was goodbye
+You were beggin' me not tonight
+Not here, not now
+We're looking up at the same night sky
+And keep pretendin' the sun will not rise
+We'll be together for one more night
+Somewhere, somehow
+
+[Chorus]
+If I could find you now things would get better
+We could leave this town and run forever
+I know somewhere, somehow we'll be together
+Let your waves crash down on me
+And take me away",
+    artist_id: yellowcard.id
+})
+ocean_avenue_img = open('https://lyrical-seeds.s3.amazonaws.com/ocean_avenue.jpg')
+ocean_avenue.image.attach(io: ocean_avenue_img, filename: 'ocean_avenue.jpg')
+
+view_heaven = Track.create({ title: "View From Heaven",
+    album: "Ocean Avenue",
+    lyrics: "[Verse 1]
+I'm just so tired
+Won't you sing me to sleep?
+And fly through my dreams
+So I can hitch a ride with you tonight
+And get away from this place
+Get a new name and face
+I just ain't the same without you in my life
+
+[Verse 2]
+Late night drives
+All alone in my car
+I can't help but start
+Singing lines from all our favorite songs
+And melodies in the air
+Singing \"Life just ain't fair\"
+Sometimes I still just can't believe you're gone
+
+[Chorus]
+And I'm sure the view from heaven
+Beats the hell out of mine here
+And if we all believe in heaven
+Maybe we'll make it through one more year
+Down here
+
+[Verse 3]
+Feel your fire
+When it's cold in my heart
+And things sorta start
+Reminding me of my last night with you
+I only need one more day
+Just one more chance to say
+\"I wish that I had gone up with you too\"
+
+[Chorus]
+And I'm sure the view from heaven
+Beats the hell out of mine here
+And if we all believe in heaven
+Maybe we'll make it through one more year
+Down here
+
+You won't be coming back
+And I didn't get to say goodbye (goodbye)
+I really wish I'd got to say goodbye
+
+[Chorus]
+And I'm sure the view from heaven
+Beats the hell out of mine here
+And if we all believe in heaven
+Maybe we'll make it through one more year
+Down here
+
+[Outro]
+I hope that all is well in heaven
+Cause it's all shot to hell down here
+I hope that I find you in heaven
+Cause I'm so lost without you down here
+
+You won't be coming back
+And I didn't get to say goodbye (goodbye)
+I really wish I'd got to say goodbye",
+    artist_id: yellowcard.id
+})
+view_heaven_img = open('https://lyrical-seeds.s3.amazonaws.com/view_heaven.jpg')
+view_heaven.image.attach(io: view_heaven_img, filename: 'view_heaven.jpg')
+
+knee_deep = Track.create({ title: "Knee Deep",
+    album: "You Get What You Give",
+    lyrics: "[Verse 1]
+Going to put the the world away for a minute
+Pretend I don't live in it
+Sunshine going to wash my blues away
+Had sweet love but I lost it
+She got too close so I fought her
+Now I'm lost in the world trying to find me a better way
+
+[Chorus]
+Wishing I was knee deep in the water somewhere
+Got the blue sky breeze and it don't seem fair
+Only worry in the world is the tide going to reach my chair
+Sunrise, there's a fire in the sky
+Never been so happy
+Never felt so high
+And I think I might have found me my own kind of paradise
+
+[Verse 2: Jimmy Buffett]
+Wrote a note said be back in a minute
+Bought a boat and I sailed off in it
+Don't think anybody going to miss me anyway
+Mind on a permanent vacation
+The ocean is my only medication
+Wishing my condition ain't ever going to go away
+
+[Chorus]
+Now I'm knee deep in the water somewhere
+Got the blue sky breeze blowing wind through my hair
+Only worry in the world is the tide going to reach my chair
+Sunrise, there's a fire in the sky
+Never been so happy
+Never felt so high
+And I think I might have found me my own kind of paradise
+
+[Bridge]
+This champagne shore washing over me
+It's a sweet sweet life living by the salty sea
+One day you could be as lost as me
+Change your geography
+Maybe you might be
+
+[Chorus]
+Knee deep in the water somewhere
+Got the blue sky breeze blowing wind through my hair
+Only worry in the world is the tide going to reach my chair
+Sunrise, there's a fire in the sky
+Never been so happy
+Never felt so high
+And I think I might have found me my own kind of paradise
+
+[Outro]
+Come on in the water's nice
+Find yourself a little slice
+Grab a backpack of lies
+You never know until you try
+When you lose yourself
+You find the key to paradise",
+    artist_id: zac_brown_band.id
+})
+knee_deep_img = open('https://lyrical-seeds.s3.amazonaws.com/knee_deep.jpg')
+knee_deep.image.attach(io: knee_deep_img, filename: 'knee_deep.jpg')
+
+chicken_fried = Track.create({ title: "Chicken Fried",
+    album: "Home Grown",
+    lyrics: "[Intro]
+You know I like my chicken fried
+Cold beer on a Friday night
+A pair of jeans that fit just right
+And the radio up
+
+[Verse 1]
+Well I was raised up beneath the shade of a Georgia Pine
+And that's home you know
+Sweet tea, pecan pie, and homemade wine where the peaches grow
+And my house it's not much to talk about
+But it's filled with love that's grown in southern ground
+
+[Chorus]
+And a little bit of chicken fried
+Cold beer on a Friday night
+A pair of jeans that fit just right
+And the radio up
+Well I've seen the sun rise
+See the love in my woman's eyes
+Feel the touch of a precious child
+And know a mother's love
+
+[Verse 2]
+It's funny how it's the little things in life that mean the most
+Not where you live, what you drive, or the price tag on your clothes
+There's no dollar sign on a piece of mind
+This I've come to know
+So if you agree, have a drink with me
+Raise your glasses for a toast
+
+[Chorus]
+To a little bit of chicken fried
+Cold beer on a Friday night
+A pair of jeans that fit just right
+And the radio up
+Well I've seen the sun rise
+See the love in my woman's eyes
+Feel the touch of a precious child
+And know a mother's love
+
+[Interlude]
+
+[Verse 3]
+I thank God for my life
+And for the stars and stripes
+May freedom forever fly, let it ring
+Salute the ones who died
+The ones that give their lives so we don't have to sacrifice
+All the things we love
+
+[Chorus]
+Like our chicken fried
+And cold beer on a Friday night
+A pair of jeans that fit just right
+And the radio up
+Well I've seen the sun rise
+See the love in my woman's eyes
+Feel the touch of a precious child
+And know a mother's love
+
+Get your little chicken fried
+Cold beer on a Friday night
+A pair of jeans that fit just right
+And the radio up
+Well I've done seen the sun rise
+See the love in my woman's eyes
+Feel the touch of a precious child
+And know a mother's love",
+    artist_id: zac_brown_band.id
+})
+chicken_fried_img = open('https://lyrical-seeds.s3.amazonaws.com/chicken_fried.jpg')
+chicken_fried.image.attach(io: chicken_fried_img, filename: 'chicken_fried.jpg')
+
+whats_up = Track.create({ title: "Chicken Fried",
+    album: "Home Grown",
+    lyrics: "[Verse 1]
+25 years and my life is still
+Trying to get up that great big hill of hope
+For a destination
+
+I realized quickly when I knew I should
+That the world was made up of this brotherhood of man
+For whatever that means
+
+[Pre-Chorus]
+And so I cry sometimes when I'm lying in bed
+Just to get it all out what's in my head
+And I, I am feeling a little peculiar
+
+And so I wake in the morning and I step outside
+And I take a deep breath and I get real high
+And I scream from the top of my lungs
+\"What's going on?\"
+
+[Chorus]
+And I say, hey-ey-ey
+Hey-ey-ey
+I said \"Hey, a-what's going on?\"
+And I say, hey-ey-ey
+Hey-ey-ey
+I said \"Hey, a-what's going on?\"
+
+[Bridge]
+Ooh, ooh
+Ooh
+Ooh, uh huh
+Ooh, ooh
+Ooh
+Ooh, uh huh
+
+[Verse 2]
+And I try
+Oh my God, do I try
+I try all the time
+In this institution
+
+And I pray
+Oh my God, do I pray
+I pray every single day
+For revolution
+
+[Pre-Chorus]
+And so I cry sometimes when I'm lying in bed
+Just to get it all out, what's in my head
+And I, I am feeling a little peculiar
+
+And so I wake in the morning and I step outside
+And I take a deep breath and I get real high
+And I scream from the top of my lungs
+\"What's going on?\"
+
+[Chorus]
+And I say, hey-ey-ey
+Hey-ey-ey
+I said \"Hey, what's going on?\"
+And I say, hey-ey-ey
+Hey-ey-ey
+I said \"Hey, a-what's going on?\"
+And I say, hey-ey-ey
+(Wake in the morning and step outside)
+Hey-ey-ey
+(Take a deep breath and I get real high)
+(And I scream)
+I said \"Hey, a-what's going on?\"
+And I say, hey-ey-ey
+(Wake in the morning and step outside)
+Hey-ey, yeah yeah yeah
+(Take a deep breath and I get real high)
+(And I scream)
+I said \"Hey, a-what's going on?\"
+
+[Bridge]
+Ooh, ooh
+Ooh
+Ooh, uh huh
+
+[Outro]
+25 years and my life is still
+Tryin' to get up that great big hill of hope
+For a destination, mmm",
+    artist_id: four_non_blondes.id
+})
+whats_up_img = open('https://lyrical-seeds.s3.amazonaws.com/whats_up.jpg')
+whats_up.image.attach(io: whats_up_img, filename: 'whats_up.jpg')
 
 
 # END TRACKS
