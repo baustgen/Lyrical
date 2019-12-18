@@ -167,6 +167,26 @@ passenger = Artist.create({ name: 'Passenger', bio: "Passenger aka Mike Rosenber
 passenger_img = open('https://lyrical-seeds.s3.amazonaws.com/passenger.jpg')
 passenger.image.attach(io: passenger_img, filename: 'passenger.jpg')
 
+ron_pope = Artist.create({ name: 'Ron Pope', bio: "Ronald Michael Pope (July 23rd 1981), best known by his stage name Ron Pope, is an American pop and rock singer, songwriter and a multi-instrumentalist. He was raised in Marietta, Georgia, United States, and is currently based in New York City. In 2005 he wrote hit “A Drop in the Ocean” with Zach Berkman. Its success led to Pope pursuing a career as a solo artist; his music is now recognized internationally.
+
+Pope signed a recording contract with record label Universal Republic, in 2009, with whom he released two singles. After leaving the label he has produced andreleased his music independently."})
+ron_pope_img = open('https://lyrical-seeds.s3.amazonaws.com/ron_pope.png')
+ron_pope.image.attach(io: ron_pope_img, filename: 'ron_pope.png')
+
+skizzy_mars = Artist.create({ name: 'Skizzy Mars', bio: "Myles Mills (born June 8, 1993) is a New York MC who goes by the moniker Skizzy Mars. Throughout high school, Skiz made a few raps here and there, although he never thought they would take him anywhere.
+
+However, as a high school senior, he realized that rap was what he wanted to pursue. He threw away his dreams of becoming a sports analyst and even his college diploma to write songs. With heavily supportive parents, Skizzy was able to hone his skills without giving up on his dreams."})
+skizzy_mars_img = open('https://lyrical-seeds.s3.amazonaws.com/skizzy_mars.jpg')
+skizzy_mars.image.attach(io: skizzy_mars_img, filename: 'skizzy_mars.jpg')
+
+sea_wolf = Artist.create({ name: 'Sea Wolf', bio: "Sea Wolf is a band led by Alex Brown Church, an indie folk musician based in Los Angeles, California. They are signed by Dangerbird Records and currently have five albums."})
+sea_wolf_img = open('https://lyrical-seeds.s3.amazonaws.com/sea_wolf.jpg')
+sea_wolf.image.attach(io: sea_wolf_img, filename: 'sea_wolf.jpg')
+
+toussaint = Artist.create({ name: 'Toussaint Morrison', bio: "Toussaint Morrison is a hopeless romantic and a super-villain. Sadly, in a world where definitive genres are ever-shrinking, Morrison still hasn’t been invited to any of the parties (which is where the super-villain part comes in). The 3-time national slam poet has not only paid his dues, he’s insisting on paying more than his tab; sampling an unconventional ensemble of sounds from Feist to Chicago to Weezer and on."})
+toussaint_img = open('https://lyrical-seeds.s3.amazonaws.com/toussaint.jpg')
+toussaint.image.attach(io: toussaint_img, filename: 'toussaint.jpg')
+
 
 # END ARTISTS
 
@@ -4313,6 +4333,486 @@ Twinkling in the silvery night",
 })
 patient_love_img = open('https://lyrical-seeds.s3.amazonaws.com/patient_love.jpg')
 patient_love.image.attach(io: patient_love_img, filename: 'patient_love.jpg')
+
+drop_ocean = Track.create({ title: "A Drop In The Ocean",
+    album: "Daylight",
+    lyrics: "[Chorus]
+A drop in the ocean
+A change in the weather
+I was praying that you and me might end up together
+It's like wishing for rain as I stand in the desert
+But I'm holding you closer than most cause you are my heaven
+
+[Verse 1]
+I don't wanna waste the weekend
+If you don't love me pretend
+A few more hours then it's time to go
+As my train rolls down the east coast I wonder how you keep warm
+It's too late to cry
+Too broken to move on
+
+[Pre-Chorus]
+And still I can't let you be
+Most nights I hardly sleep
+Don't take what you don't need from me
+
+[Chorus]
+A drop in the ocean
+A change in the weather
+I was praying that you and me might end up together
+It's like wishing for rain as I stand in the desert
+But I'm holding you closer than most cause you are my heaven
+
+[Verse 2]
+Misplaced trust and old friends
+Never counting regrets
+By the grace of God I do not rest at all
+New England as the leaves change
+The last excuse that I'll claim
+I was a boy who loved a woman like a little girl
+
+[Pre-Chorus]
+And still I can't let you be
+Most nights I hardly sleep
+Don't take what you don't need from me
+
+[Chorus]
+A drop in the ocean
+A change in the weather
+I was praying that you and me might end up together
+It's like wishing for rain as I stand in the desert
+But I'm holding you closer than most cause you are my
+
+[Bridge]
+Heaven doesn't seem far away anymore
+No, no
+Heaven doesn't seem far away
+Heaven doesn't seem far away anymore
+No, no
+Heaven doesn't seem far away
+Oh, oh
+
+[Chorus]
+A drop in the ocean
+A change in the weather
+I was praying that you and me might end up together
+It's like wishing for rain as I stand in the desert
+But I'm holding you closer than most cause you are my heaven",
+    artist_id: ron_pope.id
+})
+drop_ocean_img = open('https://lyrical-seeds.s3.amazonaws.com/drop_ocean.jpg')
+drop_ocean.image.attach(io: drop_ocean_img, filename: 'drop_ocean.jpg')
+
+prefect_for_me = Track.create({ title: "Perfect For Me",
+    album: "The New England Sessions",
+    lyrics: "You sit in the bathroom and you paint your toes
+I sit on the bed right now and I sing you a song
+It's not always easy, but somehow our love stays strong
+If I can make you happy, then this is where I belong
+
+And I'd just like to say
+I thank God that you're here with me
+And I know you too well to say that you're perfect
+But you'll see, oh my sweet love, you're perfect for me
+
+I know all you're secrets, and you know all of mine
+You're always here to hold me up when I'm losing my mind
+I wish that I was stronger so that I had more to give
+I'll share everything I have and we'll find a way to live
+
+And I'd just like to say
+I thank God that you're here with me
+And I know you too well to say that you're perfect
+But you'll see, oh my sweet love, you're perfect for me
+
+Even after all this time, nothing else I ever find
+In this whole wide world can shake me like you do
+Its true that something so sublime that there aren't words yet to describe
+The beauty of this life I've made with you
+
+And I'd just like to say
+I thank God that you're here with me
+And I know you too well to say you're perfect
+But you'll see oh my sweet love you're perfect for me
+And I know you too well to say you're perfect
+But you'll see of my sweet love you're perfect
+Oh my love I swear you're perfect
+Yes I promise, you're perfect for me",
+    artist_id: ron_pope.id
+})
+prefect_for_me_img = open('https://lyrical-seeds.s3.amazonaws.com/prefect_for_me.jpg')
+prefect_for_me.image.attach(io: prefect_for_me_img, filename: 'prefect_for_me.jpg')
+
+girl_train = Track.create({ title: "Girl on a Train",
+    album: "Alone Together",
+    lyrics: "[Verse 1]
+I met this pretty girl on the train
+I fell in love before I even got her name
+And I ain't even know where she was going
+But she broke my heart when her stop came
+On the L with some headphones on
+I wonder what you bumpin' in those in-ears
+I want to say what up but I been scared
+Vibes out of thin air, full car, blank stares
+I wonder if you single or you got a man
+I bet you like me you got a lot of fans
+I wonder if you smoke if you drink too
+I wonder if you care what I think too
+We don't know each other but that's all good
+I'm chasing love like we all should
+I wonder where she headed, Lord knows
+Bedford stop came and the doors closed
+
+[Chorus]
+Girl on a train I know you're just a stranger
+What is your name, where are you going?
+Girl on a train I don't know where I'll find you
+Still on my mind when I got home
+Now I'm all alone
+
+[Verse 2]
+City is fucking heartless
+Easy to get tarnished
+Beauty in all the darkness
+There's wealth in all the poverty
+You're like I won the lottery
+You'll never get tired of me
+You remind of a lot of things
+Martin and Gina, my Iliad and Odyssey
+Girl I want to make you proud of me
+I know I act stupid but you know I'm talented
+The chaos, the mayhem
+Girl smile the suns out
+The city got crazy
+And that's why it's fun now
+Feel what I feel
+And stop where I stop
+You know what this is and you got what I got
+The feeling's so rare it don't happen a lot no
+
+[Chorus]
+Girl on a train I know you're just a stranger
+What is your name, where are you going?
+Girl on a train I don't know where I'll find you
+Still on my mind when I got home
+Now I'm all alone
+
+[Verse 3]
+I wanna come in first place
+Fell in love and we skipped all the first dates
+Shook my world up like an earthquake
+You got me fucked up in the worst way
+I'm a stranger in the first place
+But I'm there when you celebrate your birthday
+Where that girl headed? Lord knows
+Bedford stop and them doors close
+
+[Chorus]
+Girl on a train I know you're just a stranger
+What is your name, where are you going?
+Girl on a train I don't know where I'll find you
+Still on my mind when I got home
+Now I'm all alone",
+    artist_id: skizzy_mars.id
+})
+girl_train_img = open('https://lyrical-seeds.s3.amazonaws.com/girl_train.jpg')
+girl_train.image.attach(io: girl_train_img, filename: 'girl_train.jpg')
+
+cant_work = Track.create({ title: "Why Can't We Work",
+    album: "are you OK?",
+    lyrics: "[Intro]
+Yeah, ha, ha
+Yeah, yeah, huh
+
+[Verse 1]
+Hard to be mad when your crib is gated
+I dealt with jealousy and I felt hatred
+When you get money, you get over-hated
+So I try to make more just to aggravate 'em
+
+[Pre-Chorus]
+And you drink, and you smoke
+And I wait and I hope
+That you'll stay for the night
+But you're leaving
+And you tell me you want me
+You kiss me, you love me
+But you can't give me a reason
+
+[Chorus]
+Why can't we work?
+Why can't we work?
+Why can't we work, baby?
+Why can't this work?
+Why can't this work?
+You know it can
+
+[Verse 2]
+You quick to give up 'cause you lack patience
+Don't overthink, give us a chance to make it
+This love thing hard, got you frustrated
+But when you know it's real, you don't mind waiting
+
+[Pre-Chorus]
+And you drink, and you smoke
+And I wait and I hope
+That you'll stay for the night
+But you're leaving
+And you tell me you want me
+You kiss me, you love me
+But you can't give me a reason
+
+[Bridge]
+Just give it a chance
+Give it a chance
+It's only a chance
+Won't you give it a chance
+Just give it a chance
+It's only a chance
+
+[Chorus]
+Why can't we work?
+Why can't we work?
+Why can't we work, baby?
+Why can't this work?
+Why can't this work?
+You know it can
+Why can't we work?
+Why can't we work?
+Why can't we work, baby?
+Why can't this work?
+Why can't this work?
+You know it can
+
+[Verse 3]
+It's hard to open up when you still hurting
+You tried to fall in love but it wasn't working
+Compare me to your ex, I'm a better version
+You know that I'm the one, you can stop searching
+
+[Pre-Chorus]
+And you drink, and you smoke
+And I wait and I hope
+That you'll stay for the night
+But you're leaving
+And you tell me you want me
+You kiss me, you love me
+But you can't give me a reason
+
+[Bridge]
+Just give it a chance
+Give it a chance
+It's only a chance
+Won't you give it a chance
+Just give it a chance
+It's only a chance
+
+[Chorus]
+Why can't we work?
+Why can't we work?
+Why can't we work, baby?
+Why can't this work?
+Why can't this work?
+You know it can
+Why can't we work?
+Why can't we work?
+Why can't we work, baby?
+Why can't this work?
+Why can't this work?
+You know it can",
+    artist_id: skizzy_mars.id
+})
+cant_work_img = open('https://lyrical-seeds.s3.amazonaws.com/cant_work.jpg')
+cant_work.image.attach(io: cant_work_img, filename: 'cant_work.jpg')
+
+middle_distance = Track.create({ title: "Middle Distance Runner",
+    album: "Leaves in the River",
+    lyrics: "Well I'm so sad tonight
+And the words won't come out right
+It's been a long day on the track
+And its stamina that I lack
+
+So won't you run to me tonight?
+Tonight we could pretend that we're just lovers
+But I'll only ever be a middle distance runner
+
+Well my heart is beating hard
+And I'm off with a shot at the start
+And my legs tremble from strain
+But by the finish line I am drained
+
+So won't you run to me tonight?
+Tonight let's not talk about next summer
+Cause I'll only ever be a middle distance runner
+
+Well I'm so proud tonight
+Of the woman you've become
+And I'm just too tired to fight
+So my darling, I'll succumb
+
+But you'll have to run to me tonight
+Tonight I will love you forever
+But I'll only ever be a middle distance runner",
+    artist_id: sea_wolf.id
+})
+middle_distance_img = open('https://lyrical-seeds.s3.amazonaws.com/middle_distance.jpg')
+middle_distance.image.attach(io: middle_distance_img, filename: 'middle_distance.jpg')
+
+black_leaf_falls = Track.create({ title: "Black Leaf Falls",
+    album: "Leaves in the River",
+    lyrics: "It weighs too much this time
+My hands are broken
+She'll disappear again
+Before we've spoken
+The night we took that year
+In Black Leaf Falls
+All of the trees were bare
+Next to the dance hall
+
+I saw you outside
+The bathroom stalls
+You were just standing there
+Out in the hall
+You leaned your hip against
+Against the wall
+I'd love you anywhere
+But Black Leaf Falls
+
+Her perfume was so
+I smell it still
+I put her leaf upon
+The window sill
+I found it there today
+Its color gone
+It's in the water now
+It's been too too long
+
+I saw you outside
+The bathroom stall
+You were just standing there
+Out in the hall
+You leaned your hip against
+Against the wall
+I'd love you anywhere
+But Black Leaf Falls
+
+I'll fall asleep tonight
+See where they take me
+Fly with the maple seeds
+See if she wakes me
+
+I saw you outside
+The bathroom stalls
+You were just standing there
+Out in the hall
+You turned your eyes to me
+I felt it all
+I'd love you anywhere
+But Black Leaf Falls
+Oh, Black Leaf Falls",
+    artist_id: sea_wolf.id
+})
+black_leaf_falls_img = open('https://lyrical-seeds.s3.amazonaws.com/black_leaf_falls.jpg')
+black_leaf_falls.image.attach(io: black_leaf_falls_img, filename: 'black_leaf_falls.jpg')
+
+liquor_store = Track.create({ title: "The Girl From The Liquor Store",
+    album: "Is Not My Boyfriend",
+    lyrics: "Rain, rain, won’t you stay
+I never really cared for when the skies were blue
+I’d rather have you than snow today
+Oh, rain, rain, won’t you stay
+I never really cared for when the skies were blue
+I’d rather have you than snow today
+
+My turn signal blinks when I turn left or right
+Almost in sync with my flashin’ engine light
+It could be worse, I could be cursed
+To steerin’ old habits rollin’ on stolen bikes
+To be workin’ with an organ with less than golden pipes
+To be headed nowhere with a head full of hopeful hype
+I’m not the man you’d settle for
+Who could only maintain a crush on the girl from the liquor store
+
+For rich or poor, hittin’ the deck or jumpin’ over board
+We sadly volunteer for the happy in-between
+And I’ve been floatin’ off the course and haven’t seen the shore
+Ever since I cut the anchor and decided this was me
+So spill, did you choose- is this you?
+Beautiful and uptight tryin’ to keep grad school cool?
+Payin’ off the debt behind a desk slangin’ booze
+Waitin’ on someday… hmm
+
+Frozen just before closin’
+I couldn’t help but notice
+You gave a small smile
+Knowin’ tonight might be different
+Than bright lights and liquor
+Ya look out the window and sigh
+
+Rain, rain, won’t you stay
+I never really cared for when the skies were blue
+I’d rather have you than snow today
+Oh, rain, rain, won’t you stay
+I never really cared for when the skies were blue
+I’d rather have you than snow today
+
+I have dreams, but I wake up on a couch
+Or in my car, or the floor of someone else’s house
+It could be worse, I could be cursed
+Sleepin’ on cardboard, laughin’ at the clouds
+This tough lover’s crush ain’t the slightest odd
+It’s an invite to spray paint the town when you get off your job
+So, before you buckle underneath your hopes to keep’em up
+Find a black dress, the night is lookin’ mighty Neil Young
+
+Meet me on the corner at the center of the city
+Where tomorrow ain’t a promise and it’s only good as iffy
+We’ll show the buildings and graffiti what they’re missin’
+And give’em a little bit’a the venom and good heavens
+Since “I like you” hasn’t been enough
+Here’s a full heart, gold coin and a one-up
+Where I’m from, goin’ vulnerable is playin’ smart
+Lights out, let’s give this thing a jumpstart
+
+Frozen just before closin’
+I couldn’t help but notice
+You gave a small smile
+Knowin’ tonight might be different
+Than bright lights and liquor
+Ya look out the window and sigh
+
+Rain, rain, won’t you stay
+I never really cared for when the skies were blue
+I’d rather have you than snow today
+Oh, rain, rain, won’t you stay
+I never really cared for when the skies were blue
+I’d rather have you than snow today
+
+You’re tired of the same
+Well, right on, right on, right on, right on right on
+You’re tired of the same
+Well, right on, right on, right on, right on, right on
+I could be your change
+Right on, right on, right on, right on, right on
+I could be your change
+
+Frozen just before closin’
+I couldn’t help but notice
+You gave a small smile
+Knowin’ tonight might be different
+Than bright lights and liquor
+Ya look out the window and sigh
+
+Rain, rain, won’t you stay
+I never really cared for when the skies were blue
+I’d rather have you than snow today
+Oh, rain, rain, won’t you stay
+I never really cared for when the skies were blue
+I’d rather have you than snow today",
+    artist_id: toussaint.id
+})
+liquor_store_img = open('https://lyrical-seeds.s3.amazonaws.com/liquor_store.jpg')
+liquor_store.image.attach(io: liquor_store_img, filename: 'liquor_store.jpg')
 
 
 # END TRACKS
