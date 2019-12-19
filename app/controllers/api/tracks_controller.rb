@@ -6,7 +6,7 @@ class Api::TracksController < ApplicationController
     end
 
     def show
-        @track = Track.includes(:artist).includes(:annotations).find_by(id: params[:id])
+        @track = Track.includes(:artist).includes(:annotations).with_attached_image.find_by(id: params[:id])
         render :show
     end
 end
