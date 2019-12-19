@@ -43,19 +43,12 @@ class ArtistsIndex extends React.Component {
             )
         })
 
-        let title;
-        if (this.letter = 'num') {
-            title = '0 - 9';
-        } else {
-            title = this.letter;
-        }
-
         return (
             <div className="gray-out">
                 <div className="artists-index-container">
-                    <p className='artists-index-breadcrumbs'><Link to='/artists'>Artists</Link> > <span className="current-letter">{title}</span></p>
+                    <p className='artists-index-breadcrumbs'><Link to='/artists'>Artists</Link> > <span className="current-letter">{this.letter}</span></p>
 
-                    <h2 className='artists-index-header'>{title} Artists on Lyrical</h2>
+                    <h2 className='artists-index-header'>{this.letter} Artists on Lyrical</h2>
                     <ul className="artists-index">
                         {artistItems}
                     </ul>
