@@ -131,7 +131,7 @@ After that first LP, founding member Andy Husted left the band, and Herrera’s 
 mxpx_img = open('https://lyrical-seeds.s3.amazonaws.com/mxpx.jpg')
 mxpx.image.attach(io: mxpx_img, filename: 'mxpx.jpg')
 
-mike_posner = Artist.create({ name: 'mike_posner', bio: "Born in Detroit, Michigan, Posner has never shied away from telling folks where he’s from. Growing up with childhood friend Big Sean, music quickly grabbed his attention. Garnering fame in August of 2010 with 31 Minutes to Take Off, he has quickly established himself as not only a singer of pop music but also a songwriter to big names."})
+mike_posner = Artist.create({ name: 'Mike Posner', bio: "Born in Detroit, Michigan, Posner has never shied away from telling folks where he’s from. Growing up with childhood friend Big Sean, music quickly grabbed his attention. Garnering fame in August of 2010 with 31 Minutes to Take Off, he has quickly established himself as not only a singer of pop music but also a songwriter to big names."})
 mike_posner_img = open('https://lyrical-seeds.s3.amazonaws.com/mike_posner.jpg')
 mike_posner.image.attach(io: mike_posner_img, filename: 'mike_posner.jpg')
 
@@ -5831,8 +5831,8 @@ And know a mother's love",
 chicken_fried_img = open('https://lyrical-seeds.s3.amazonaws.com/chicken_fried.jpg')
 chicken_fried.image.attach(io: chicken_fried_img, filename: 'chicken_fried.jpg')
 
-whats_up = Track.create({ title: "Chicken Fried",
-    album: "Home Grown",
+whats_up = Track.create({ title: "What's Up",
+    album: "Bigger, Better, Faster, More!",
     lyrics: "[Verse 1]
 25 years and my life is still
 Trying to get up that great big hill of hope
