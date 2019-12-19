@@ -8,11 +8,11 @@ class TracksIndex extends React.Component {
             return (
                 <li key={track.id}>
                     <Link to={'/tracks/' + track.id}>
-                        <div className="track-item">
-                            <img className="track-img" src={track.imageUrl}/>
-                            <div className="track-info">
-                                <p className="track-title">{track.title}</p>
-                                <p className="track-album">{track.album}</p>
+                        <div className="artist-track-item">
+                            <img className="artist-track-img" src={track.imageUrl}/>
+                            <div className="artist-track-info">
+                                <p className="artist-track-title">{track.title}</p>
+                                <p className="artist-track-album">{track.album}</p>
                             </div>
                         </div>
                     </Link>

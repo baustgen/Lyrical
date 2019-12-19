@@ -76,7 +76,7 @@
     color: rgb(150, 150, 150);
 }
 
-.track-item {
+.artist-track-item {
     display: flex;
     height: 75px;
     margin: 5px;
@@ -84,16 +84,28 @@
     color: black;
 }
 
-.track-img {
+.artist-track-img {
     height: 100%;
 }
 
-.artist-tracks .track-title {
-    font-size: 20px;
+.artist-tracks .artist-track-title {
+    font-size: 16px;
     color: black;
 }
 
-.track-album {
+.artist-track-album {
     font-size: 12px;
     padding-top: 5px;
+    color: rgb(150, 150, 150);
+}
+
+.artist-track-info {
+    padding: 5px 0 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.artist-track-info p {
+    display: block;
 }
