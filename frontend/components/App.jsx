@@ -33,7 +33,7 @@ const App = () => (
                 <ProtectedRoute path="/tracks/:trackId" component={TrackShowContainer}/>
                 <ProtectedRoute path="/artists/" component={ArtistsIndexContainer}/>
             </Switch>
-            <Footer />
+            <ProtectedRoute path="/" component={Footer} />
         </main>
     </div>
 );
