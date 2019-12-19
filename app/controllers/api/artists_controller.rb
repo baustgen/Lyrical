@@ -16,7 +16,7 @@ class Api::ArtistsController < ApplicationController
                 .order(:name)
                 .with_attached_image
         else
-            @artists = Artist.where("name ILIKE ?", "#{params[:letter]}%").with_attached_image.order(:name)
+            @artists = Artist.where("name ILIKE ?", "#{params[:letter]}%").with_attached_image.order('LOWER(name)')
         end
         render :index
     end
