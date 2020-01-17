@@ -30,16 +30,17 @@ class AnnotationShow extends React.Component {
 
         if (this.state.edit === true) {
             edit = (
-                <>
-                    <AnnotationUpdateContainer
-                        annotationId={this.props.annotation.id}
-                        selectAnnotation={this.props.selectAnnotation}
-                        clearAnnotation={this.props.clearAnnotation}
-                    />
-                    <button className="anno-form-button" onClick={this.cancelEdit}>Cancel</button>
-                    
+                <AnnotationUpdateContainer
+                    annotationId={this.props.annotation.id}
+                    selectAnnotation={this.props.selectAnnotation}
+                    clearAnnotation={this.props.clearAnnotation}
+                />
+            )
 
-                </>
+            return (
+                <div className="annotation-show">
+                    {edit}
+                </div>
             )
         }
 

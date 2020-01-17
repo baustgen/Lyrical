@@ -39,8 +39,11 @@ class AnnotationForm extends React.Component {
         ))
 
         return (
+            <>
+                <div className="anno-form-header">
+                    <h2>{this.props.formType} Annotation</h2>
+                </div>
                 <div className="anno-form-container" onClick={(e) => e.stopPropagation()}>
-                    <h2 className="anno-form-header">{this.props.formType} Annotation</h2>
                     <p className="annotation-lyric">
                         {this.props.tracks[this.props.annotation.trackId]
                             .lyrics
@@ -59,11 +62,12 @@ class AnnotationForm extends React.Component {
                             required
                         />
                         <div className="anno-form-button-container">
-                            <button className="anno-form-button">{this.props.formType}</button>
-                            <button className="anno-form-button" onClick={this.props.clearAnnotation}>Cancel</button>
+                            <button className="anno-form-button submit">{this.props.formType}</button>
+                            <button className="anno-form-button cancel" onClick={this.props.clearAnnotation}>Cancel</button>
                         </div>
                     </form>
                 </div>
+            </>
         )
     }
 }
