@@ -31,8 +31,8 @@ class AnnotationShow extends React.Component {
         if (this.props.annotation.userId === parseInt(this.props.currentUserId)) {
             edit = (
                 <>
-                    <button className="anno-form-button" onClick={this.handleEdit}>Edit</button>
-                    <button className="anno-form-button" onClick={this.handleDelete}>Delete</button>
+                    <button className="anno-form-button submit" onClick={this.handleEdit}>Edit</button>
+                    <button className="anno-form-button cancel" onClick={this.handleDelete}>Delete</button>
                 </>
             )
         }
