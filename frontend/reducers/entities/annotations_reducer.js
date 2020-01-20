@@ -10,7 +10,8 @@ const annotationsReducer = (state = {}, action) => {
             return Object.assign({}, action.payload.annotations);
         case REMOVE_ANNOTATION:
             let newState = Object.assign({}, state);
-            delete newState[action.payload.annotations.id];
+            delete newState[Object.keys(action.payload.annotations)[0]];
+
             return newState;
         case RECEIVE_TRACK:
             return Object.assign({}, action.payload.annotations);

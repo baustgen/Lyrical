@@ -9,6 +9,7 @@ class AnnotationShow extends React.Component {
         }
         this.handleEdit = this.handleEdit.bind(this)
         this.cancelEdit = this.cancelEdit.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     handleEdit(e) {
@@ -19,12 +20,20 @@ class AnnotationShow extends React.Component {
         this.setState({edit: false})
     }
 
+    handleDelete(e) {
+        this.props.deleteAnnotation(this.props.annotation.id);
+        this.props.clearAnnotation();
+    }
+
     render() {
         let edit;
 
         if (this.props.annotation.userId === parseInt(this.props.currentUserId)) {
             edit = (
-                <button className="anno-form-button" onClick={this.handleEdit}>Edit</button>
+                <>
+                    <button className="anno-form-button" onClick={this.handleEdit}>Edit</button>
+                    <button className="anno-form-button" onClick={this.handleDelete}>Delete</button>
+                </>
             )
         }
 
