@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :artists, only: [:index, :show], defaults: {format: :json}
-    resources :tracks, only: [:index, :show], defaults: {format: :json}
+    resources :tracks, only: [:show], defaults: {format: :json}
     resources :annotations, only: [:create, :update, :destroy], defaults: {format: :json}
-    get '/tracks/search', to:'tracks#search', defaults: {format: :json}
+    get '/tracks', to:'tracks#search', defaults: {format: :json}
   end
 end
