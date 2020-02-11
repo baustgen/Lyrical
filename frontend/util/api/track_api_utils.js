@@ -1,8 +1,8 @@
-export const fetchTracks = (limit) => (
+export const searchTracks = (query) => (
     $.ajax({
         url: '/api/tracks',
         method: 'GET',
-        data: { limit }
+        data: { query }
     })
 )
 

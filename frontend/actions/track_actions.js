@@ -18,7 +18,7 @@ export const requestTrack = (trackId) => (dispatch) => (
         .then(payload => dispatch(receiveTrack(payload)))
 )
 
-export const requestTracks = () => (dispatch) => (
-    TrackAPIUtil.fetchTracks()
+export const requestTracks = (query) => (dispatch) => (
+    TrackAPIUtil.searchTracks(query)
         .then(payload => dispatch(receiveTracks(payload)))
 )
