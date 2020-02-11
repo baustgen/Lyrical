@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :artists, only: [:index, :show], defaults: {format: :json}
     resources :tracks, only: [:index, :show], defaults: {format: :json}
     resources :annotations, only: [:create, :update, :destroy], defaults: {format: :json}
+    get '/tracks/search', to:'tracks#search', defaults: {format: :json}
   end
 end
