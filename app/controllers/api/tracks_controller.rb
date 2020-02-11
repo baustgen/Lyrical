@@ -6,7 +6,7 @@ class Api::TracksController < ApplicationController
     end
 
     def search
-        @tracks = Track.includes(:artist).with_attached_image.where('title ILIKE ?', '%' + params["q"] + '%')
+        @tracks = Track.includes(:artist).with_attached_image.where('title ILIKE ?', "%#{params[:query]}%") # N+1(artist images)
         render :index
     end
 end
