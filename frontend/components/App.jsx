@@ -9,6 +9,7 @@ import UserLinksContainer from "./nav_bar/user_links_container";
 import ArtistsIndexContainer from "./artist/artists_index_container";
 import ArtistShowContainer from "./artist/artist_show_container";
 import TrackShowContainer from "./track/track_show_container";
+import SearchIndexContainer from './search/search_index_container'
 import Splash from './splash/splash'
 
 const App = () => (
@@ -31,6 +32,7 @@ const App = () => (
                 <ProtectedRoute path="/artists/:letter/:artistId" component={ArtistShowContainer}/>
                 <ProtectedRoute path="/artists/:letter" component={ArtistsIndexContainer}/>
                 <ProtectedRoute path="/tracks/:trackId" component={TrackShowContainer}/>
+                <ProtectedRoute path="/tracks" component={SearchIndexContainer}/>
                 <ProtectedRoute path="/artists/" component={ArtistsIndexContainer}/>
             </Switch>
             <ProtectedRoute path="/" component={Footer} />
