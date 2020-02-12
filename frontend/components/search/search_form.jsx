@@ -26,13 +26,19 @@ class SearchForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form 
+                className="search-form"
+                onSubmit={this.handleSubmit}
+            >
                 <input 
                     type="text"
+                    className="search-input"
                     placeholder="Enter track title"
                     onChange={this.handleInput}
                 />
-                <button type="submit">Search</button>
+                <button type="submit" className="search-button">
+                    <img src="Search.png"/>
+                </button>
             </form>
         )
     }
