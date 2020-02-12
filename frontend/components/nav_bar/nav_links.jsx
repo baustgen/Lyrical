@@ -7,9 +7,6 @@ const NavLinks = (props) => {
     return (
         <div className="header-links-container">
             <ul className="page-links">
-                <li>
-                    <SearchFormWithRouter />
-                </li>
                 <li className="nav-artists-link">
                     <Link to="/artists">ARTISTS</Link>
                 </li>

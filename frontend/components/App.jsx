@@ -11,11 +11,13 @@ import ArtistShowContainer from "./artist/artist_show_container";
 import TrackShowContainer from "./track/track_show_container";
 import SearchIndexContainer from './search/search_index_container'
 import Splash from './splash/splash'
+import SearchFormWithRouter from "./search/search_form";
 
 const App = () => (
     <div>
         <header>
             <div className="top-header">
+                <ProtectedRoute path="/" component={SearchFormWithRouter} />
                 <Link to="/" className="logo">L Y R I C A L</Link>
                 <UserLinksContainer />
             </div>
