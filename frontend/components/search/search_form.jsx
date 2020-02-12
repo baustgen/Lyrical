@@ -16,7 +16,6 @@ class SearchForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        debugger
         this.props.history.push({
             pathname: '/tracks',
             search: `?query=${this.state.query}`,
