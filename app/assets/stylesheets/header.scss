@@ -7,14 +7,14 @@ header {
 .top-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
     background-color: rgb(255, 255, 50);
 }
 
 .logo {
-    margin-left: 50%;
     position: relative;
-    left: -63px;
+    left: -10px;
     font-size: 26px;
     color: rgb(255, 255, 50);
     text-shadow: -2px 2px black;
@@ -26,11 +26,12 @@ header {
 }
 
 .user-links {
-    margin-left: auto;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
     font-size: 11px;
     font-weight: 700;
+    width: 150px;
 }
 
 .user-links a:hover {
@@ -96,4 +97,22 @@ header {
 .ext-links img {
     display: inline-block;
     height: 100%;
+}
+
+.search-input {
+    box-sizing: border-box;
+    padding: 3px;
+    width: 150px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 3px;
+}
+
+.search-button {
+    position: relative;
+    left: -20px;
+    top: 3px;
+}
+
+.search-button img {
+    height: 15px;
 }
