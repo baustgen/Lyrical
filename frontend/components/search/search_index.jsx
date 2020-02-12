@@ -11,7 +11,7 @@ class SearchIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-            this.props.requestTracks(this.props.location.search.slice(7))
+        this.props.requestTracks(this.props.location.search.slice(7))
     }
 
     render() {
