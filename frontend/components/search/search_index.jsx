@@ -11,7 +11,9 @@ class SearchIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        this.props.requestTracks(this.props.location.search.slice(7))
+        if (this.props.location.search.slice(7) != prevProps.location.search.slice(7)) {
+            this.props.requestTracks(this.props.location.search.slice(7))
+        }
     }
 
     render() {
@@ -34,7 +36,7 @@ class SearchIndex extends React.Component {
 
         return (
             <div className="search-results-container">
-                <h2 className='search-results-header'>Tracks Matching "{decodeURI(this.props.location.search.slice(7))}"</h2>
+                <h2 className='search-results-header'>Tracks matching: <span className="search-query">{decodeURI(this.props.location.search.slice(7))}</span></h2>
                 <ul className="search-results-index">
                     {trackItems}
                 </ul>
