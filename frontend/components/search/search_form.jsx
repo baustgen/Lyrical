@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 
 class SearchForm extends React.Component {
@@ -7,29 +7,35 @@ class SearchForm extends React.Component {
         super(props)
         this.state = {query: ""}
         this.handleInput = this.handleInput.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleInput(e) {
         this.setState({ query: e.target.value })
     }
 
-    render() {
+    handleSubmit(e) {
+        e.preventDefault()
+        debugger
+        this.props.history.push({
+            pathname: '/tracks',
+            search: `?query=${this.state.query}`,
+        })
+    }
 
+
+    render() {
         return (
-            <div>
+            <form onSubmit={this.handleSubmit}>
                 <input 
                     type="text"
                     placeholder="Enter track title"
                     onChange={this.handleInput}
                 />
-                <Link to={{
-                    pathname: '/tracks',
-                    search: `?query=${this.state.query}`,
-                }}>Search</Link>
-                
-            </div>
+                <button type="submit">Search</button>
+            </form>
         )
     }
 }
-
-export default SearchForm;
+let SearchFormWithRouter = withRouter(SearchForm)
+export default SearchFormWithRouter;
