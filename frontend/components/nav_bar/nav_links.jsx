@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchForm from "../search/search_form";
+import SearchFormWithRouter from "../search/search_form";
 
 
 const NavLinks = (props) => {
@@ -8,7 +8,7 @@ const NavLinks = (props) => {
         <div className="header-links-container">
             <ul className="page-links">
                 <li>
-                    <SearchForm />
+                    <SearchFormWithRouter />
                 </li>
                 <li className="nav-artists-link">
                     <Link to="/artists">ARTISTS</Link>
