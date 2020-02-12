@@ -11,9 +11,7 @@ class SearchIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.location.search.slice(7) != prevProps.location.search.slice(7)) {
             this.props.requestTracks(this.props.location.search.slice(7))
-        }
     }
 
     render() {
@@ -22,11 +20,11 @@ class SearchIndex extends React.Component {
             return (
                 <li key={track.id}>
                     <Link to={'/tracks/' + track.id}>
-                        <div className="artist-track-item">
-                            <img className="artist-track-img" src={track.imageUrl} />
-                            <div className="artist-track-info">
-                                <p className="artist-track-title">{track.title}</p>
-                                <p className="artist-track-album">{this.props.artists[track.artistId].name}</p>
+                        <div className="search-track-item">
+                            <img className="search-track-img" src={track.imageUrl} />
+                            <div className="search-track-info">
+                                <p className="search-track-title">{track.title}</p>
+                                <p className="search-track-artist">{this.props.artists[track.artistId].name}</p>
                             </div>
                         </div>
                     </Link>
@@ -35,14 +33,11 @@ class SearchIndex extends React.Component {
         })
 
         return (
-            <div className="gray-out">
-                <div className="artists-index-container">
-
-                    <h2 className='artists-index-header'>Tracks Matching "{decodeURI(this.props.location.search.slice(7))}"</h2>
-                    <ul className="artists-index">
-                        {trackItems}
-                    </ul>
-                </div>
+            <div className="search-results-container">
+                <h2 className='search-results-header'>Tracks Matching "{decodeURI(this.props.location.search.slice(7))}"</h2>
+                <ul className="search-results-index">
+                    {trackItems}
+                </ul>
             </div>
         )
     }
