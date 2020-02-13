@@ -17,7 +17,9 @@ const App = () => (
     <div>
         <header>
             <div className="top-header">
-                <ProtectedRoute path="/" component={SearchFormWithRouter} />
+                <div className="top-header-left">
+                    <ProtectedRoute path="/" component={SearchFormWithRouter} />
+                </div>
                 <Link to="/" className="logo">L Y R I C A L</Link>
                 <UserLinksContainer />
             </div>
