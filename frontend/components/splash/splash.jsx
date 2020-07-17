@@ -38,6 +38,9 @@ const Splash = () => {
                 <p>
                     <Link to="/login">Log In</Link> or <Link to="/signup">Sign Up</Link> to get started!
                 </p>
+                <p>
+                    <Link to="/login">Demo</Link>
+                </p>
             </div>
         </div>
     )
